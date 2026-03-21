@@ -218,6 +218,10 @@ csx/
 ecf/
 rcf/
 
+# Local working archive for experimental textures and generated assets
+archive/
+.DS_Store
+
 # Windows Store app package directories and files
 AppPackages/
 BundleArtifacts/
