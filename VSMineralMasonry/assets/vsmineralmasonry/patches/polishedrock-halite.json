@@ -1,0 +1,26 @@
+[
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "halite",
+    "file": "game:blocktypes/stone/polished/polishedrock.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "halite",
+    "file": "game:blocktypes/stone/polished/polishedrockslab.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/S/allowedVariants/-",
+    "value": "halite",
+    "file": "game:recipes/grid/polishedrock.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/S/allowedVariants/-",
+    "value": "halite",
+    "file": "game:recipes/grid/slabs/polishedrockslab.json"
+  }
+]

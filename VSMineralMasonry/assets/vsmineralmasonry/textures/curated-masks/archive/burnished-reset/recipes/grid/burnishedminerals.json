@@ -1,0 +1,274 @@
+[
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-malachite-greenmarble"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Malachite Green Marble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-malachite-greenmarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-malachite-limestone"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Malachite Limestone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-malachite-limestone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-malachite-redmarble"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Malachite Red Marble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-malachite-redmarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-malachite-whitemarble"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Malachite White Marble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-malachite-whitemarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-andesite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Andesite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-andesite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-basalt"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Basalt",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-basalt",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-chalk"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Chalk",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-chalk",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-chert"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Chert",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-chert",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-claystone"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Claystone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-claystone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-conglomerate"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Conglomerate",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-conglomerate",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-granite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Granite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-granite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-peridotite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Peridotite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-peridotite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-phyllite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Phyllite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-phyllite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-sandstone"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Sandstone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-sandstone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-shale"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Shale",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-shale",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:exposed-nativecopper-slate"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Burnish Native Copper Slate",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-nativecopper-slate",
+      "quantity": 1
+    }
+  }
+]

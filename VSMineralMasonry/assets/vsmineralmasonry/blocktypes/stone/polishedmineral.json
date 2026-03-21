@@ -1,0 +1,2589 @@
+{
+  "code": "polished",
+  "blockmaterial": "Stone",
+  "storageFlags": 5,
+  "attributes": {
+    "canChisel": true,
+    "handbook": {
+      "groupBy": [
+        "polished-{mineral}-{rock}"
+      ]
+    }
+  },
+  "variantgroups": [
+    {
+      "code": "mineral",
+      "states": [
+        "alum",
+        "anthracite",
+        "bismuthinite",
+        "bituminouscoal",
+        "borax",
+        "cassiterite",
+        "chromite",
+        "cinnabar",
+        "corundum",
+        "diamond",
+        "emerald",
+        "fluorite",
+        "galena",
+        "galena_nativesilver",
+        "graphite",
+        "hematite",
+        "ilmenite",
+        "kernite",
+        "lapislazuli",
+        "lignite",
+        "limonite",
+        "magnetite",
+        "malachite",
+        "nativecopper",
+        "olivine",
+        "olivine_peridot",
+        "pentlandite",
+        "phosphorite",
+        "quartz",
+        "quartz_nativegold",
+        "quartz_nativesilver",
+        "rhodochrosite",
+        "sphalerite",
+        "sulfur",
+        "sylvite",
+        "uranium"
+      ]
+    },
+    {
+      "code": "rock",
+      "states": [
+        "andesite",
+        "basalt",
+        "bauxite",
+        "chalk",
+        "chert",
+        "claystone",
+        "conglomerate",
+        "granite",
+        "greenmarble",
+        "halite",
+        "kimberlite",
+        "limestone",
+        "peridotite",
+        "phyllite",
+        "redmarble",
+        "sandstone",
+        "shale",
+        "slate",
+        "suevite",
+        "whitemarble"
+      ]
+    }
+  ],
+  "allowedVariants": [
+    "polished-alum-chalk",
+    "polished-alum-chert",
+    "polished-alum-claystone",
+    "polished-alum-conglomerate",
+    "polished-alum-limestone",
+    "polished-alum-sandstone",
+    "polished-alum-shale",
+    "polished-anthracite-chalk",
+    "polished-anthracite-chert",
+    "polished-anthracite-claystone",
+    "polished-anthracite-conglomerate",
+    "polished-anthracite-limestone",
+    "polished-anthracite-sandstone",
+    "polished-anthracite-shale",
+    "polished-bismuthinite-andesite",
+    "polished-bismuthinite-basalt",
+    "polished-bismuthinite-granite",
+    "polished-bismuthinite-peridotite",
+    "polished-bismuthinite-phyllite",
+    "polished-bismuthinite-slate",
+    "polished-bituminouscoal-chalk",
+    "polished-bituminouscoal-chert",
+    "polished-bituminouscoal-claystone",
+    "polished-bituminouscoal-conglomerate",
+    "polished-bituminouscoal-limestone",
+    "polished-bituminouscoal-sandstone",
+    "polished-bituminouscoal-shale",
+    "polished-borax-chalk",
+    "polished-borax-chert",
+    "polished-borax-claystone",
+    "polished-borax-conglomerate",
+    "polished-borax-limestone",
+    "polished-borax-sandstone",
+    "polished-borax-shale",
+    "polished-cassiterite-andesite",
+    "polished-cassiterite-basalt",
+    "polished-cassiterite-granite",
+    "polished-cassiterite-peridotite",
+    "polished-cassiterite-phyllite",
+    "polished-cassiterite-slate",
+    "polished-chromite-andesite",
+    "polished-chromite-basalt",
+    "polished-chromite-granite",
+    "polished-chromite-kimberlite",
+    "polished-chromite-peridotite",
+    "polished-cinnabar-andesite",
+    "polished-cinnabar-basalt",
+    "polished-cinnabar-granite",
+    "polished-cinnabar-peridotite",
+    "polished-cinnabar-phyllite",
+    "polished-cinnabar-slate",
+    "polished-corundum-greenmarble",
+    "polished-corundum-peridotite",
+    "polished-corundum-phyllite",
+    "polished-corundum-redmarble",
+    "polished-corundum-slate",
+    "polished-corundum-whitemarble",
+    "polished-diamond-kimberlite",
+    "polished-diamond-suevite",
+    "polished-emerald-basalt",
+    "polished-emerald-limestone",
+    "polished-emerald-peridotite",
+    "polished-emerald-phyllite",
+    "polished-emerald-shale",
+    "polished-emerald-slate",
+    "polished-fluorite-chalk",
+    "polished-fluorite-chert",
+    "polished-fluorite-claystone",
+    "polished-fluorite-conglomerate",
+    "polished-fluorite-limestone",
+    "polished-fluorite-phyllite",
+    "polished-fluorite-sandstone",
+    "polished-fluorite-shale",
+    "polished-fluorite-slate",
+    "polished-galena-chalk",
+    "polished-galena-chert",
+    "polished-galena-claystone",
+    "polished-galena-conglomerate",
+    "polished-galena-limestone",
+    "polished-galena-sandstone",
+    "polished-galena-shale",
+    "polished-galena_nativesilver-chalk",
+    "polished-galena_nativesilver-chert",
+    "polished-galena_nativesilver-claystone",
+    "polished-galena_nativesilver-conglomerate",
+    "polished-galena_nativesilver-limestone",
+    "polished-galena_nativesilver-sandstone",
+    "polished-galena_nativesilver-shale",
+    "polished-graphite-greenmarble",
+    "polished-graphite-phyllite",
+    "polished-graphite-redmarble",
+    "polished-graphite-slate",
+    "polished-graphite-whitemarble",
+    "polished-hematite-granite",
+    "polished-hematite-limestone",
+    "polished-hematite-peridotite",
+    "polished-hematite-phyllite",
+    "polished-hematite-sandstone",
+    "polished-ilmenite-andesite",
+    "polished-ilmenite-basalt",
+    "polished-ilmenite-granite",
+    "polished-ilmenite-kimberlite",
+    "polished-ilmenite-peridotite",
+    "polished-ilmenite-phyllite",
+    "polished-ilmenite-slate",
+    "polished-kernite-chalk",
+    "polished-kernite-chert",
+    "polished-kernite-claystone",
+    "polished-kernite-conglomerate",
+    "polished-kernite-limestone",
+    "polished-kernite-sandstone",
+    "polished-kernite-shale",
+    "polished-lapislazuli-bauxite",
+    "polished-lapislazuli-greenmarble",
+    "polished-lapislazuli-limestone",
+    "polished-lapislazuli-redmarble",
+    "polished-lapislazuli-whitemarble",
+    "polished-lignite-chalk",
+    "polished-lignite-chert",
+    "polished-lignite-claystone",
+    "polished-lignite-conglomerate",
+    "polished-lignite-limestone",
+    "polished-lignite-sandstone",
+    "polished-lignite-shale",
+    "polished-limonite-basalt",
+    "polished-limonite-chert",
+    "polished-limonite-shale",
+    "polished-magnetite-andesite",
+    "polished-magnetite-chalk",
+    "polished-magnetite-claystone",
+    "polished-magnetite-conglomerate",
+    "polished-magnetite-slate",
+    "polished-malachite-greenmarble",
+    "polished-malachite-limestone",
+    "polished-malachite-redmarble",
+    "polished-malachite-whitemarble",
+    "polished-nativecopper-andesite",
+    "polished-nativecopper-basalt",
+    "polished-nativecopper-chalk",
+    "polished-nativecopper-chert",
+    "polished-nativecopper-claystone",
+    "polished-nativecopper-conglomerate",
+    "polished-nativecopper-granite",
+    "polished-nativecopper-peridotite",
+    "polished-nativecopper-phyllite",
+    "polished-nativecopper-sandstone",
+    "polished-nativecopper-shale",
+    "polished-nativecopper-slate",
+    "polished-olivine-peridotite",
+    "polished-olivine_peridot-peridotite",
+    "polished-pentlandite-andesite",
+    "polished-pentlandite-basalt",
+    "polished-pentlandite-granite",
+    "polished-pentlandite-peridotite",
+    "polished-phosphorite-chalk",
+    "polished-phosphorite-chert",
+    "polished-phosphorite-claystone",
+    "polished-phosphorite-conglomerate",
+    "polished-phosphorite-limestone",
+    "polished-phosphorite-sandstone",
+    "polished-phosphorite-shale",
+    "polished-quartz-andesite",
+    "polished-quartz-basalt",
+    "polished-quartz-chalk",
+    "polished-quartz-chert",
+    "polished-quartz-claystone",
+    "polished-quartz-conglomerate",
+    "polished-quartz-granite",
+    "polished-quartz-limestone",
+    "polished-quartz-peridotite",
+    "polished-quartz-phyllite",
+    "polished-quartz-sandstone",
+    "polished-quartz-shale",
+    "polished-quartz-slate",
+    "polished-quartz_nativegold-andesite",
+    "polished-quartz_nativegold-basalt",
+    "polished-quartz_nativegold-chalk",
+    "polished-quartz_nativegold-chert",
+    "polished-quartz_nativegold-claystone",
+    "polished-quartz_nativegold-conglomerate",
+    "polished-quartz_nativegold-granite",
+    "polished-quartz_nativegold-limestone",
+    "polished-quartz_nativegold-peridotite",
+    "polished-quartz_nativegold-phyllite",
+    "polished-quartz_nativegold-sandstone",
+    "polished-quartz_nativegold-shale",
+    "polished-quartz_nativegold-slate",
+    "polished-quartz_nativesilver-andesite",
+    "polished-quartz_nativesilver-basalt",
+    "polished-quartz_nativesilver-chalk",
+    "polished-quartz_nativesilver-chert",
+    "polished-quartz_nativesilver-claystone",
+    "polished-quartz_nativesilver-conglomerate",
+    "polished-quartz_nativesilver-granite",
+    "polished-quartz_nativesilver-limestone",
+    "polished-quartz_nativesilver-peridotite",
+    "polished-quartz_nativesilver-phyllite",
+    "polished-quartz_nativesilver-sandstone",
+    "polished-quartz_nativesilver-shale",
+    "polished-quartz_nativesilver-slate",
+    "polished-rhodochrosite-chalk",
+    "polished-rhodochrosite-chert",
+    "polished-rhodochrosite-claystone",
+    "polished-rhodochrosite-conglomerate",
+    "polished-rhodochrosite-limestone",
+    "polished-rhodochrosite-phyllite",
+    "polished-rhodochrosite-sandstone",
+    "polished-rhodochrosite-shale",
+    "polished-rhodochrosite-slate",
+    "polished-sphalerite-andesite",
+    "polished-sphalerite-basalt",
+    "polished-sphalerite-chalk",
+    "polished-sphalerite-chert",
+    "polished-sphalerite-claystone",
+    "polished-sphalerite-conglomerate",
+    "polished-sphalerite-granite",
+    "polished-sphalerite-limestone",
+    "polished-sphalerite-peridotite",
+    "polished-sphalerite-phyllite",
+    "polished-sphalerite-sandstone",
+    "polished-sphalerite-shale",
+    "polished-sphalerite-slate",
+    "polished-sulfur-chalk",
+    "polished-sulfur-chert",
+    "polished-sulfur-claystone",
+    "polished-sulfur-conglomerate",
+    "polished-sulfur-limestone",
+    "polished-sulfur-sandstone",
+    "polished-sulfur-shale",
+    "polished-sylvite-halite",
+    "polished-uranium-andesite",
+    "polished-uranium-basalt",
+    "polished-uranium-chalk",
+    "polished-uranium-chert",
+    "polished-uranium-claystone",
+    "polished-uranium-conglomerate",
+    "polished-uranium-granite",
+    "polished-uranium-kimberlite",
+    "polished-uranium-limestone",
+    "polished-uranium-peridotite",
+    "polished-uranium-phyllite",
+    "polished-uranium-sandstone",
+    "polished-uranium-shale",
+    "polished-uranium-slate"
+  ],
+  "creativeinventory": {
+    "general": [
+      "*"
+    ],
+    "construction": [
+      "*"
+    ]
+  },
+  "shape": {
+    "base": "game:block/basic/cube"
+  },
+  "drawtype": "cube",
+  "replaceable": 120,
+  "resistance": 8,
+  "requiredMiningTier": 2,
+  "texturesByType": {
+  },
+  "textures": {
+    "all": {
+      "base": "game:block/stone/rock/{rock}1",
+      "overlays": [
+        "game:block/stone/ore/{mineral}1"
+      ],
+      "alternates": [
+        {
+          "base": "game:block/stone/rock/{rock}1",
+          "overlays": [
+            "game:block/stone/ore/{mineral}2"
+          ]
+        },
+        {
+          "base": "game:block/stone/rock/{rock}1",
+          "overlays": [
+            "game:block/stone/ore/{mineral}3"
+          ]
+        }
+      ]
+    }
+  },
+  "sounds": {
+    "walk": "walk/stone",
+    "byTool": {
+      "Pickaxe": {
+        "hit": "block/rock-hit-pickaxe",
+        "break": "block/rock-break-pickaxe"
+      }
+    }
+  },
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  },
+  "dropsByType": {
+    "polished-alum-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-alum-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-alum-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-alum-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-alum-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-alum-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-alum-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-alum-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-alum-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-alum-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-alum-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-alum-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-alum-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-alum-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-anthracite-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-anthracite-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-anthracite-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-anthracite-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-anthracite-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-anthracite-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-anthracite-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-anthracite-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-anthracite-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-anthracite-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-anthracite-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-anthracite-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-anthracite-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-anthracite-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bismuthinite-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bismuthinite-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bismuthinite-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bismuthinite-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bismuthinite-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bismuthinite-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bismuthinite-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bismuthinite-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bismuthinite-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bismuthinite-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bismuthinite-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bismuthinite-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bituminouscoal-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bituminouscoal-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bituminouscoal-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bituminouscoal-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bituminouscoal-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bituminouscoal-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bituminouscoal-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bituminouscoal-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bituminouscoal-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bituminouscoal-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bituminouscoal-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bituminouscoal-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-bituminouscoal-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-bituminouscoal-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-borax-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-borax-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-borax-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-borax-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-borax-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-borax-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-borax-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-borax-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-borax-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-borax-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-borax-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-borax-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-borax-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-borax-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cassiterite-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cassiterite-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cassiterite-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cassiterite-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cassiterite-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cassiterite-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cassiterite-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cassiterite-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cassiterite-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cassiterite-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cassiterite-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cassiterite-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-chromite-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-chromite-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-chromite-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-chromite-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-chromite-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-chromite-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-chromite-kimberlite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-chromite-kimberlite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-chromite-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-chromite-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cinnabar-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cinnabar-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cinnabar-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cinnabar-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cinnabar-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cinnabar-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cinnabar-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cinnabar-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cinnabar-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cinnabar-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-cinnabar-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-cinnabar-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-corundum-greenmarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-corundum-greenmarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-corundum-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-corundum-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-corundum-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-corundum-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-corundum-redmarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-corundum-redmarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-corundum-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-corundum-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-corundum-whitemarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-corundum-whitemarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-diamond-kimberlite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-diamond-kimberlite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-diamond-suevite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-diamond-suevite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-emerald-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-emerald-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-emerald-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-emerald-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-emerald-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-emerald-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-emerald-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-emerald-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-emerald-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-emerald-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-emerald-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-emerald-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-fluorite-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-fluorite-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-fluorite-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-fluorite-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-fluorite-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-fluorite-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-fluorite-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-fluorite-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-fluorite-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-fluorite-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-fluorite-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-fluorite-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-fluorite-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-fluorite-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-fluorite-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-fluorite-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-fluorite-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-fluorite-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena_nativesilver-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena_nativesilver-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena_nativesilver-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena_nativesilver-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena_nativesilver-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena_nativesilver-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena_nativesilver-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena_nativesilver-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena_nativesilver-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena_nativesilver-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena_nativesilver-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena_nativesilver-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-galena_nativesilver-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-galena_nativesilver-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-graphite-greenmarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-graphite-greenmarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-graphite-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-graphite-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-graphite-redmarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-graphite-redmarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-graphite-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-graphite-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-graphite-whitemarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-graphite-whitemarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-hematite-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-hematite-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-hematite-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-hematite-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-hematite-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-hematite-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-hematite-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-hematite-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-hematite-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-hematite-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-ilmenite-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-ilmenite-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-ilmenite-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-ilmenite-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-ilmenite-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-ilmenite-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-ilmenite-kimberlite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-ilmenite-kimberlite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-ilmenite-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-ilmenite-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-ilmenite-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-ilmenite-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-ilmenite-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-ilmenite-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-kernite-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-kernite-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-kernite-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-kernite-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-kernite-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-kernite-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-kernite-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-kernite-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-kernite-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-kernite-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-kernite-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-kernite-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-kernite-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-kernite-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lapislazuli-bauxite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lapislazuli-bauxite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lapislazuli-greenmarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lapislazuli-greenmarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lapislazuli-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lapislazuli-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lapislazuli-redmarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lapislazuli-redmarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lapislazuli-whitemarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lapislazuli-whitemarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lignite-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lignite-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lignite-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lignite-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lignite-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lignite-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lignite-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lignite-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lignite-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lignite-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lignite-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lignite-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-lignite-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-lignite-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-limonite-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-limonite-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-limonite-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-limonite-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-limonite-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-limonite-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-magnetite-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-magnetite-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-magnetite-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-magnetite-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-magnetite-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-magnetite-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-magnetite-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-magnetite-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-magnetite-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-magnetite-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-malachite-greenmarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-malachite-greenmarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-malachite-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-malachite-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-malachite-redmarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-malachite-redmarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-malachite-whitemarble": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-malachite-whitemarble",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-nativecopper-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-olivine-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-olivine-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-olivine_peridot-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-olivine_peridot-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-pentlandite-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-pentlandite-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-pentlandite-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-pentlandite-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-pentlandite-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-pentlandite-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-pentlandite-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-pentlandite-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-phosphorite-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-phosphorite-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-phosphorite-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-phosphorite-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-phosphorite-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-phosphorite-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-phosphorite-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-phosphorite-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-phosphorite-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-phosphorite-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-phosphorite-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-phosphorite-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-phosphorite-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-phosphorite-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativegold-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativegold-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-quartz_nativesilver-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-quartz_nativesilver-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-rhodochrosite-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-rhodochrosite-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-rhodochrosite-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-rhodochrosite-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-rhodochrosite-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-rhodochrosite-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-rhodochrosite-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-rhodochrosite-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-rhodochrosite-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-rhodochrosite-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-rhodochrosite-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-rhodochrosite-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-rhodochrosite-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-rhodochrosite-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-rhodochrosite-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-rhodochrosite-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-rhodochrosite-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-rhodochrosite-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sphalerite-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sphalerite-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sulfur-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sulfur-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sulfur-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sulfur-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sulfur-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sulfur-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sulfur-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sulfur-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sulfur-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sulfur-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sulfur-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sulfur-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sulfur-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sulfur-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-sylvite-halite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-sylvite-halite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-andesite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-andesite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-basalt": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-basalt",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-chalk": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-chalk",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-chert": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-chert",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-claystone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-claystone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-conglomerate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-conglomerate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-granite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-granite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-kimberlite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-kimberlite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-limestone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-limestone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-peridotite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-peridotite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-phyllite": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-phyllite",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-sandstone": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-sandstone",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-shale": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-shale",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ],
+    "polished-uranium-slate": [
+      {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-uranium-slate",
+        "quantity": {
+          "avg": 1
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,444 @@
+[
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-magnetite-andesite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Magnetite Andesite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-magnetite-andesite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-magnetite-chalk"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Magnetite Chalk",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-magnetite-chalk",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-magnetite-claystone"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Magnetite Claystone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-magnetite-claystone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-magnetite-conglomerate"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Magnetite Conglomerate",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-magnetite-conglomerate",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-magnetite-slate"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Magnetite Slate",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-magnetite-slate",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-malachite-greenmarble"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Malachite Green Marble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-malachite-greenmarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-malachite-limestone"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Malachite Limestone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-malachite-limestone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-malachite-redmarble"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Malachite Red Marble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-malachite-redmarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-malachite-whitemarble"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Malachite White Marble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-malachite-whitemarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-andesite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Andesite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-andesite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-basalt"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Basalt",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-basalt",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-chalk"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Chalk",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-chalk",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-chert"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Chert",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-chert",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-claystone"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Claystone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-claystone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-conglomerate"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Conglomerate",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-conglomerate",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-granite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Granite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-granite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-peridotite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Peridotite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-peridotite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-phyllite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Phyllite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-phyllite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-sandstone"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Sandstone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-sandstone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-shale"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Shale",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-shale",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-nativecopper-slate"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Native Copper Slate",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-nativecopper-slate",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-hematite-granite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Hematite Granite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-hematite-granite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-hematite-limestone"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Hematite Limestone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-hematite-limestone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-hematite-peridotite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Hematite Peridotite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-hematite-peridotite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-hematite-phyllite"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Hematite Phyllite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-hematite-phyllite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "P",
+    "ingredients": {
+      "P": {
+        "type": "block",
+        "code": "vsmineralmasonry:polished-hematite-sandstone"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "name": "Expose Hematite Sandstone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:exposed-hematite-sandstone",
+      "quantity": 1
+    }
+  }
+]
