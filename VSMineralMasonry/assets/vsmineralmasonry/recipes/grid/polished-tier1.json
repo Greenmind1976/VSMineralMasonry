@@ -1,0 +1,1322 @@
+[
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-andesite",
+        "name": "andesite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Andesite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-andesite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-basalt",
+        "name": "basalt"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Basalt",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-basalt",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-bauxite",
+        "name": "bauxite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Bauxite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-bauxite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-chalk",
+        "name": "chalk"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Chalk",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-chalk",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-chert",
+        "name": "chert"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Chert",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-chert",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-claystone",
+        "name": "claystone"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Claystone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-claystone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-conglomerate",
+        "name": "conglomerate"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Conglomerate",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-conglomerate",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-granite",
+        "name": "granite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Granite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-granite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-greenmarble",
+        "name": "greenmarble"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Greenmarble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-greenmarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-halite",
+        "name": "halite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Halite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-halite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-kimberlite",
+        "name": "kimberlite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Kimberlite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-kimberlite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-limestone",
+        "name": "limestone"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Limestone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-limestone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-peridotite",
+        "name": "peridotite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Peridotite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-peridotite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-phyllite",
+        "name": "phyllite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Phyllite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-phyllite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-redmarble",
+        "name": "redmarble"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Redmarble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-redmarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-sandstone",
+        "name": "sandstone"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Sandstone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-sandstone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-shale",
+        "name": "shale"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Shale",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-shale",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-slate",
+        "name": "slate"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Slate",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-slate",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-suevite",
+        "name": "suevite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Suevite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-suevite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-malachite-*",
+        "name": "malachite"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-whitemarble",
+        "name": "whitemarble"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Malachite Whitemarble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-malachite-whitemarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-andesite",
+        "name": "andesite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Andesite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-andesite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-basalt",
+        "name": "basalt"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Basalt",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-basalt",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-bauxite",
+        "name": "bauxite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Bauxite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-bauxite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-chalk",
+        "name": "chalk"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Chalk",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-chalk",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-chert",
+        "name": "chert"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Chert",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-chert",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-claystone",
+        "name": "claystone"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Claystone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-claystone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-conglomerate",
+        "name": "conglomerate"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Conglomerate",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-conglomerate",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-granite",
+        "name": "granite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Granite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-granite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-greenmarble",
+        "name": "greenmarble"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Greenmarble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-greenmarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-halite",
+        "name": "halite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Halite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-halite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-kimberlite",
+        "name": "kimberlite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Kimberlite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-kimberlite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-limestone",
+        "name": "limestone"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Limestone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-limestone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-peridotite",
+        "name": "peridotite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Peridotite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-peridotite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-phyllite",
+        "name": "phyllite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Phyllite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-phyllite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-redmarble",
+        "name": "redmarble"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Redmarble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-redmarble",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-sandstone",
+        "name": "sandstone"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Sandstone",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-sandstone",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-shale",
+        "name": "shale"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Shale",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-shale",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-slate",
+        "name": "slate"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Slate",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-slate",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-suevite",
+        "name": "suevite"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Suevite",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-suevite",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HCM\nR__",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "M": {
+        "type": "item",
+        "code": "game:ore-*-nativecopper-*",
+        "name": "nativecopper"
+      },
+      "R": {
+        "type": "block",
+        "code": "game:rock-whitemarble",
+        "name": "whitemarble"
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "Polish Nativecopper Whitemarble",
+    "output": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-nativecopper-whitemarble",
+      "quantity": 1
+    }
+  }
+]

@@ -15,6 +15,40 @@ TEXTURE_ROOT="$PROJECT_DIR/assets/game/textures/block/stone"
 POLISHED_DIR="$TEXTURE_ROOT/polishedrock"
 SLAB_DIR="$TEXTURE_ROOT/polishedrockslab"
 
+base_args=()
+
+case "$OUTPUT_NAME" in
+  chalk|halite|limestone|whitemarble)
+    base_args=(
+      -modulate 112,100,100
+      -blur 0x0.55
+      -sigmoidal-contrast 3,52%
+    )
+    ;;
+  andesite|basalt|granite|greenmarble|kimberlite|peridotite|phyllite|shale|slate|suevite)
+    base_args=(
+      -modulate 92,104,100
+      -blur 0x0.55
+      -sigmoidal-contrast 4,50%
+    )
+    ;;
+  bauxite|chert|claystone|conglomerate|redmarble|sandstone)
+    base_args=(
+      -modulate 100,112,100
+      -blur 0x0.55
+      -sigmoidal-contrast 3,50%
+    )
+    ;;
+  *)
+    # Default to a restrained polish for stones without an explicit bucket yet.
+    base_args=(
+      -modulate 100,106,100
+      -blur 0x0.55
+      -sigmoidal-contrast 3,50%
+    )
+    ;;
+esac
+
 mkdir -p "$POLISHED_DIR" "$SLAB_DIR"
 
 MAIN_OUT="$POLISHED_DIR/$OUTPUT_NAME.png"
@@ -23,9 +57,7 @@ SLAB_OUT="$SLAB_DIR/$OUTPUT_NAME.png"
 
 magick "$SOURCE_TEXTURE" \
   -colorspace sRGB \
-  -sigmoidal-contrast 4,55% \
-  -modulate 103,78,100 \
-  -blur 0x0.55 \
+  "${base_args[@]}" \
   -unsharp 0x0.85+0.9+0.015 \
   "$MAIN_OUT"
 
