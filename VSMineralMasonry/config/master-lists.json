@@ -101,9 +101,7 @@
     "exposedMineral": {
       "mode": "selective",
       "notes": "Exposed blocks can be baked broadly while recipes stay limited until the embedding workflow is finalized.",
-      "enabledMinerals": [
-
-      ]
+      "enabledMinerals": []
     }
   },
   "mineralsByMiningTier": {
@@ -193,11 +191,13 @@
   "mineralsByVisualCategory": {
     "crystal": [
       "alum",
+      "borax",
+      "cinnabar",
       "corundum",
       "diamond",
       "emerald",
       "fluorite",
-      "cinnabar",
+      "kernite",
       "lapislazuli",
       "malachite",
       "olivine",
@@ -206,13 +206,13 @@
       "quartz_nativegold",
       "quartz_nativesilver",
       "rhodochrosite",
+      "sylvite",
       "uranium"
     ],
     "ore": [
       "anthracite",
       "bismuthinite",
       "bituminouscoal",
-      "borax",
       "cassiterite",
       "chromite",
       "galena",
@@ -220,7 +220,6 @@
       "graphite",
       "hematite",
       "ilmenite",
-      "kernite",
       "lignite",
       "limonite",
       "magnetite",
@@ -228,8 +227,7 @@
       "pentlandite",
       "phosphorite",
       "sphalerite",
-      "sulfur",
-      "sylvite"
+      "sulfur"
     ]
   },
   "mineralVisualCategory": {
@@ -251,7 +249,7 @@
     "anthracite": "ore",
     "bismuthinite": "ore",
     "bituminouscoal": "ore",
-    "borax": "ore",
+    "borax": "crystal",
     "cassiterite": "ore",
     "chromite": "ore",
     "galena": "ore",
@@ -259,7 +257,7 @@
     "graphite": "ore",
     "hematite": "ore",
     "ilmenite": "ore",
-    "kernite": "ore",
+    "kernite": "crystal",
     "lignite": "ore",
     "limonite": "ore",
     "magnetite": "ore",
@@ -268,7 +266,7 @@
     "phosphorite": "ore",
     "sphalerite": "ore",
     "sulfur": "ore",
-    "sylvite": "ore"
+    "sylvite": "crystal"
   },
   "oresByMiningTier": {
     "2": [
@@ -279,16 +277,13 @@
       "lignite",
       "nativecopper",
       "sphalerite",
-      "sulfur",
-      "sylvite"
+      "sulfur"
     ],
     "3": [
       "anthracite",
       "bituminouscoal",
-      "borax",
       "graphite",
       "hematite",
-      "kernite",
       "limonite",
       "magnetite",
       "phosphorite"
@@ -303,10 +298,12 @@
   },
   "crystals": [
     "alum",
+    "borax",
     "corundum",
     "diamond",
     "emerald",
     "fluorite",
+    "kernite",
     "lapislazuli",
     "malachite",
     "olivine",
@@ -315,6 +312,7 @@
     "quartz_nativegold",
     "quartz_nativesilver",
     "rhodochrosite",
+    "sylvite",
     "uranium"
   ]
 }

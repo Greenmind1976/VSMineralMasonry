@@ -31,7 +31,8 @@
         "phosphorite",
         "pentlandite",
         "ilmenite",
-        "chromite"
+        "chromite",
+        "hematite"
       ]
     },
     {
@@ -420,7 +421,27 @@
     "polished-chromite-shale",
     "polished-chromite-slate",
     "polished-chromite-suevite",
-    "polished-chromite-whitemarble"
+    "polished-chromite-whitemarble",
+    "polished-hematite-andesite",
+    "polished-hematite-basalt",
+    "polished-hematite-bauxite",
+    "polished-hematite-chalk",
+    "polished-hematite-chert",
+    "polished-hematite-claystone",
+    "polished-hematite-conglomerate",
+    "polished-hematite-granite",
+    "polished-hematite-greenmarble",
+    "polished-hematite-halite",
+    "polished-hematite-kimberlite",
+    "polished-hematite-limestone",
+    "polished-hematite-peridotite",
+    "polished-hematite-phyllite",
+    "polished-hematite-redmarble",
+    "polished-hematite-sandstone",
+    "polished-hematite-shale",
+    "polished-hematite-slate",
+    "polished-hematite-suevite",
+    "polished-hematite-whitemarble"
   ],
   "creativeinventory": {
     "general": [
@@ -3938,6 +3959,86 @@
           "avg": 1
         }
       }
-    ]
+    ],
+    "polished-hematite-andesite": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-andesite"
+    },
+    "polished-hematite-basalt": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-basalt"
+    },
+    "polished-hematite-bauxite": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-bauxite"
+    },
+    "polished-hematite-chalk": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-chalk"
+    },
+    "polished-hematite-chert": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-chert"
+    },
+    "polished-hematite-claystone": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-claystone"
+    },
+    "polished-hematite-conglomerate": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-conglomerate"
+    },
+    "polished-hematite-granite": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-granite"
+    },
+    "polished-hematite-greenmarble": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-greenmarble"
+    },
+    "polished-hematite-halite": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-halite"
+    },
+    "polished-hematite-kimberlite": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-kimberlite"
+    },
+    "polished-hematite-limestone": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-limestone"
+    },
+    "polished-hematite-peridotite": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-peridotite"
+    },
+    "polished-hematite-phyllite": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-phyllite"
+    },
+    "polished-hematite-redmarble": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-redmarble"
+    },
+    "polished-hematite-sandstone": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-sandstone"
+    },
+    "polished-hematite-shale": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-shale"
+    },
+    "polished-hematite-slate": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-slate"
+    },
+    "polished-hematite-suevite": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-suevite"
+    },
+    "polished-hematite-whitemarble": {
+      "type": "block",
+      "code": "vsmineralmasonry:polished-hematite-whitemarble"
+    }
   }
 }

@@ -32,6 +32,7 @@ base_color_for() {
     lignite) echo '#665547' ;;
     nativecopper) echo '#d77733' ;;
     graphite) echo '#575a5e' ;;
+    hematite) echo '#8c4438' ;;
     ilmenite) echo '#5a4338' ;;
     limonite) echo '#a46643' ;;
     magnetite) echo '#8f979e' ;;
@@ -39,7 +40,6 @@ base_color_for() {
     phosphorite) echo '#8e8c5f' ;;
     sphalerite) echo '#a67647' ;;
     sulfur) echo '#c6b12a' ;;
-    sylvite) echo '#bf7a5f' ;;
     *) echo '#999999' ;;
   esac
 }
@@ -291,6 +291,10 @@ elif [ "$MINERAL" = "graphite" ]; then
   build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-14.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
   build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-11.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
   build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-13.png" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
+elif [ "$MINERAL" = "hematite" ]; then
+  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/extra-high/extra-high-mask-01.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/extra-high/extra-high-mask-02.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/extra-high/extra-high-mask-03.png" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
 elif [ "$MINERAL" = "ilmenite" ]; then
   build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-07.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
   build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-08.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
