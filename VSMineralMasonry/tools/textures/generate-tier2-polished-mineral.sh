@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+usage() {
+  echo "Usage: $0 <mineral> <mask1.png|vanilla|vanilla:mineral> <mask2.png|vanilla|vanilla:mineral> <mask3.png|vanilla|vanilla:mineral> [--base-palette-mineral <mineral>] [--overlay2-mask1 <mask>] [--overlay2-mask2 <mask>] [--overlay2-mask3 <mask>] [--overlay2-palette-mineral <mineral>]" >&2
+}
+
 if [ "${1:-}" = "" ] || [ "${2:-}" = "" ] || [ "${3:-}" = "" ] || [ "${4:-}" = "" ]; then
-  echo "Usage: $0 <mineral> <mask1.png|vanilla> <mask2.png|vanilla> <mask3.png|vanilla>" >&2
+  usage
   exit 1
 fi
 
@@ -10,6 +14,47 @@ MINERAL="$1"
 MASK1="$2"
 MASK2="$3"
 MASK3="$4"
+shift 4
+
+BASE_PALETTE_MINERAL="$MINERAL"
+OVERLAY2_MASK1=""
+OVERLAY2_MASK2=""
+OVERLAY2_MASK3=""
+OVERLAY2_PALETTE_MINERAL=""
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --base-palette-mineral)
+      BASE_PALETTE_MINERAL="${2:-}"
+      shift 2
+      ;;
+    --overlay2-mask1)
+      OVERLAY2_MASK1="${2:-}"
+      shift 2
+      ;;
+    --overlay2-mask2)
+      OVERLAY2_MASK2="${2:-}"
+      shift 2
+      ;;
+    --overlay2-mask3)
+      OVERLAY2_MASK3="${2:-}"
+      shift 2
+      ;;
+    --overlay2-palette-mineral)
+      OVERLAY2_PALETTE_MINERAL="${2:-}"
+      shift 2
+      ;;
+    --help|-h)
+      usage
+      exit 0
+      ;;
+    *)
+      echo "Unknown option: $1" >&2
+      usage
+      exit 1
+      ;;
+  esac
+done
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
@@ -73,6 +118,9 @@ palette_for() {
       ;;
     sulfur)
       printf '%s\n' '#716311' '#c6b12a' '#f2e078'
+      ;;
+    silver)
+      printf '%s\n' '#636a73' '#b7c0cb' '#fbfdff'
       ;;
     sylvite)
       printf '%s\n' '#794634' '#bf7a5f' '#efb59a'
@@ -155,19 +203,46 @@ PY
 
 mkdir -p "$OUT_DIR"
 
-PALETTE="$(sample_palette_from_ore "$MINERAL")"
+PALETTE="$(sample_palette_from_ore "$BASE_PALETTE_MINERAL")"
 SHADOW="$(printf '%s\n' "$PALETTE" | sed -n '1p')"
 MID="$(printf '%s\n' "$PALETTE" | sed -n '2p')"
 HIGHLIGHT="$(printf '%s\n' "$PALETTE" | sed -n '3p')"
+
+SECONDARY_SHADOW=""
+SECONDARY_MID=""
+SECONDARY_HIGHLIGHT=""
+if [[ -n "$OVERLAY2_PALETTE_MINERAL" ]]; then
+  SECONDARY_PALETTE="$(sample_palette_from_ore "$OVERLAY2_PALETTE_MINERAL")"
+  SECONDARY_SHADOW="$(printf '%s\n' "$SECONDARY_PALETTE" | sed -n '1p')"
+  SECONDARY_MID="$(printf '%s\n' "$SECONDARY_PALETTE" | sed -n '2p')"
+  SECONDARY_HIGHLIGHT="$(printf '%s\n' "$SECONDARY_PALETTE" | sed -n '3p')"
+fi
 
 mask_overlay() {
   local mask_file="$1"
   local variant="$2"
   local out_file="$3"
+  local shadow="$4"
+  local mid="$5"
+  local highlight="$6"
   local source_file="$mask_file"
+  local source_mineral="$MINERAL"
+
+  if [[ "$mask_file" == vanilla:* ]]; then
+    source_mineral="${mask_file#vanilla:}"
+    source_file="/Applications/Vintage Story.app/assets/survival/textures/block/stone/ore/${source_mineral}${variant}.png"
+    magick "$source_file" \
+      -filter point -resize 64x64! \
+      -colorspace sRGB \
+      -modulate 100,118,100 \
+      -sigmoidal-contrast 3,50% \
+      -type TrueColorAlpha \
+      PNG32:"$out_file"
+    return
+  fi
 
   if [ "$mask_file" = "vanilla" ]; then
-    source_file="/Applications/Vintage Story.app/assets/survival/textures/block/stone/ore/${MINERAL}${variant}.png"
+    source_file="/Applications/Vintage Story.app/assets/survival/textures/block/stone/ore/${source_mineral}${variant}.png"
     magick "$source_file" \
       -filter point -resize 64x64! \
       -colorspace sRGB \
@@ -184,19 +259,47 @@ mask_overlay() {
     -level 18%,96% \
     -write mpr:gray +delete \
     mpr:gray \
-    \( xc:"$SHADOW" xc:"$MID" xc:"$HIGHLIGHT" +append -filter triangle -resize 256x1! \) \
+    \( xc:"$shadow" xc:"$mid" xc:"$highlight" +append -filter triangle -resize 256x1! \) \
     -clut \
     -colorspace sRGB \
     mpr:gray -compose CopyOpacity -composite \
     PNG32:"$out_file"
 }
 
+compose_overlay_pair() {
+  local primary_mask="$1"
+  local secondary_mask="$2"
+  local variant="$3"
+  local out_file="$4"
+
+  local primary_tmp
+  local secondary_tmp
+  primary_tmp="$(mktemp /tmp/${MINERAL}-primary-XXXX.png)"
+  secondary_tmp="$(mktemp /tmp/${MINERAL}-secondary-XXXX.png)"
+
+  mask_overlay "$primary_mask" "$variant" "$primary_tmp" "$SHADOW" "$MID" "$HIGHLIGHT"
+  mask_overlay "$secondary_mask" "$variant" "$secondary_tmp" "$SECONDARY_SHADOW" "$SECONDARY_MID" "$SECONDARY_HIGHLIGHT"
+
+  magick "$primary_tmp" "$secondary_tmp" -compose Over -composite PNG32:"$out_file"
+  rm -f "$primary_tmp" "$secondary_tmp"
+}
+
 TMP1="/tmp/${MINERAL}-overlay-1.png"
 TMP2="/tmp/${MINERAL}-overlay-2.png"
 TMP3="/tmp/${MINERAL}-overlay-3.png"
-mask_overlay "$MASK1" "1" "$TMP1"
-mask_overlay "$MASK2" "2" "$TMP2"
-mask_overlay "$MASK3" "3" "$TMP3"
+if [[ -n "$OVERLAY2_MASK1" || -n "$OVERLAY2_MASK2" || -n "$OVERLAY2_MASK3" ]]; then
+  if [[ -z "$OVERLAY2_MASK1" || -z "$OVERLAY2_MASK2" || -z "$OVERLAY2_MASK3" || -z "$OVERLAY2_PALETTE_MINERAL" ]]; then
+    echo "Secondary overlay requires all three overlay2 masks and --overlay2-palette-mineral" >&2
+    exit 1
+  fi
+  compose_overlay_pair "$MASK1" "$OVERLAY2_MASK1" "1" "$TMP1"
+  compose_overlay_pair "$MASK2" "$OVERLAY2_MASK2" "2" "$TMP2"
+  compose_overlay_pair "$MASK3" "$OVERLAY2_MASK3" "3" "$TMP3"
+else
+  mask_overlay "$MASK1" "1" "$TMP1" "$SHADOW" "$MID" "$HIGHLIGHT"
+  mask_overlay "$MASK2" "2" "$TMP2" "$SHADOW" "$MID" "$HIGHLIGHT"
+  mask_overlay "$MASK3" "3" "$TMP3" "$SHADOW" "$MID" "$HIGHLIGHT"
+fi
 
 for rock in "${ROCKS[@]}"; do
   rock_src="/Applications/Vintage Story.app/assets/survival/textures/block/stone/rock/${rock}1.png"

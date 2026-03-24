@@ -1,20 +1,47 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [ "${1:-}" = "" ] || [ "${2:-}" = "" ] || [ "${3:-}" = "" ] || [ "${4:-}" = "" ]; then
-  echo "Usage: $0 <mineral> <mask1.png> <mask2.png> <mask3.png>" >&2
-  exit 1
-fi
-
-MINERAL="$1"
-MASK1="$2"
-MASK2="$3"
-MASK3="$4"
-
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 OUT_DIR="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedmineral/tier2"
+OVERLAY_BASE="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedmineral-overlays"
+MASTER_LISTS="$PROJECT_DIR/config/master-lists.json"
+MANIFEST="$PROJECT_DIR/assets/vsmineralmasonry/textures/review/ore-color-studies/ore-curated-mask-manifest.json"
 BEVEL_SCRIPT="$SCRIPT_DIR/apply-block-bevel.sh"
+
+load_masks_from_manifest() {
+  python3 - "$MANIFEST" "$1" <<'PY'
+import json, sys
+with open(sys.argv[1]) as f:
+    j = json.load(f)
+for mask in j[sys.argv[2]]:
+    print(mask)
+PY
+}
+
+if [ "${1:-}" = "" ]; then
+  MINERALS=()
+  while IFS= read -r mineral; do
+    MINERALS+=("$mineral")
+  done < <(python3 - "$MANIFEST" <<'PY'
+import json, sys
+with open(sys.argv[1]) as f:
+    j = json.load(f)
+for mineral in j.keys():
+    print(mineral)
+PY
+)
+elif [ "${2:-}" = "" ]; then
+  MINERALS=("$1")
+else
+  if [ "${4:-}" = "" ]; then
+    echo "Usage: $0 <mineral> <mask1.png> <mask2.png> <mask3.png>" >&2
+    echo "   or: $0 <mineral>" >&2
+    echo "   or: $0" >&2
+    exit 1
+  fi
+  MINERALS=("$1")
+fi
 
 ROCKS=(
   andesite basalt bauxite chalk chert claystone conglomerate granite
@@ -249,13 +276,38 @@ build_bituminouscoal_overlay() {
 
 mkdir -p "$OUT_DIR"
 
+for MINERAL in "${MINERALS[@]}"; do
+if [ "${2:-}" = "" ]; then
+  MASKS=()
+  while IFS= read -r mask; do
+    MASKS+=("$mask")
+  done < <(load_masks_from_manifest "$MINERAL")
+  MASK1="${MASKS[0]}"
+  MASK2="${MASKS[1]}"
+  MASK3="${MASKS[2]}"
+else
+  MASK1="$2"
+  MASK2="$3"
+  MASK3="$4"
+fi
+
+TIER="$(python3 - "$MASTER_LISTS" "$MINERAL" <<'PY'
+import json, sys
+with open(sys.argv[1]) as f:
+    j = json.load(f)
+print(j["mineralMiningTier"].get(sys.argv[2], 2))
+PY
+)"
+OVERLAY_DIR="$OVERLAY_BASE/tier$TIER"
+mkdir -p "$OVERLAY_DIR"
+
 BASE="$(base_color_for "$MINERAL")"
 SHADOW="$(shade_color "$BASE" 0.75)"
 HIGHLIGHT="$(shade_color "$BASE" 1.22)"
 
-TMP1="/tmp/${MINERAL}-simple-overlay-1.png"
-TMP2="/tmp/${MINERAL}-simple-overlay-2.png"
-TMP3="/tmp/${MINERAL}-simple-overlay-3.png"
+TMP1="$OVERLAY_DIR/${MINERAL}1-overlay.png"
+TMP2="$OVERLAY_DIR/${MINERAL}2-overlay.png"
+TMP3="$OVERLAY_DIR/${MINERAL}3-overlay.png"
 if [ "$MINERAL" = "galena_nativesilver" ]; then
   build_galena_nativesilver_overlay "$MASK1" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/low-coverage/low-coverage-mask-01.png" "$TMP1"
   build_galena_nativesilver_overlay "$MASK2" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/low-coverage/low-coverage-mask-02.png" "$TMP2"
@@ -265,56 +317,53 @@ elif [ "$MINERAL" = "lignite" ]; then
   build_lignite_overlay "$MASK2" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-02.png" "$TMP2"
   build_lignite_overlay "$MASK3" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-01.png" "$TMP3"
 elif [ "$MINERAL" = "sphalerite" ]; then
-  build_sphalerite_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-03.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-02.png" "$TMP1"
-  build_sphalerite_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-02.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-01.png" "$TMP2"
-  build_sphalerite_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-01.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-03.png" "$TMP3"
+  build_sphalerite_overlay "$MASK1" "$MASK2" "$TMP1"
+  build_sphalerite_overlay "$MASK2" "$MASK3" "$TMP2"
+  build_sphalerite_overlay "$MASK3" "$MASK1" "$TMP3"
 elif [ "$MINERAL" = "sulfur" ]; then
-  build_sulfur_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-01.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-14.png" "$TMP1"
-  build_sulfur_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-02.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-11.png" "$TMP2"
-  build_sulfur_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-03.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-13.png" "$TMP3"
+  build_sulfur_overlay "$MASK1" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-14.png" "$TMP1"
+  build_sulfur_overlay "$MASK2" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-11.png" "$TMP2"
+  build_sulfur_overlay "$MASK3" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-13.png" "$TMP3"
 elif [ "$MINERAL" = "anthracite" ]; then
-  build_anthracite_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-01.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-14.png" "$TMP1"
-  build_anthracite_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-02.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-11.png" "$TMP2"
-  build_anthracite_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-03.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-13.png" "$TMP3"
+  build_anthracite_overlay "$MASK1" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-14.png" "$TMP1"
+  build_anthracite_overlay "$MASK2" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-11.png" "$TMP2"
+  build_anthracite_overlay "$MASK3" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-13.png" "$TMP3"
 elif [ "$MINERAL" = "bituminouscoal" ]; then
-  build_bituminouscoal_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-01.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-01.png" "$TMP1"
-  build_bituminouscoal_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-03.png" "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-03.png" "$TMP2"
-  tmp_mask="$(mktemp /tmp/bituminouscoal-rot180XXXX.png)"
-  magick "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/derived-sprawl/sprawl-mask-01.png" -rotate 180 PNG32:"$tmp_mask"
-  build_bituminouscoal_overlay "$tmp_mask" "$tmp_mask" "$TMP3"
-  rm -f "$tmp_mask"
+  build_bituminouscoal_overlay "$MASK1" "$MASK1" "$TMP1"
+  build_bituminouscoal_overlay "$MASK2" "$MASK2" "$TMP2"
+  build_bituminouscoal_overlay "$MASK3" "$MASK3" "$TMP3"
 elif [ "$MINERAL" = "chromite" ]; then
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-04.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-05.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-06.png" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK1" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK2" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK3" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
 elif [ "$MINERAL" = "graphite" ]; then
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-14.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-11.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-13.png" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK1" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK2" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK3" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
 elif [ "$MINERAL" = "hematite" ]; then
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/extra-high/extra-high-mask-01.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/extra-high/extra-high-mask-02.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/extra-high/extra-high-mask-03.png" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK1" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK2" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK3" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
 elif [ "$MINERAL" = "ilmenite" ]; then
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-07.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-08.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-09.png" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK1" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK2" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK3" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
 elif [ "$MINERAL" = "limonite" ]; then
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/extra-high/extra-high-mask-02.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/extra-high/extra-high-mask-03.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/extra-high/extra-high-mask-04.png" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK1" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK2" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK3" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
 elif [ "$MINERAL" = "magnetite" ]; then
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/high-coverage/high-coverage-mask-05.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/high-coverage/high-coverage-mask-06.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/high-coverage/high-coverage-mask-07.png" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK1" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK2" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK3" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
 elif [ "$MINERAL" = "pentlandite" ]; then
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/high-coverage/high-coverage-mask-05.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/high-coverage/high-coverage-mask-06.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/high-coverage/high-coverage-mask-07.png" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK1" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK2" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK3" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
 elif [ "$MINERAL" = "phosphorite" ]; then
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-11.png" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-13.png" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
-  build_overlay "$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/medium-coverage/medium-coverage-mask-14.png" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK1" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK2" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
+  build_overlay "$MASK3" "$TMP3" "$BASE" "$SHADOW" "$HIGHLIGHT"
 else
   build_overlay "$MASK1" "$TMP1" "$BASE" "$SHADOW" "$HIGHLIGHT"
   build_overlay "$MASK2" "$TMP2" "$BASE" "$SHADOW" "$HIGHLIGHT"
@@ -337,3 +386,5 @@ for rock in "${ROCKS[@]}"; do
 done
 
 echo "Generated $MINERAL textures in $OUT_DIR"
+echo "Saved $MINERAL overlays in $OVERLAY_DIR"
+done

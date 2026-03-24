@@ -296,6 +296,26 @@
       "ilmenite"
     ]
   },
+  "oreTextureAssignments": {
+    "anthracite": "granite-overlay14.png",
+    "bismuthinite": "granite-overlay17.png",
+    "bituminouscoal": "granite-overlay23.png",
+    "cassiterite": "granite-overlay6.png",
+    "chromite": "granite-overlay9.png",
+    "galena": "granite-overlay15.png",
+    "galena_nativesilver": "granite-overlay10.png",
+    "graphite": "granite-overlay11.png",
+    "hematite": "granite-overlay7.png",
+    "ilmenite": "granite-overlay5.png",
+    "lignite": "granite-overlay13.png",
+    "limonite": "granite-overlay20.png",
+    "magnetite": "granite-overlay8.png",
+    "nativecopper": "granite-overlay18.png",
+    "pentlandite": "granite-overlay3.png",
+    "phosphorite": "granite-overlay2.png",
+    "sphalerite": "granite-overlay21.png",
+    "sulfur": "granite-overlay1.png"
+  },
   "crystals": [
     "alum",
     "borax",
