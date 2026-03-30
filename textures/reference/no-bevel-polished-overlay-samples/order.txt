@@ -1,0 +1,16 @@
+Rows top to bottom:
+greccia emerald
+greccia quartz
+greccia bituminouscoal
+soapstone emerald
+soapstone quartz
+soapstone bituminouscoal
+travertine emerald
+travertine quartz
+travertine bituminouscoal
+
+Columns left to right:
+overlay
+basalt (no-bevel polished base)
+granite (no-bevel polished base)
+chalk (no-bevel polished base)

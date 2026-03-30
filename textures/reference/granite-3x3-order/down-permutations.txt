@@ -1,0 +1,4 @@
+A_normal: rows r1->r3, cols c1->c3
+B_flip_cols: rows r1->r3, cols c3->c1
+C_flip_rows: rows r3->r1, cols c1->c3
+D_flip_both: rows r3->r1, cols c3->c1

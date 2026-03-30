@@ -1,0 +1,3 @@
+Rows grouped by color: green, darkred, yellow
+Within each group: top = 100% polished, bottom = 40% burnished
+Cols: basalt, chalk, chert, granite

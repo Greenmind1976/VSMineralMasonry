@@ -1,0 +1,5 @@
+A top-left: normal rows, normal cols
+B top-right: normal rows, flipped cols
+C bottom-left: flipped rows, normal cols
+D bottom-right: flipped rows, flipped cols
+Left half of each panel is UP (base textures). Right half is DOWN (horizontal-flipped textures).

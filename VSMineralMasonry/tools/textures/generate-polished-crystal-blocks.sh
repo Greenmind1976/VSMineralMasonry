@@ -5,7 +5,6 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 MASK_DIR="$PROJECT_DIR/assets/vsmineralmasonry/textures/curated-masks/extra-high-legacy"
 MANIFEST="$PROJECT_DIR/assets/vsmineralmasonry/textures/review/crystal-color-studies/crystal-curated-mask-manifest.json"
-MASTER_LISTS="$PROJECT_DIR/config/master-lists.json"
 BEVEL_SCRIPT="$SCRIPT_DIR/apply-block-bevel.sh"
 OUT_BASE="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedcrystal"
 OVERLAY_BASE="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedcrystal-overlays"
@@ -15,21 +14,10 @@ if [ ! -f "$MANIFEST" ]; then
   exit 1
 fi
 
-if [ ! -f "$MASTER_LISTS" ]; then
-  echo "Missing master lists: $MASTER_LISTS" >&2
-  exit 1
-fi
-
-ROCKS=()
-while IFS= read -r rock; do
-  ROCKS+=("$rock")
-done < <(python3 - "$MASTER_LISTS" <<'PY'
-import json, sys
-with open(sys.argv[1]) as f:
-    j = json.load(f)
-for rock in j["rocks"]:
-    print(rock)
-PY
+ROCKS=(
+  andesite basalt bauxite chalk chert claystone conglomerate granite
+  greenmarble halite kimberlite limestone peridotite phyllite redmarble
+  sandstone shale slate suevite whitemarble
 )
 
 palette_for() {
@@ -220,15 +208,8 @@ for num in j[sys.argv[2]]:
     print(num)
 PY
 )
-  TIER="$(python3 - "$MASTER_LISTS" "$MINERAL" <<'PY'
-import json, sys
-with open(sys.argv[1]) as f:
-    j = json.load(f)
-print(j["mineralMiningTier"][sys.argv[2]])
-PY
-)"
-  OUT_DIR="$OUT_BASE/tier$TIER"
-  OVERLAY_DIR="$OVERLAY_BASE/tier$TIER"
+  OUT_DIR="$OUT_BASE"
+  OVERLAY_DIR="$OVERLAY_BASE"
   mkdir -p "$OUT_DIR"
   mkdir -p "$OVERLAY_DIR"
 

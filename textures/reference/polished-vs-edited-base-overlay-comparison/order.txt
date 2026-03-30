@@ -1,0 +1,6 @@
+Rows top to bottom:
+andesite basalt bauxite chalk chert claystone conglomerate granite greenmarble kimberlite limestone peridotite phyllite redmarble sandstone shale slate suevite whitemarble
+
+Columns left to right:
+vanilla polished rock
+edited polished-vanilla-64 base + greccia polished emerald R1C1 overlay

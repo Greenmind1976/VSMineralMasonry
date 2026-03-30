@@ -1,0 +1,2 @@
+Rows: basalt, granite, chalk
+Columns: vanilla rock | vanilla polished rock | de-beveled polished + overlay (greccia polished emerald R1C1)

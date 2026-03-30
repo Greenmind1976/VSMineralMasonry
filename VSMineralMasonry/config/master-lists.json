@@ -3,9 +3,8 @@
     "purpose": "Canonical working lists for VSMineralMasonry generation, recipe policy, and coverage checks.",
     "policy": "These lists are allowed to grow later if a missing rock or mineral needs to be added.",
     "design": "Block availability can be broader than recipe availability. Keep full matrices in the block system and use the recipe sections to control player-facing progression.",
-    "miningTier": "Vanilla mining tiers used for tool gating. These are stored by numeric tier so block organization and future recipe gating can follow actual break requirements.",
     "visualCategory": "Visual categories are for texture pipeline organization only. Crystal-style minerals should not use the same vein-mask treatment as ore-style minerals.",
-    "organization": "Use ore-by-tier for ore texture workflow and keep crystal-style minerals in a separate crystal workflow."
+    "organization": "Use ore and crystal as the primary texture workflow groups. Mining tier is no longer used for asset organization."
   },
   "rocks": [
     "andesite",
@@ -104,90 +103,6 @@
       "enabledMinerals": []
     }
   },
-  "mineralsByMiningTier": {
-    "2": [
-      "alum",
-      "bismuthinite",
-      "cassiterite",
-      "corundum",
-      "galena",
-      "galena_nativesilver",
-      "lapislazuli",
-      "lignite",
-      "malachite",
-      "nativecopper",
-      "sphalerite",
-      "sulfur",
-      "sylvite"
-    ],
-    "3": [
-      "anthracite",
-      "bituminouscoal",
-      "borax",
-      "cinnabar",
-      "fluorite",
-      "graphite",
-      "hematite",
-      "kernite",
-      "limonite",
-      "magnetite",
-      "olivine",
-      "olivine_peridot",
-      "phosphorite",
-      "quartz",
-      "quartz_nativegold",
-      "quartz_nativesilver"
-    ],
-    "4": [
-      "diamond",
-      "emerald",
-      "pentlandite",
-      "rhodochrosite",
-      "uranium"
-    ],
-    "5": [
-      "chromite",
-      "ilmenite"
-    ]
-  },
-  "mineralMiningTier": {
-    "alum": 2,
-    "anthracite": 3,
-    "bismuthinite": 2,
-    "bituminouscoal": 3,
-    "borax": 3,
-    "cassiterite": 2,
-    "chromite": 5,
-    "cinnabar": 3,
-    "corundum": 2,
-    "diamond": 4,
-    "emerald": 4,
-    "fluorite": 3,
-    "galena": 2,
-    "galena_nativesilver": 2,
-    "graphite": 3,
-    "hematite": 3,
-    "ilmenite": 5,
-    "kernite": 3,
-    "lapislazuli": 2,
-    "lignite": 2,
-    "limonite": 3,
-    "magnetite": 3,
-    "malachite": 2,
-    "nativecopper": 2,
-    "olivine": 3,
-    "olivine_peridot": 3,
-    "pentlandite": 4,
-    "phosphorite": 3,
-    "quartz": 3,
-    "quartz_nativegold": 3,
-    "quartz_nativesilver": 3,
-    "rhodochrosite": 4,
-    "sphalerite": 2,
-    "sulfur": 2,
-    "sylvite": 2,
-    "uranium": 4
-  },
   "mineralsByVisualCategory": {
     "crystal": [
       "alum",
@@ -199,7 +114,6 @@
       "fluorite",
       "kernite",
       "lapislazuli",
-      "malachite",
       "olivine",
       "olivine_peridot",
       "quartz",
@@ -223,6 +137,7 @@
       "lignite",
       "limonite",
       "magnetite",
+      "malachite",
       "nativecopper",
       "pentlandite",
       "phosphorite",
@@ -238,7 +153,7 @@
     "fluorite": "crystal",
     "cinnabar": "crystal",
     "lapislazuli": "crystal",
-    "malachite": "crystal",
+    "malachite": "ore",
     "olivine": "crystal",
     "olivine_peridot": "crystal",
     "quartz": "crystal",
@@ -268,52 +183,11 @@
     "sulfur": "ore",
     "sylvite": "crystal"
   },
-  "oresByMiningTier": {
-    "2": [
-      "bismuthinite",
-      "cassiterite",
-      "galena",
-      "galena_nativesilver",
-      "lignite",
-      "nativecopper",
-      "sphalerite",
-      "sulfur"
-    ],
-    "3": [
-      "anthracite",
-      "bituminouscoal",
-      "graphite",
-      "hematite",
-      "limonite",
-      "magnetite",
-      "phosphorite"
-    ],
-    "4": [
-      "pentlandite"
-    ],
-    "5": [
-      "chromite",
-      "ilmenite"
-    ]
-  },
   "oreTextureAssignments": {
-    "anthracite": "granite-overlay14.png",
-    "bismuthinite": "granite-overlay17.png",
-    "bituminouscoal": "granite-overlay23.png",
-    "cassiterite": "granite-overlay6.png",
-    "chromite": "granite-overlay9.png",
-    "galena": "granite-overlay15.png",
-    "galena_nativesilver": "granite-overlay10.png",
-    "graphite": "granite-overlay11.png",
-    "hematite": "granite-overlay7.png",
-    "ilmenite": "granite-overlay5.png",
     "lignite": "granite-overlay13.png",
-    "limonite": "granite-overlay20.png",
+    "hematite": "granite-overlay7.png",
     "magnetite": "granite-overlay8.png",
-    "nativecopper": "granite-overlay18.png",
-    "pentlandite": "granite-overlay3.png",
-    "phosphorite": "granite-overlay2.png",
-    "sphalerite": "granite-overlay21.png",
+    "malachite": "granite-1d.png",
     "sulfur": "granite-overlay1.png"
   },
   "crystals": [
@@ -325,7 +199,6 @@
     "fluorite",
     "kernite",
     "lapislazuli",
-    "malachite",
     "olivine",
     "olivine_peridot",
     "quartz",
@@ -334,5 +207,32 @@
     "rhodochrosite",
     "sylvite",
     "uranium"
+  ],
+  "crystalTextureStatus": {
+    "notes": "Tracking list for crystal overlays that still need replacement or refinement.",
+    "needsNewTexture": [
+      "cinnabar",
+      "corundum",
+      "kernite",
+      "olivine",
+      "olivine_peridot",
+      "rhodochrosite",
+      "sylvite"
+    ]
+  },
+  "supportedOreTypes": [
+    "lignite",
+    "bituminouscoal",
+    "quartz",
+    "magnetite",
+    "hematite",
+    "cinnabar",
+    "olivine",
+    "malachite",
+    "emerald",
+    "lapislazuli",
+    "sulfur",
+    "quartz_nativegold",
+    "quartz_nativesilver"
   ]
 }

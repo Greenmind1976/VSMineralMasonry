@@ -100,7 +100,7 @@ for rock in j["rocks"]:
 PY
 )
 
-detect_kind_and_tier() {
+detect_kind() {
   python3 - "$MASTER_LISTS" "$MINERAL" "$KIND" <<'PY'
 import json, sys
 with open(sys.argv[1]) as f:
@@ -108,16 +108,13 @@ with open(sys.argv[1]) as f:
 mineral = sys.argv[2]
 kind = sys.argv[3]
 visual = j.get("mineralVisualCategory", {})
-tier = j.get("mineralMiningTier", {}).get(mineral)
 if kind:
-    if tier is None:
+    if mineral not in visual:
         raise SystemExit(f"Unknown mineral: {mineral}")
     print(kind)
-    print(tier)
     raise SystemExit
 if mineral in visual:
     print(visual[mineral])
-    print(tier)
     raise SystemExit
 raise SystemExit(f"Unable to detect kind for {mineral}")
 PY
@@ -126,9 +123,8 @@ PY
 DETECTED=()
 while IFS= read -r line; do
   DETECTED+=("$line")
-done < <(detect_kind_and_tier)
+done < <(detect_kind)
 KIND="${DETECTED[0]}"
-TIER="${DETECTED[1]}"
 
 if [[ "$KIND" != "ore" && "$KIND" != "crystal" ]]; then
   echo "Unsupported kind: $KIND" >&2
@@ -136,12 +132,12 @@ if [[ "$KIND" != "ore" && "$KIND" != "crystal" ]]; then
 fi
 
 if [[ "$KIND" == "ore" ]]; then
-  EDIT_ROOT="$REPO_ROOT/textures/ore/tier$TIER"
-  OUT_DIR="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedmineral/tier2"
+  EDIT_ROOT="$REPO_ROOT/textures/ore"
+  OUT_DIR="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedmineral"
   REVIEW_DIR="$PROJECT_DIR/assets/vsmineralmasonry/textures/review"
 else
-  EDIT_ROOT="$REPO_ROOT/textures/crystal/tier$TIER"
-  OUT_DIR="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedcrystal/tier$TIER"
+  EDIT_ROOT="$REPO_ROOT/textures/crystal"
+  OUT_DIR="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedcrystal"
   REVIEW_DIR="$PROJECT_DIR/assets/vsmineralmasonry/textures/review"
 fi
 

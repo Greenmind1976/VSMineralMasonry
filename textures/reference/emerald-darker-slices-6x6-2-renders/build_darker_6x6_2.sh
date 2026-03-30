@@ -1,0 +1,221 @@
+#!/bin/zsh
+set -euo pipefail
+OUT="/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/reference/emerald-darker-slices-6x6-2-renders"
+ROCKSRC="/Applications/Vintage Story.app/assets/survival/textures/block/stone/rock"
+rm -rf "$OUT/green" "$OUT/darkred" "$OUT/yellow" "$OUT/tmp" "$OUT/rocks"
+mkdir -p "$OUT"/green/tiles "$OUT"/darkred/tiles "$OUT"/yellow/tiles "$OUT"/tmp "$OUT"/rocks
+for rock in basalt chalk chert granite; do
+  magick "$ROCKSRC/${rock}1.png" -filter point -resize 64x64! "$OUT/rocks/${rock}-64.png"
+done
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_01.png" -resize 64x64! "$OUT/green/tiles/green_01.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_02.png" -resize 64x64! "$OUT/green/tiles/green_02.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_03.png" -resize 64x64! "$OUT/green/tiles/green_03.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_04.png" -resize 64x64! "$OUT/green/tiles/green_04.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_05.png" -resize 64x64! "$OUT/green/tiles/green_05.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_06.png" -resize 64x64! "$OUT/green/tiles/green_06.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_07.png" -resize 64x64! "$OUT/green/tiles/green_07.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_08.png" -resize 64x64! "$OUT/green/tiles/green_08.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_09.png" -resize 64x64! "$OUT/green/tiles/green_09.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_10.png" -resize 64x64! "$OUT/green/tiles/green_10.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_11.png" -resize 64x64! "$OUT/green/tiles/green_11.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_12.png" -resize 64x64! "$OUT/green/tiles/green_12.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_13.png" -resize 64x64! "$OUT/green/tiles/green_13.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_14.png" -resize 64x64! "$OUT/green/tiles/green_14.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_15.png" -resize 64x64! "$OUT/green/tiles/green_15.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_16.png" -resize 64x64! "$OUT/green/tiles/green_16.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_17.png" -resize 64x64! "$OUT/green/tiles/green_17.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_18.png" -resize 64x64! "$OUT/green/tiles/green_18.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_19.png" -resize 64x64! "$OUT/green/tiles/green_19.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_20.png" -resize 64x64! "$OUT/green/tiles/green_20.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_21.png" -resize 64x64! "$OUT/green/tiles/green_21.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_22.png" -resize 64x64! "$OUT/green/tiles/green_22.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_23.png" -resize 64x64! "$OUT/green/tiles/green_23.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_24.png" -resize 64x64! "$OUT/green/tiles/green_24.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_25.png" -resize 64x64! "$OUT/green/tiles/green_25.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_26.png" -resize 64x64! "$OUT/green/tiles/green_26.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_27.png" -resize 64x64! "$OUT/green/tiles/green_27.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_28.png" -resize 64x64! "$OUT/green/tiles/green_28.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_29.png" -resize 64x64! "$OUT/green/tiles/green_29.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_30.png" -resize 64x64! "$OUT/green/tiles/green_30.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_31.png" -resize 64x64! "$OUT/green/tiles/green_31.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_32.png" -resize 64x64! "$OUT/green/tiles/green_32.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_33.png" -resize 64x64! "$OUT/green/tiles/green_33.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_34.png" -resize 64x64! "$OUT/green/tiles/green_34.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_35.png" -resize 64x64! "$OUT/green/tiles/green_35.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/6x6-2/images/emerald-darker_36.png" -resize 64x64! "$OUT/green/tiles/green_36.png"
+for f in "$OUT"/green/tiles/*.png; do
+  name=$(basename "$f")
+  magick "$f" -colorspace gray -fill "rgb(140,28,28)" -colorize 100 "$OUT/darkred/tiles/${name/green_/darkred_}"
+  magick "$f" -colorspace gray -fill "rgb(201,162,39)" -colorize 100 "$OUT/yellow/tiles/${name/green_/yellow_}"
+done
+magick -size 391x391 canvas:black \
+  "$OUT/green/tiles/green_01.png" -geometry +1+1 -composite \
+  "$OUT/green/tiles/green_02.png" -geometry +66+1 -composite \
+  "$OUT/green/tiles/green_03.png" -geometry +131+1 -composite \
+  "$OUT/green/tiles/green_04.png" -geometry +196+1 -composite \
+  "$OUT/green/tiles/green_05.png" -geometry +261+1 -composite \
+  "$OUT/green/tiles/green_06.png" -geometry +326+1 -composite \
+  "$OUT/green/tiles/green_07.png" -geometry +1+66 -composite \
+  "$OUT/green/tiles/green_08.png" -geometry +66+66 -composite \
+  "$OUT/green/tiles/green_09.png" -geometry +131+66 -composite \
+  "$OUT/green/tiles/green_10.png" -geometry +196+66 -composite \
+  "$OUT/green/tiles/green_11.png" -geometry +261+66 -composite \
+  "$OUT/green/tiles/green_12.png" -geometry +326+66 -composite \
+  "$OUT/green/tiles/green_13.png" -geometry +1+131 -composite \
+  "$OUT/green/tiles/green_14.png" -geometry +66+131 -composite \
+  "$OUT/green/tiles/green_15.png" -geometry +131+131 -composite \
+  "$OUT/green/tiles/green_16.png" -geometry +196+131 -composite \
+  "$OUT/green/tiles/green_17.png" -geometry +261+131 -composite \
+  "$OUT/green/tiles/green_18.png" -geometry +326+131 -composite \
+  "$OUT/green/tiles/green_19.png" -geometry +1+196 -composite \
+  "$OUT/green/tiles/green_20.png" -geometry +66+196 -composite \
+  "$OUT/green/tiles/green_21.png" -geometry +131+196 -composite \
+  "$OUT/green/tiles/green_22.png" -geometry +196+196 -composite \
+  "$OUT/green/tiles/green_23.png" -geometry +261+196 -composite \
+  "$OUT/green/tiles/green_24.png" -geometry +326+196 -composite \
+  "$OUT/green/tiles/green_25.png" -geometry +1+261 -composite \
+  "$OUT/green/tiles/green_26.png" -geometry +66+261 -composite \
+  "$OUT/green/tiles/green_27.png" -geometry +131+261 -composite \
+  "$OUT/green/tiles/green_28.png" -geometry +196+261 -composite \
+  "$OUT/green/tiles/green_29.png" -geometry +261+261 -composite \
+  "$OUT/green/tiles/green_30.png" -geometry +326+261 -composite \
+  "$OUT/green/tiles/green_31.png" -geometry +1+326 -composite \
+  "$OUT/green/tiles/green_32.png" -geometry +66+326 -composite \
+  "$OUT/green/tiles/green_33.png" -geometry +131+326 -composite \
+  "$OUT/green/tiles/green_34.png" -geometry +196+326 -composite \
+  "$OUT/green/tiles/green_35.png" -geometry +261+326 -composite \
+  "$OUT/green/tiles/green_36.png" -geometry +326+326 -composite "$OUT/overlay-6x6-reconstructed-bordered-green.png"
+magick -size 391x391 canvas:black \
+  "$OUT/darkred/tiles/darkred_01.png" -geometry +1+1 -composite \
+  "$OUT/darkred/tiles/darkred_02.png" -geometry +66+1 -composite \
+  "$OUT/darkred/tiles/darkred_03.png" -geometry +131+1 -composite \
+  "$OUT/darkred/tiles/darkred_04.png" -geometry +196+1 -composite \
+  "$OUT/darkred/tiles/darkred_05.png" -geometry +261+1 -composite \
+  "$OUT/darkred/tiles/darkred_06.png" -geometry +326+1 -composite \
+  "$OUT/darkred/tiles/darkred_07.png" -geometry +1+66 -composite \
+  "$OUT/darkred/tiles/darkred_08.png" -geometry +66+66 -composite \
+  "$OUT/darkred/tiles/darkred_09.png" -geometry +131+66 -composite \
+  "$OUT/darkred/tiles/darkred_10.png" -geometry +196+66 -composite \
+  "$OUT/darkred/tiles/darkred_11.png" -geometry +261+66 -composite \
+  "$OUT/darkred/tiles/darkred_12.png" -geometry +326+66 -composite \
+  "$OUT/darkred/tiles/darkred_13.png" -geometry +1+131 -composite \
+  "$OUT/darkred/tiles/darkred_14.png" -geometry +66+131 -composite \
+  "$OUT/darkred/tiles/darkred_15.png" -geometry +131+131 -composite \
+  "$OUT/darkred/tiles/darkred_16.png" -geometry +196+131 -composite \
+  "$OUT/darkred/tiles/darkred_17.png" -geometry +261+131 -composite \
+  "$OUT/darkred/tiles/darkred_18.png" -geometry +326+131 -composite \
+  "$OUT/darkred/tiles/darkred_19.png" -geometry +1+196 -composite \
+  "$OUT/darkred/tiles/darkred_20.png" -geometry +66+196 -composite \
+  "$OUT/darkred/tiles/darkred_21.png" -geometry +131+196 -composite \
+  "$OUT/darkred/tiles/darkred_22.png" -geometry +196+196 -composite \
+  "$OUT/darkred/tiles/darkred_23.png" -geometry +261+196 -composite \
+  "$OUT/darkred/tiles/darkred_24.png" -geometry +326+196 -composite \
+  "$OUT/darkred/tiles/darkred_25.png" -geometry +1+261 -composite \
+  "$OUT/darkred/tiles/darkred_26.png" -geometry +66+261 -composite \
+  "$OUT/darkred/tiles/darkred_27.png" -geometry +131+261 -composite \
+  "$OUT/darkred/tiles/darkred_28.png" -geometry +196+261 -composite \
+  "$OUT/darkred/tiles/darkred_29.png" -geometry +261+261 -composite \
+  "$OUT/darkred/tiles/darkred_30.png" -geometry +326+261 -composite \
+  "$OUT/darkred/tiles/darkred_31.png" -geometry +1+326 -composite \
+  "$OUT/darkred/tiles/darkred_32.png" -geometry +66+326 -composite \
+  "$OUT/darkred/tiles/darkred_33.png" -geometry +131+326 -composite \
+  "$OUT/darkred/tiles/darkred_34.png" -geometry +196+326 -composite \
+  "$OUT/darkred/tiles/darkred_35.png" -geometry +261+326 -composite \
+  "$OUT/darkred/tiles/darkred_36.png" -geometry +326+326 -composite "$OUT/overlay-6x6-reconstructed-bordered-darkred.png"
+magick -size 391x391 canvas:black \
+  "$OUT/yellow/tiles/yellow_01.png" -geometry +1+1 -composite \
+  "$OUT/yellow/tiles/yellow_02.png" -geometry +66+1 -composite \
+  "$OUT/yellow/tiles/yellow_03.png" -geometry +131+1 -composite \
+  "$OUT/yellow/tiles/yellow_04.png" -geometry +196+1 -composite \
+  "$OUT/yellow/tiles/yellow_05.png" -geometry +261+1 -composite \
+  "$OUT/yellow/tiles/yellow_06.png" -geometry +326+1 -composite \
+  "$OUT/yellow/tiles/yellow_07.png" -geometry +1+66 -composite \
+  "$OUT/yellow/tiles/yellow_08.png" -geometry +66+66 -composite \
+  "$OUT/yellow/tiles/yellow_09.png" -geometry +131+66 -composite \
+  "$OUT/yellow/tiles/yellow_10.png" -geometry +196+66 -composite \
+  "$OUT/yellow/tiles/yellow_11.png" -geometry +261+66 -composite \
+  "$OUT/yellow/tiles/yellow_12.png" -geometry +326+66 -composite \
+  "$OUT/yellow/tiles/yellow_13.png" -geometry +1+131 -composite \
+  "$OUT/yellow/tiles/yellow_14.png" -geometry +66+131 -composite \
+  "$OUT/yellow/tiles/yellow_15.png" -geometry +131+131 -composite \
+  "$OUT/yellow/tiles/yellow_16.png" -geometry +196+131 -composite \
+  "$OUT/yellow/tiles/yellow_17.png" -geometry +261+131 -composite \
+  "$OUT/yellow/tiles/yellow_18.png" -geometry +326+131 -composite \
+  "$OUT/yellow/tiles/yellow_19.png" -geometry +1+196 -composite \
+  "$OUT/yellow/tiles/yellow_20.png" -geometry +66+196 -composite \
+  "$OUT/yellow/tiles/yellow_21.png" -geometry +131+196 -composite \
+  "$OUT/yellow/tiles/yellow_22.png" -geometry +196+196 -composite \
+  "$OUT/yellow/tiles/yellow_23.png" -geometry +261+196 -composite \
+  "$OUT/yellow/tiles/yellow_24.png" -geometry +326+196 -composite \
+  "$OUT/yellow/tiles/yellow_25.png" -geometry +1+261 -composite \
+  "$OUT/yellow/tiles/yellow_26.png" -geometry +66+261 -composite \
+  "$OUT/yellow/tiles/yellow_27.png" -geometry +131+261 -composite \
+  "$OUT/yellow/tiles/yellow_28.png" -geometry +196+261 -composite \
+  "$OUT/yellow/tiles/yellow_29.png" -geometry +261+261 -composite \
+  "$OUT/yellow/tiles/yellow_30.png" -geometry +326+261 -composite \
+  "$OUT/yellow/tiles/yellow_31.png" -geometry +1+326 -composite \
+  "$OUT/yellow/tiles/yellow_32.png" -geometry +66+326 -composite \
+  "$OUT/yellow/tiles/yellow_33.png" -geometry +131+326 -composite \
+  "$OUT/yellow/tiles/yellow_34.png" -geometry +196+326 -composite \
+  "$OUT/yellow/tiles/yellow_35.png" -geometry +261+326 -composite \
+  "$OUT/yellow/tiles/yellow_36.png" -geometry +326+326 -composite "$OUT/overlay-6x6-reconstructed-bordered-yellow.png"
+for rock in basalt chalk chert granite; do
+  for color in green darkred yellow; do
+    rm -rf "$OUT/tmp/${rock}-${color}"
+    mkdir -p "$OUT/tmp/${rock}-${color}"
+    for i in {01..36}; do
+      ffmpeg -y -loglevel error -i "$OUT/rocks/${rock}-64.png" -i "$OUT/${color}/tiles/${color}_${i}.png" -filter_complex "[0][1]overlay=0:0:format=auto" "$OUT/tmp/${rock}-${color}/${rock}-${color}_${i}.png"
+    done
+    magick -size 391x391 canvas:black \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_01.png" -geometry +1+1 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_02.png" -geometry +66+1 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_03.png" -geometry +131+1 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_04.png" -geometry +196+1 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_05.png" -geometry +261+1 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_06.png" -geometry +326+1 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_07.png" -geometry +1+66 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_08.png" -geometry +66+66 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_09.png" -geometry +131+66 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_10.png" -geometry +196+66 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_11.png" -geometry +261+66 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_12.png" -geometry +326+66 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_13.png" -geometry +1+131 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_14.png" -geometry +66+131 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_15.png" -geometry +131+131 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_16.png" -geometry +196+131 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_17.png" -geometry +261+131 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_18.png" -geometry +326+131 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_19.png" -geometry +1+196 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_20.png" -geometry +66+196 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_21.png" -geometry +131+196 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_22.png" -geometry +196+196 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_23.png" -geometry +261+196 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_24.png" -geometry +326+196 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_25.png" -geometry +1+261 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_26.png" -geometry +66+261 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_27.png" -geometry +131+261 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_28.png" -geometry +196+261 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_29.png" -geometry +261+261 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_30.png" -geometry +326+261 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_31.png" -geometry +1+326 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_32.png" -geometry +66+326 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_33.png" -geometry +131+326 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_34.png" -geometry +196+326 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_35.png" -geometry +261+326 -composite \
+      "$OUT/tmp/${rock}-${color}/${rock}-${color}_36.png" -geometry +326+326 -composite "$OUT/${rock}-reconstructed-bordered-${color}.png"
+  done
+done
+magick -size 1644x1260 canvas:"rgb(245,245,245)" \
+  "$OUT/basalt-reconstructed-bordered-green.png" -geometry +80+44 -composite \
+  "$OUT/chalk-reconstructed-bordered-green.png" -geometry +471+44 -composite \
+  "$OUT/chert-reconstructed-bordered-green.png" -geometry +862+44 -composite \
+  "$OUT/granite-reconstructed-bordered-green.png" -geometry +1253+44 -composite \
+  "$OUT/basalt-reconstructed-bordered-darkred.png" -geometry +80+459 -composite \
+  "$OUT/chalk-reconstructed-bordered-darkred.png" -geometry +471+459 -composite \
+  "$OUT/chert-reconstructed-bordered-darkred.png" -geometry +862+459 -composite \
+  "$OUT/granite-reconstructed-bordered-darkred.png" -geometry +1253+459 -composite \
+  "$OUT/basalt-reconstructed-bordered-yellow.png" -geometry +80+874 -composite \
+  "$OUT/chalk-reconstructed-bordered-yellow.png" -geometry +471+874 -composite \
+  "$OUT/chert-reconstructed-bordered-yellow.png" -geometry +862+874 -composite \
+  "$OUT/granite-reconstructed-bordered-yellow.png" -geometry +1253+874 -composite "$OUT/multi-rock-color-comparison-sheet.png"
+printf "Rows: green, darkred, yellow\nCols: basalt, chalk, chert, granite\nGrid: 6x6, 64x64 per tile with 1px borders\n" > "$OUT/order.txt"

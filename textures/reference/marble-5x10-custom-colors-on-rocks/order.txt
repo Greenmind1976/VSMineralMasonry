@@ -1,0 +1,15 @@
+Columns: basalt, granite, chalk, whitemarble
+Rows:
+lignite
+bituminouscoal
+quartz
+magnetite
+hematite
+cinnabar
+olivine
+malachite
+emerald
+lapislazuli
+sulfur
+gold
+silver

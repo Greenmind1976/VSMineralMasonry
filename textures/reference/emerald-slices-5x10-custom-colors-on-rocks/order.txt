@@ -1,0 +1,2 @@
+Rows: lignite, quartz, magnetite, hematite, cinnabar, olivine, malachite, emerald, lapis_lazuli, sulfur, gold, silver
+Cols: basalt, chalk, chert, granite

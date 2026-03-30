@@ -1,0 +1,2118 @@
+#!/bin/zsh
+set -euo pipefail
+OUT="/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/reference/emerald-slices-5x10-opacity-renders"
+ROCKSRC="/Applications/Vintage Story.app/assets/survival/textures/block/stone/rock"
+rm -rf "$OUT/green" "$OUT/darkred" "$OUT/yellow" "$OUT/tmp" "$OUT/rocks"
+mkdir -p "$OUT"/green/tiles "$OUT"/darkred/tiles "$OUT"/yellow/tiles "$OUT"/tmp "$OUT"/rocks
+for rock in basalt chalk chert granite; do
+  magick "$ROCKSRC/${rock}1.png" -filter point -resize 64x64! "$OUT/rocks/${rock}-64.png"
+done
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_01.png" -resize 64x64! "$OUT/green/tiles/green_01.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_02.png" -resize 64x64! "$OUT/green/tiles/green_02.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_03.png" -resize 64x64! "$OUT/green/tiles/green_03.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_04.png" -resize 64x64! "$OUT/green/tiles/green_04.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_05.png" -resize 64x64! "$OUT/green/tiles/green_05.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_06.png" -resize 64x64! "$OUT/green/tiles/green_06.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_07.png" -resize 64x64! "$OUT/green/tiles/green_07.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_08.png" -resize 64x64! "$OUT/green/tiles/green_08.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_09.png" -resize 64x64! "$OUT/green/tiles/green_09.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_10.png" -resize 64x64! "$OUT/green/tiles/green_10.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_11.png" -resize 64x64! "$OUT/green/tiles/green_11.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_12.png" -resize 64x64! "$OUT/green/tiles/green_12.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_13.png" -resize 64x64! "$OUT/green/tiles/green_13.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_14.png" -resize 64x64! "$OUT/green/tiles/green_14.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_15.png" -resize 64x64! "$OUT/green/tiles/green_15.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_16.png" -resize 64x64! "$OUT/green/tiles/green_16.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_17.png" -resize 64x64! "$OUT/green/tiles/green_17.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_18.png" -resize 64x64! "$OUT/green/tiles/green_18.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_19.png" -resize 64x64! "$OUT/green/tiles/green_19.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_20.png" -resize 64x64! "$OUT/green/tiles/green_20.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_21.png" -resize 64x64! "$OUT/green/tiles/green_21.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_22.png" -resize 64x64! "$OUT/green/tiles/green_22.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_23.png" -resize 64x64! "$OUT/green/tiles/green_23.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_24.png" -resize 64x64! "$OUT/green/tiles/green_24.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_25.png" -resize 64x64! "$OUT/green/tiles/green_25.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_26.png" -resize 64x64! "$OUT/green/tiles/green_26.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_27.png" -resize 64x64! "$OUT/green/tiles/green_27.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_28.png" -resize 64x64! "$OUT/green/tiles/green_28.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_29.png" -resize 64x64! "$OUT/green/tiles/green_29.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_30.png" -resize 64x64! "$OUT/green/tiles/green_30.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_31.png" -resize 64x64! "$OUT/green/tiles/green_31.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_32.png" -resize 64x64! "$OUT/green/tiles/green_32.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_33.png" -resize 64x64! "$OUT/green/tiles/green_33.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_34.png" -resize 64x64! "$OUT/green/tiles/green_34.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_35.png" -resize 64x64! "$OUT/green/tiles/green_35.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_36.png" -resize 64x64! "$OUT/green/tiles/green_36.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_37.png" -resize 64x64! "$OUT/green/tiles/green_37.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_38.png" -resize 64x64! "$OUT/green/tiles/green_38.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_39.png" -resize 64x64! "$OUT/green/tiles/green_39.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_40.png" -resize 64x64! "$OUT/green/tiles/green_40.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_41.png" -resize 64x64! "$OUT/green/tiles/green_41.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_42.png" -resize 64x64! "$OUT/green/tiles/green_42.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_43.png" -resize 64x64! "$OUT/green/tiles/green_43.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_44.png" -resize 64x64! "$OUT/green/tiles/green_44.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_45.png" -resize 64x64! "$OUT/green/tiles/green_45.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_46.png" -resize 64x64! "$OUT/green/tiles/green_46.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_47.png" -resize 64x64! "$OUT/green/tiles/green_47.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_48.png" -resize 64x64! "$OUT/green/tiles/green_48.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_49.png" -resize 64x64! "$OUT/green/tiles/green_49.png"
+magick "/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/emerald-slices/5x10/images/Untitled-2_50.png" -resize 64x64! "$OUT/green/tiles/green_50.png"
+for f in "$OUT"/green/tiles/*.png; do
+  name=$(basename "$f")
+  magick "$f" -colorspace gray -fill "rgb(140,28,28)" -colorize 100 "$OUT/darkred/tiles/${name/green_/darkred_}"
+  magick "$f" -colorspace gray -fill "rgb(201,162,39)" -colorize 100 "$OUT/yellow/tiles/${name/green_/yellow_}"
+done
+rm -rf "$OUT/tmp/basalt-green-10pct"
+mkdir -p "$OUT/tmp/basalt-green-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/basalt-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/basalt-green-10pct/basalt-green-10pct_50.png" -geometry +586+261 -composite "$OUT/basalt-reconstructed-bordered-green-10pct.png"
+rm -rf "$OUT/tmp/basalt-green-25pct"
+mkdir -p "$OUT/tmp/basalt-green-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/basalt-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/basalt-green-25pct/basalt-green-25pct_50.png" -geometry +586+261 -composite "$OUT/basalt-reconstructed-bordered-green-25pct.png"
+rm -rf "$OUT/tmp/basalt-green-40pct"
+mkdir -p "$OUT/tmp/basalt-green-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/basalt-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/basalt-green-40pct/basalt-green-40pct_50.png" -geometry +586+261 -composite "$OUT/basalt-reconstructed-bordered-green-40pct.png"
+rm -rf "$OUT/tmp/basalt-darkred-10pct"
+mkdir -p "$OUT/tmp/basalt-darkred-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/basalt-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/basalt-darkred-10pct/basalt-darkred-10pct_50.png" -geometry +586+261 -composite "$OUT/basalt-reconstructed-bordered-darkred-10pct.png"
+rm -rf "$OUT/tmp/basalt-darkred-25pct"
+mkdir -p "$OUT/tmp/basalt-darkred-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/basalt-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/basalt-darkred-25pct/basalt-darkred-25pct_50.png" -geometry +586+261 -composite "$OUT/basalt-reconstructed-bordered-darkred-25pct.png"
+rm -rf "$OUT/tmp/basalt-darkred-40pct"
+mkdir -p "$OUT/tmp/basalt-darkred-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/basalt-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/basalt-darkred-40pct/basalt-darkred-40pct_50.png" -geometry +586+261 -composite "$OUT/basalt-reconstructed-bordered-darkred-40pct.png"
+rm -rf "$OUT/tmp/basalt-yellow-10pct"
+mkdir -p "$OUT/tmp/basalt-yellow-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/basalt-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/basalt-yellow-10pct/basalt-yellow-10pct_50.png" -geometry +586+261 -composite "$OUT/basalt-reconstructed-bordered-yellow-10pct.png"
+rm -rf "$OUT/tmp/basalt-yellow-25pct"
+mkdir -p "$OUT/tmp/basalt-yellow-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/basalt-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/basalt-yellow-25pct/basalt-yellow-25pct_50.png" -geometry +586+261 -composite "$OUT/basalt-reconstructed-bordered-yellow-25pct.png"
+rm -rf "$OUT/tmp/basalt-yellow-40pct"
+mkdir -p "$OUT/tmp/basalt-yellow-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/basalt-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/basalt-yellow-40pct/basalt-yellow-40pct_50.png" -geometry +586+261 -composite "$OUT/basalt-reconstructed-bordered-yellow-40pct.png"
+rm -rf "$OUT/tmp/chalk-green-10pct"
+mkdir -p "$OUT/tmp/chalk-green-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chalk-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chalk-green-10pct/chalk-green-10pct_50.png" -geometry +586+261 -composite "$OUT/chalk-reconstructed-bordered-green-10pct.png"
+rm -rf "$OUT/tmp/chalk-green-25pct"
+mkdir -p "$OUT/tmp/chalk-green-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chalk-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chalk-green-25pct/chalk-green-25pct_50.png" -geometry +586+261 -composite "$OUT/chalk-reconstructed-bordered-green-25pct.png"
+rm -rf "$OUT/tmp/chalk-green-40pct"
+mkdir -p "$OUT/tmp/chalk-green-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chalk-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chalk-green-40pct/chalk-green-40pct_50.png" -geometry +586+261 -composite "$OUT/chalk-reconstructed-bordered-green-40pct.png"
+rm -rf "$OUT/tmp/chalk-darkred-10pct"
+mkdir -p "$OUT/tmp/chalk-darkred-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chalk-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chalk-darkred-10pct/chalk-darkred-10pct_50.png" -geometry +586+261 -composite "$OUT/chalk-reconstructed-bordered-darkred-10pct.png"
+rm -rf "$OUT/tmp/chalk-darkred-25pct"
+mkdir -p "$OUT/tmp/chalk-darkred-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chalk-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chalk-darkred-25pct/chalk-darkred-25pct_50.png" -geometry +586+261 -composite "$OUT/chalk-reconstructed-bordered-darkred-25pct.png"
+rm -rf "$OUT/tmp/chalk-darkred-40pct"
+mkdir -p "$OUT/tmp/chalk-darkred-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chalk-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chalk-darkred-40pct/chalk-darkred-40pct_50.png" -geometry +586+261 -composite "$OUT/chalk-reconstructed-bordered-darkred-40pct.png"
+rm -rf "$OUT/tmp/chalk-yellow-10pct"
+mkdir -p "$OUT/tmp/chalk-yellow-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chalk-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chalk-yellow-10pct/chalk-yellow-10pct_50.png" -geometry +586+261 -composite "$OUT/chalk-reconstructed-bordered-yellow-10pct.png"
+rm -rf "$OUT/tmp/chalk-yellow-25pct"
+mkdir -p "$OUT/tmp/chalk-yellow-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chalk-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chalk-yellow-25pct/chalk-yellow-25pct_50.png" -geometry +586+261 -composite "$OUT/chalk-reconstructed-bordered-yellow-25pct.png"
+rm -rf "$OUT/tmp/chalk-yellow-40pct"
+mkdir -p "$OUT/tmp/chalk-yellow-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chalk-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chalk-yellow-40pct/chalk-yellow-40pct_50.png" -geometry +586+261 -composite "$OUT/chalk-reconstructed-bordered-yellow-40pct.png"
+rm -rf "$OUT/tmp/chert-green-10pct"
+mkdir -p "$OUT/tmp/chert-green-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chert-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chert-green-10pct/chert-green-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chert-green-10pct/chert-green-10pct_50.png" -geometry +586+261 -composite "$OUT/chert-reconstructed-bordered-green-10pct.png"
+rm -rf "$OUT/tmp/chert-green-25pct"
+mkdir -p "$OUT/tmp/chert-green-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chert-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chert-green-25pct/chert-green-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chert-green-25pct/chert-green-25pct_50.png" -geometry +586+261 -composite "$OUT/chert-reconstructed-bordered-green-25pct.png"
+rm -rf "$OUT/tmp/chert-green-40pct"
+mkdir -p "$OUT/tmp/chert-green-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chert-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chert-green-40pct/chert-green-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chert-green-40pct/chert-green-40pct_50.png" -geometry +586+261 -composite "$OUT/chert-reconstructed-bordered-green-40pct.png"
+rm -rf "$OUT/tmp/chert-darkred-10pct"
+mkdir -p "$OUT/tmp/chert-darkred-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chert-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chert-darkred-10pct/chert-darkred-10pct_50.png" -geometry +586+261 -composite "$OUT/chert-reconstructed-bordered-darkred-10pct.png"
+rm -rf "$OUT/tmp/chert-darkred-25pct"
+mkdir -p "$OUT/tmp/chert-darkred-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chert-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chert-darkred-25pct/chert-darkred-25pct_50.png" -geometry +586+261 -composite "$OUT/chert-reconstructed-bordered-darkred-25pct.png"
+rm -rf "$OUT/tmp/chert-darkred-40pct"
+mkdir -p "$OUT/tmp/chert-darkred-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chert-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chert-darkred-40pct/chert-darkred-40pct_50.png" -geometry +586+261 -composite "$OUT/chert-reconstructed-bordered-darkred-40pct.png"
+rm -rf "$OUT/tmp/chert-yellow-10pct"
+mkdir -p "$OUT/tmp/chert-yellow-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chert-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chert-yellow-10pct/chert-yellow-10pct_50.png" -geometry +586+261 -composite "$OUT/chert-reconstructed-bordered-yellow-10pct.png"
+rm -rf "$OUT/tmp/chert-yellow-25pct"
+mkdir -p "$OUT/tmp/chert-yellow-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chert-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chert-yellow-25pct/chert-yellow-25pct_50.png" -geometry +586+261 -composite "$OUT/chert-reconstructed-bordered-yellow-25pct.png"
+rm -rf "$OUT/tmp/chert-yellow-40pct"
+mkdir -p "$OUT/tmp/chert-yellow-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/chert-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/chert-yellow-40pct/chert-yellow-40pct_50.png" -geometry +586+261 -composite "$OUT/chert-reconstructed-bordered-yellow-40pct.png"
+rm -rf "$OUT/tmp/granite-green-10pct"
+mkdir -p "$OUT/tmp/granite-green-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/granite-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/granite-green-10pct/granite-green-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/granite-green-10pct/granite-green-10pct_50.png" -geometry +586+261 -composite "$OUT/granite-reconstructed-bordered-green-10pct.png"
+rm -rf "$OUT/tmp/granite-green-25pct"
+mkdir -p "$OUT/tmp/granite-green-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/granite-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/granite-green-25pct/granite-green-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/granite-green-25pct/granite-green-25pct_50.png" -geometry +586+261 -composite "$OUT/granite-reconstructed-bordered-green-25pct.png"
+rm -rf "$OUT/tmp/granite-green-40pct"
+mkdir -p "$OUT/tmp/granite-green-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/granite-64.png" -i "$OUT/green/tiles/green_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/granite-green-40pct/granite-green-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/granite-green-40pct/granite-green-40pct_50.png" -geometry +586+261 -composite "$OUT/granite-reconstructed-bordered-green-40pct.png"
+rm -rf "$OUT/tmp/granite-darkred-10pct"
+mkdir -p "$OUT/tmp/granite-darkred-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/granite-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/granite-darkred-10pct/granite-darkred-10pct_50.png" -geometry +586+261 -composite "$OUT/granite-reconstructed-bordered-darkred-10pct.png"
+rm -rf "$OUT/tmp/granite-darkred-25pct"
+mkdir -p "$OUT/tmp/granite-darkred-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/granite-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/granite-darkred-25pct/granite-darkred-25pct_50.png" -geometry +586+261 -composite "$OUT/granite-reconstructed-bordered-darkred-25pct.png"
+rm -rf "$OUT/tmp/granite-darkred-40pct"
+mkdir -p "$OUT/tmp/granite-darkred-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/granite-64.png" -i "$OUT/darkred/tiles/darkred_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/granite-darkred-40pct/granite-darkred-40pct_50.png" -geometry +586+261 -composite "$OUT/granite-reconstructed-bordered-darkred-40pct.png"
+rm -rf "$OUT/tmp/granite-yellow-10pct"
+mkdir -p "$OUT/tmp/granite-yellow-10pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/granite-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.10[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/granite-yellow-10pct/granite-yellow-10pct_50.png" -geometry +586+261 -composite "$OUT/granite-reconstructed-bordered-yellow-10pct.png"
+rm -rf "$OUT/tmp/granite-yellow-25pct"
+mkdir -p "$OUT/tmp/granite-yellow-25pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/granite-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.25[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/granite-yellow-25pct/granite-yellow-25pct_50.png" -geometry +586+261 -composite "$OUT/granite-reconstructed-bordered-yellow-25pct.png"
+rm -rf "$OUT/tmp/granite-yellow-40pct"
+mkdir -p "$OUT/tmp/granite-yellow-40pct"
+for i in {01..50}; do
+  ffmpeg -y -loglevel error -i "$OUT/rocks/granite-64.png" -i "$OUT/yellow/tiles/yellow_${i}.png" -filter_complex "[1]format=rgba,colorchannelmixer=aa=0.40[ov];[0][ov]overlay=0:0:format=auto" "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_${i}.png"
+done
+magick -size 651x326 canvas:black \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_01.png" -geometry +1+1 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_02.png" -geometry +66+1 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_03.png" -geometry +131+1 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_04.png" -geometry +196+1 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_05.png" -geometry +261+1 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_06.png" -geometry +326+1 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_07.png" -geometry +391+1 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_08.png" -geometry +456+1 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_09.png" -geometry +521+1 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_10.png" -geometry +586+1 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_11.png" -geometry +1+66 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_12.png" -geometry +66+66 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_13.png" -geometry +131+66 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_14.png" -geometry +196+66 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_15.png" -geometry +261+66 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_16.png" -geometry +326+66 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_17.png" -geometry +391+66 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_18.png" -geometry +456+66 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_19.png" -geometry +521+66 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_20.png" -geometry +586+66 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_21.png" -geometry +1+131 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_22.png" -geometry +66+131 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_23.png" -geometry +131+131 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_24.png" -geometry +196+131 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_25.png" -geometry +261+131 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_26.png" -geometry +326+131 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_27.png" -geometry +391+131 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_28.png" -geometry +456+131 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_29.png" -geometry +521+131 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_30.png" -geometry +586+131 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_31.png" -geometry +1+196 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_32.png" -geometry +66+196 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_33.png" -geometry +131+196 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_34.png" -geometry +196+196 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_35.png" -geometry +261+196 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_36.png" -geometry +326+196 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_37.png" -geometry +391+196 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_38.png" -geometry +456+196 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_39.png" -geometry +521+196 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_40.png" -geometry +586+196 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_41.png" -geometry +1+261 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_42.png" -geometry +66+261 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_43.png" -geometry +131+261 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_44.png" -geometry +196+261 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_45.png" -geometry +261+261 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_46.png" -geometry +326+261 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_47.png" -geometry +391+261 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_48.png" -geometry +456+261 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_49.png" -geometry +521+261 -composite \
+  "$OUT/tmp/granite-yellow-40pct/granite-yellow-40pct_50.png" -geometry +586+261 -composite "$OUT/granite-reconstructed-bordered-yellow-40pct.png"
+magick -size 2704x3142 canvas:"rgb(245,245,245)" \
+  "$OUT/basalt-reconstructed-bordered-green-10pct.png" -geometry +80+44 -composite \
+  "$OUT/basalt-reconstructed-bordered-green-25pct.png" -geometry +80+378 -composite \
+  "$OUT/basalt-reconstructed-bordered-green-40pct.png" -geometry +80+712 -composite \
+  "$OUT/chalk-reconstructed-bordered-green-10pct.png" -geometry +731+44 -composite \
+  "$OUT/chalk-reconstructed-bordered-green-25pct.png" -geometry +731+378 -composite \
+  "$OUT/chalk-reconstructed-bordered-green-40pct.png" -geometry +731+712 -composite \
+  "$OUT/chert-reconstructed-bordered-green-10pct.png" -geometry +1382+44 -composite \
+  "$OUT/chert-reconstructed-bordered-green-25pct.png" -geometry +1382+378 -composite \
+  "$OUT/chert-reconstructed-bordered-green-40pct.png" -geometry +1382+712 -composite \
+  "$OUT/granite-reconstructed-bordered-green-10pct.png" -geometry +2033+44 -composite \
+  "$OUT/granite-reconstructed-bordered-green-25pct.png" -geometry +2033+378 -composite \
+  "$OUT/granite-reconstructed-bordered-green-40pct.png" -geometry +2033+712 -composite \
+  "$OUT/basalt-reconstructed-bordered-darkred-10pct.png" -geometry +80+1078 -composite \
+  "$OUT/basalt-reconstructed-bordered-darkred-25pct.png" -geometry +80+1412 -composite \
+  "$OUT/basalt-reconstructed-bordered-darkred-40pct.png" -geometry +80+1746 -composite \
+  "$OUT/chalk-reconstructed-bordered-darkred-10pct.png" -geometry +731+1078 -composite \
+  "$OUT/chalk-reconstructed-bordered-darkred-25pct.png" -geometry +731+1412 -composite \
+  "$OUT/chalk-reconstructed-bordered-darkred-40pct.png" -geometry +731+1746 -composite \
+  "$OUT/chert-reconstructed-bordered-darkred-10pct.png" -geometry +1382+1078 -composite \
+  "$OUT/chert-reconstructed-bordered-darkred-25pct.png" -geometry +1382+1412 -composite \
+  "$OUT/chert-reconstructed-bordered-darkred-40pct.png" -geometry +1382+1746 -composite \
+  "$OUT/granite-reconstructed-bordered-darkred-10pct.png" -geometry +2033+1078 -composite \
+  "$OUT/granite-reconstructed-bordered-darkred-25pct.png" -geometry +2033+1412 -composite \
+  "$OUT/granite-reconstructed-bordered-darkred-40pct.png" -geometry +2033+1746 -composite \
+  "$OUT/basalt-reconstructed-bordered-yellow-10pct.png" -geometry +80+2112 -composite \
+  "$OUT/basalt-reconstructed-bordered-yellow-25pct.png" -geometry +80+2446 -composite \
+  "$OUT/basalt-reconstructed-bordered-yellow-40pct.png" -geometry +80+2780 -composite \
+  "$OUT/chalk-reconstructed-bordered-yellow-10pct.png" -geometry +731+2112 -composite \
+  "$OUT/chalk-reconstructed-bordered-yellow-25pct.png" -geometry +731+2446 -composite \
+  "$OUT/chalk-reconstructed-bordered-yellow-40pct.png" -geometry +731+2780 -composite \
+  "$OUT/chert-reconstructed-bordered-yellow-10pct.png" -geometry +1382+2112 -composite \
+  "$OUT/chert-reconstructed-bordered-yellow-25pct.png" -geometry +1382+2446 -composite \
+  "$OUT/chert-reconstructed-bordered-yellow-40pct.png" -geometry +1382+2780 -composite \
+  "$OUT/granite-reconstructed-bordered-yellow-10pct.png" -geometry +2033+2112 -composite \
+  "$OUT/granite-reconstructed-bordered-yellow-25pct.png" -geometry +2033+2446 -composite \
+  "$OUT/granite-reconstructed-bordered-yellow-40pct.png" -geometry +2033+2780 -composite "$OUT/multi-rock-opacity-comparison-sheet.png"
+printf "Rows: green, darkred, yellow\nCols: basalt, chalk, chert, granite\nOpacity stack in each column group: 10%%, 25%%, 40%%\nGrid: 5x10, 64x64 per tile with 1px borders\n" > "$OUT/order.txt"

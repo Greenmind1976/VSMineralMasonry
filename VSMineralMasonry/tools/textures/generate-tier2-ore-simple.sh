@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
-OUT_DIR="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedmineral/tier2"
+OUT_DIR="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedmineral"
 OVERLAY_BASE="$PROJECT_DIR/assets/vsmineralmasonry/textures/block/stone/polishedmineral-overlays"
 MASTER_LISTS="$PROJECT_DIR/config/master-lists.json"
 MANIFEST="$PROJECT_DIR/assets/vsmineralmasonry/textures/review/ore-color-studies/ore-curated-mask-manifest.json"
@@ -291,14 +291,7 @@ else
   MASK3="$4"
 fi
 
-TIER="$(python3 - "$MASTER_LISTS" "$MINERAL" <<'PY'
-import json, sys
-with open(sys.argv[1]) as f:
-    j = json.load(f)
-print(j["mineralMiningTier"].get(sys.argv[2], 2))
-PY
-)"
-OVERLAY_DIR="$OVERLAY_BASE/tier$TIER"
+OVERLAY_DIR="$OVERLAY_BASE"
 mkdir -p "$OVERLAY_DIR"
 
 BASE="$(base_color_for "$MINERAL")"
