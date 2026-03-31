@@ -1,2 +1,0 @@
-Rows: basalt, granite, chalk
-Columns: vanilla rock | vanilla polished rock | randomized-fill de-beveled polished | randomized-fill de-beveled polished + overlay

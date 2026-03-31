@@ -1,3 +1,0 @@
-Families: greccia, soapstone, travertine
-Cols: basalt, whitemarble
-Sheets: quartz, emerald, gold

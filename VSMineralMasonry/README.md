@@ -1,76 +1,115 @@
 # VSMineralMasonry
 
-Vintage Story masonry blocks built from vanilla stone, ore, and mineral textures.
+Decorative stone masonry blocks for Vintage Story, built from curated overlay patterns and polished rock textures.
 
-## Block Tiers
+## Current Live Set
 
-- `polishedrock-*`
-  - Plain polished stone blocks, including stones that do not have a vanilla polished variant.
-- `polished-*`
-  - Current mineral masonry tier, using baked full textures organized by mining-tier buckets.
-  - These replace the earlier exposed mineral test blocks.
+The current live mod ships with:
 
-## Texture Processing
+- `4` overlay families
+- `2` finishes
+- `5` colorways
+- `10` supported host rocks
 
-### Polished Mineral
+## Overlay Families
 
-- Goal: make the mineral more visible while still looking embedded in the host stone.
-- Current workflow:
-  1. Start from the vanilla host rock texture.
-  2. Resize to `64x64`.
-  3. Apply a stone-specific base treatment.
-  4. Composite a baked mineral overlay onto that treated rock.
-  5. Save the final texture as a full block texture in `textures/block/stone/polishedmineral/tier2`.
+- `breccia`
+- `travertine`
+- `granite`
+- `marble`
 
-### Why baked full textures
+## Finishes
 
-Runtime `rock + overlay` composition was too limiting for the current art direction and caused resolution mismatches when mixing vanilla `32x32` textures with custom `64x64` overlays. The mineral masonry tier therefore uses baked full textures.
+- `polished`
+- `burnished`
 
-## Base Rock Treatment Plan
+## Colorways
 
-The base rock should not be processed the same way for every stone. Polished mineral finishes usually make stone look richer and clearer, not uniformly brighter.
+The mod should be discussed in terms of color, not source mineral name.
 
-### Brighten slightly, then blur
+Current live colorways:
 
-Use for very pale stones that otherwise go flat:
+- `black`
+- `green`
+- `brown`
+- `white`
+- `silver`
 
-- `chalk`
-- `halite`
-- `limestone`
-- `whitemarble`
+Current internal source mapping:
 
-### Darken slightly, then blur
+- `black` currently uses `bituminouscoal`
+- `green` currently uses `emerald`
+- `brown` currently uses `lignite`
+- `white` currently uses `quartz`
+- `silver` currently uses `silver`
 
-Use for darker stones where polish should deepen the tone instead of washing it out:
+Planned direction:
+
+- `green` is intended to become a shared green color family that can draw from `malachite`, `emerald`, and `olivine`
+
+## Host Rocks
+
+Current live host rocks:
 
 - `andesite`
 - `basalt`
+- `chalk`
+- `chert`
 - `granite`
-- `greenmarble`
-- `kimberlite`
-- `peridotite`
+- `limestone`
 - `phyllite`
 - `shale`
 - `slate`
-- `suevite`
+- `whitemarble`
 
-### Increase saturation slightly, then blur
+## Block Types
 
-Use for warmer or more neutral stones where polish should enrich the existing color:
+Current live block/content set:
 
-- `bauxite`
-- `chert`
-- `claystone`
-- `conglomerate`
-- `redmarble`
-- `sandstone`
+- `muralslab`
+  - baked mural textures
+- `slabcycle`
+  - same mural set with tool-driven tile cycling/alignment
+- `rockpolishedvsm`
+  - standalone polished base-rock blocks using the current host rock set
 
-## Current Polished Mineral Notes
+## Tool Behavior
 
-- `nativecopper`
-  - Current direction is copper-dominant with only subtle green influence in the host stone treatment.
-- `malachite`
-  - Current direction uses medium-coverage green masks rather than large masks.
+For `slabcycle` blocks:
+
+- `wrench`
+  - cycles only the clicked block through its local `3x3` tile set
+  - useful for checkerboards, mixed layouts, and manual tile picking
+- `hammer`
+  - auto-aligns the local `3x3` mural layout on the clicked face plane
+  - useful when you want adjacent blocks to snap into a coherent mural pattern
+
+In practice:
+
+- use the `wrench` when you want precise single-block control
+- use the `hammer` when you want neighboring mural blocks to line up automatically
+
+## Texture Source
+
+The live build currently depends on these source folders:
+
+- [`/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/overlay-source-3x3`](/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/overlay-source-3x3)
+- [`/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/no-bevel-polished-vanilla-64`](/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/no-bevel-polished-vanilla-64)
+- [`/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/polished-vanilla-64`](/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/polished-vanilla-64)
+
+Everything else in the project texture tree is archival or reference material.
+
+## Notes On Scope
+
+This mod currently uses baked textures rather than runtime composition.
+
+That choice was made because:
+
+- it gives predictable in-game results
+- it avoids orientation issues during normal mural use
+- it keeps the art workflow straightforward
+
+The tradeoff is mod size, so the live set is curated rather than fully combinatorial.
 
 ## Development
 

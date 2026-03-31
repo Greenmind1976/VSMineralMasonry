@@ -1,3 +1,0 @@
-Both sheets use row-major R1C1..R3C3 placement.
-looking-down-at-up-face.png uses current up-face textures (*-horiz).
-looking-up-at-down-face.png uses current down-face textures (base).

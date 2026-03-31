@@ -1,4 +1,0 @@
-Rows: green, darkred, yellow
-Cols: basalt, chalk, chert, granite
-Opacity stack in each column group: 10%, 25%, 40%
-Grid: 5x10, 64x64 per tile with 1px borders

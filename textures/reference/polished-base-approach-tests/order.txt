@@ -1,7 +1,0 @@
-Columns left to right:
-raw base
-vanilla polished
-de-beveled polished
-current raw+overlay
-raw tonematched+overlay
-de-beveled polished+overlay

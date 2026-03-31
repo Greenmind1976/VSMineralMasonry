@@ -1,3 +1,0 @@
-Rows: green, darkred, yellow
-Cols: basalt, chalk, chert, granite
-Grid: 5x10, 64x64 per tile with 1px borders

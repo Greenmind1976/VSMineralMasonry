@@ -1,5 +1,0 @@
-A top-left: up=base, down=base
-B top-right: up=base, down=horiz
-C bottom-left: up=horiz, down=base
-D bottom-right: up=horiz, down=horiz
-All panels use the same A layout: normal rows, normal cols. Left half is UP, right half is DOWN.

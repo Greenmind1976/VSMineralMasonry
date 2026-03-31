@@ -1,2 +1,0 @@
-Rows: basalt, granite, whitemarble
-Columns: vanilla polished rock | edited base + overlay preview | actual live mod texture

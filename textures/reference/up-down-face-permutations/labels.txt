@@ -1,5 +1,0 @@
-A top-left: up=base, down=base
-B top-right: up=base, down=horiz
-C bottom-left: up=horiz, down=base
-D bottom-right: up=horiz, down=horiz
-Each tile image uses the same row-major 3x3 placement. Left half of each panel is UP, right half is DOWN.
