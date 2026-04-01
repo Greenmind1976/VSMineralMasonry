@@ -1,7 +1,7 @@
 {
-  "code": "rockpolishedvsm",
-  "replaceable": 120,
+  "code": "rockbevel4vsm",
   "blockmaterial": "Stone",
+  "replaceable": 120,
   "storageFlags": 5,
   "variantgroups": [
     {
@@ -24,30 +24,43 @@
     "canChisel": true,
     "handbook": {
       "groupBy": [
-        "rockpolishedvsm-*"
+        "rockbevel4vsm-*"
       ]
     }
   },
   "creativeinventory": {
-    "general": [
-      "*"
-    ],
-    "construction": [
-      "*"
-    ]
+    "general": ["*"],
+    "construction": ["*"]
   },
+  "drawtype": "json",
   "shape": {
-    "base": "game:block/basic/cube"
+    "base": "block/stone/bevel/fourside"
   },
-  "drawtype": "cube",
-  "heldTpIdleAnimation": "holdbothhandslarge",
-  "heldRightReadyAnimation": "heldblockready",
-  "heldTpUseAnimation": "twohandplaceblock",
   "textures": {
     "all": {
       "base": "vsmineralmasonry:block/stone/slabbase/{rock}"
     }
   },
+  "collisionbox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 1,
+    "z2": 1
+  },
+  "selectionbox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 1,
+    "z2": 1
+  },
+  "sideAo": { "all": true },
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
   "sounds": {
     "walk": "walk/stone",
     "byTool": {
