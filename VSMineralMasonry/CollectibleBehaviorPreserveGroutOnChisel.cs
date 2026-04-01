@@ -41,7 +41,7 @@ public class CollectibleBehaviorPreserveGroutOnChisel : CollectibleBehavior
 
             foreach (var entry in subDecors)
             {
-                if (entry.Value is not BlockGroutCycle)
+                if (!IsEditableDecor(entry.Value))
                 {
                     continue;
                 }
@@ -49,6 +49,11 @@ public class CollectibleBehaviorPreserveGroutOnChisel : CollectibleBehavior
                 world.BlockAccessor.SetDecor(air, pos, entry.Key);
             }
         }
+    }
+
+    private static bool IsEditableDecor(Block? block)
+    {
+        return block is BlockGroutCycle || block is BlockTriangleOverlayCycle;
     }
 
     private static BlockPos[] CandidatePositions(BlockPos origin)

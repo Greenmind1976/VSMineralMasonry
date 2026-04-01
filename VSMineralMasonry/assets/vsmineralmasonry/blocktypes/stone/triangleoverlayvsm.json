@@ -1,0 +1,116 @@
+{
+  "code": "triangleoverlayvsm",
+  "class": "BlockTriangleOverlayCycle",
+  "behaviors": [
+    {
+      "name": "Decor",
+      "properties": {
+        "sides": ["north", "east", "south", "west", "up", "down"],
+        "notFullFace": true,
+        "thickness": 0.0,
+        "removable": false
+      }
+    }
+  ],
+  "variantgroups": [
+    {
+      "code": "rock",
+      "states": [
+        "basalt",
+        "granite",
+        "whitemarble",
+        "slate",
+        "chert",
+        "phyllite",
+        "andesite",
+        "limestone",
+        "shale",
+        "chalk"
+      ]
+    },
+    {
+      "code": "part",
+      "states": [
+        "topleft",
+        "topright",
+        "bottomleft",
+        "bottomright"
+      ]
+    }
+  ],
+  "shapeInventory": {
+    "base": "game:block/basic/layers/0voxel",
+    "rotateX": 90
+  },
+  "textures": {
+    "all": {
+      "base": "vsmineralmasonry:block/stone/triangleoverlay/{rock}-{part}"
+    }
+  },
+  "vertexflags": {
+    "zOffset": 1
+  },
+  "attributes": {
+    "ignoreSounds": true,
+    "handbook": {
+      "include": true
+    }
+  },
+  "renderPass": "Transparent",
+  "drawtype": "surfacelayer",
+  "doNotRenderAtLod2": true,
+  "randomizeRotations": false,
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "selectionBox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 1,
+    "z2": 1
+  },
+  "blockmaterial": "Stone",
+  "creativeinventory": {
+    "general": [
+      "*-basalt-topleft",
+      "*-granite-topleft",
+      "*-whitemarble-topleft",
+      "*-slate-topleft",
+      "*-chert-topleft",
+      "*-phyllite-topleft",
+      "*-andesite-topleft",
+      "*-limestone-topleft",
+      "*-shale-topleft",
+      "*-chalk-topleft"
+    ],
+    "clutter": [
+      "*-basalt-topleft",
+      "*-granite-topleft",
+      "*-whitemarble-topleft",
+      "*-slate-topleft",
+      "*-chert-topleft",
+      "*-phyllite-topleft",
+      "*-andesite-topleft",
+      "*-limestone-topleft",
+      "*-shale-topleft",
+      "*-chalk-topleft"
+    ]
+  },
+  "replaceable": 5500,
+  "resistance": 0,
+  "lightAbsorption": 0,
+  "drops": [],
+  "materialDensity": 400,
+  "guiTransform": {
+    "origin": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    }
+  }
+}

@@ -6,7 +6,7 @@ Decorative stone masonry blocks for Vintage Story, built from curated overlay pa
 
 The current live mod ships with:
 
-- `4` overlay families
+- `5` overlay/decor families
 - `2` finishes
 - `5` colorways
 - `10` supported host rocks
@@ -17,6 +17,7 @@ The current live mod ships with:
 - `travertine`
 - `granite`
 - `marble`
+- `triangleoverlay`
 
 ## Finishes
 
@@ -72,6 +73,8 @@ Current live block/content set:
   - same mural set with tool-driven tile cycling/alignment
 - `rockpolishedvsm`
   - standalone polished base-rock blocks using the current host rock set
+- `triangleoverlayvsm`
+  - placeable triangular polished-stone decor pieces for corners, diagonals, and trim work
 
 ## Tool Behavior
 
@@ -88,6 +91,13 @@ In practice:
 
 - use the `wrench` when you want precise single-block control
 - use the `hammer` when you want neighboring mural blocks to line up automatically
+
+For `grouttrowel` interactions:
+
+- `groutvsm`, `groutcolorvsm`, `thickgroutvsm`, `thickgroutcolorvsm`
+  - cycles the clicked grout decor through its corner variants
+- `triangleoverlayvsm`
+  - cycles the clicked triangle decor through its four triangle orientations
 
 ## Texture Source
 

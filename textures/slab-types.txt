@@ -1,0 +1,63 @@
+Marbled
+Granite
+Quartz
+Soapstone
+Travertine
+Slate
+Terrazzo
+Breccia
+
+olished tiles with bevel (polished-beveled)
+Polished tiles without bevel (polished)
+Burnished tiles with bevel (burnished-beveled)
+Burnished without bevel (burnished)
+
+Can be put in crafting window to change texture. Ordered blocks can be named R1C2 for easy. 
+3x3 - 9 tiles
+6x6 - 36 tiles
+5x8 - 40 tiles
+
+Gem inlay bottom/top
+Ore inlay bottom/top.
+
+Table tops? Marble topped block for chiseling.
+
+“ Turn” blocks with wrench or something like it to change texture?
+
+Stone dye.
+Woad for light blue
+Lapis lazuli for deep blue
+
+Red flowers for light red
+Cinnabar for deep red
+
+Flower for light green
+Olivine for light green
+
+Flower for light yellow
+Sulfur for light deep yellow
+
+Core vein materials:
+	•	Brown coal (lignite)
+	•	Quartz
+	•	Magnetite
+
+Red materials:
+	•	Hematite (dark red)
+	•	Cinnabar (light red / pink)
+
+Olivine?
+
+
+Accent materials:
+	•	Malachite (green)
+	•	Azurite (blue)
+	•	Sulfur (yellow)
+
+Metal accents:
+	•	Native Gold
+	•	Native Silver
+
+Rare inclusions:
+	•	Diamond
+	•	Amethyst (optional)
