@@ -10,7 +10,7 @@ public class ItemGroutTrowel : Item
     {
         public required BlockPos Position { get; init; }
         public required int DecorIndex { get; init; }
-        public required BlockGroutCycle Block { get; init; }
+        public required Block Block { get; init; }
     }
 
     public override void OnHeldInteractStart(
@@ -57,25 +57,45 @@ public class ItemGroutTrowel : Item
             return true;
         }
 
-        string currentPart = target.Block.LastCodePart(0) ?? BlockGroutCycle.Parts[0];
-        int currentIndex = 0;
-        for (int i = 0; i < BlockGroutCycle.Parts.Length; i++)
-        {
-            if (BlockGroutCycle.Parts[i] == currentPart)
-            {
-                currentIndex = i;
-                break;
-            }
-        }
-
-        string nextPart = BlockGroutCycle.Parts[(currentIndex + 1) % BlockGroutCycle.Parts.Length];
-        Block? nextBlock = world.GetBlock(target.Block.CodeWithParts(nextPart));
+        Block? nextBlock = GetNextCycleBlock(world, target.Block);
         if (nextBlock == null || nextBlock.Id == 0)
         {
             return false;
         }
 
         return world.BlockAccessor.SetDecor(nextBlock, target.Position, target.DecorIndex);
+    }
+
+    private static Block? GetNextCycleBlock(IWorldAccessor world, Block block)
+    {
+        if (block is BlockGroutCycle grout)
+        {
+            return GetNextBlock(world, grout, BlockGroutCycle.Parts);
+        }
+
+        if (block is BlockTriangleOverlayCycle triangle)
+        {
+            return GetNextBlock(world, triangle, BlockTriangleOverlayCycle.Parts);
+        }
+
+        return null;
+    }
+
+    private static Block? GetNextBlock(IWorldAccessor world, Block block, string[] parts)
+    {
+        string currentPart = block.LastCodePart(0) ?? parts[0];
+        int currentIndex = 0;
+        for (int i = 0; i < parts.Length; i++)
+        {
+            if (parts[i] == currentPart)
+            {
+                currentIndex = i;
+                break;
+            }
+        }
+
+        string nextPart = parts[(currentIndex + 1) % parts.Length];
+        return world.GetBlock(block.CodeWithParts(nextPart));
     }
 
     private static DecorTarget? GetSelectedGrout(IWorldAccessor world, BlockSelection blockSel)
@@ -96,16 +116,16 @@ public class ItemGroutTrowel : Item
     {
         int exactIndex = blockSel.ToDecorIndex();
         Block? decor = world.BlockAccessor.GetDecor(pos, exactIndex);
-        if (decor is BlockGroutCycle exactGrout)
+        if (IsEditableDecor(decor))
         {
-            return new DecorTarget { Position = pos.Copy(), DecorIndex = exactIndex, Block = exactGrout };
+            return new DecorTarget { Position = pos.Copy(), DecorIndex = exactIndex, Block = decor };
         }
 
         int faceIndex = (int)new DecorBits(blockSel.Face);
         decor = world.BlockAccessor.GetDecor(pos, faceIndex);
-        if (decor is BlockGroutCycle faceGrout)
+        if (IsEditableDecor(decor))
         {
-            return new DecorTarget { Position = pos.Copy(), DecorIndex = faceIndex, Block = faceGrout };
+            return new DecorTarget { Position = pos.Copy(), DecorIndex = faceIndex, Block = decor };
         }
 
         var subDecors = world.BlockAccessor.GetSubDecors(pos);
@@ -113,14 +133,19 @@ public class ItemGroutTrowel : Item
         {
             foreach (var entry in subDecors)
             {
-                if (entry.Value is BlockGroutCycle subGrout && entry.Key % 6 == blockSel.Face.Index)
+                if (IsEditableDecor(entry.Value) && entry.Key % 6 == blockSel.Face.Index)
                 {
-                    return new DecorTarget { Position = pos.Copy(), DecorIndex = entry.Key, Block = subGrout };
+                    return new DecorTarget { Position = pos.Copy(), DecorIndex = entry.Key, Block = entry.Value };
                 }
             }
         }
 
         return null;
+    }
+
+    private static bool IsEditableDecor(Block? block)
+    {
+        return block is BlockGroutCycle || block is BlockTriangleOverlayCycle;
     }
 
     private static BlockPos[] CandidatePositions(BlockSelection blockSel)
