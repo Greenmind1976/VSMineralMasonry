@@ -13,6 +13,7 @@ SLABBASE_DIR = ROOT / "assets" / "vsmineralmasonry" / "textures" / "block" / "st
 COLOR_OUTPUT_DIR = ROOT / "assets" / "vsmineralmasonry" / "textures" / "block" / "stone" / "groutshapecolor"
 ROCK_OUTPUT_DIR = ROOT / "assets" / "vsmineralmasonry" / "textures" / "block" / "stone" / "groutshaperock"
 TILESET_OUTPUT_DIR = ROOT / "assets" / "vsmineralmasonry" / "textures" / "block" / "stone" / "grouttilecolor"
+TILESET_ROCK_OUTPUT_DIR = ROOT / "assets" / "vsmineralmasonry" / "textures" / "block" / "stone" / "grouttilerock"
 COLOR_DETAIL_SOURCE = MASK_ROOT / "color-tile-texture2.png"
 COLOR_SHADOW_FACTOR = 0.93
 COLOR_HIGHLIGHT_FACTOR = 1.03
@@ -21,8 +22,8 @@ COLOR_DETAIL_LEVEL = "18%,86%"
 
 TILESETS = [f"tileset{i}" for i in range(1, 17)]
 CUSTOM_BORDER_TILESET_SOURCES = {"tileset10": "border2"}
-ROTATION_INVARIANT_TILESETS = {"tileset4", "tileset6", "tileset7", "tileset8", "tileset9", "tileset11", "tileset12", "tileset13", "tileset14"}
-TWO_WAY_TILESETS = {"tileset8"}
+ROTATION_INVARIANT_TILESETS = {"tileset4", "tileset6", "tileset7", "tileset9", "tileset11", "tileset12", "tileset13", "tileset14", "tileset15"}
+TWO_WAY_TILESETS = {"tileset1", "tileset3", "tileset8"}
 EDGE_PARTS = ["top", "right", "bottom", "left"]
 CORNER_PARTS = ["topleft", "topright", "bottomright", "bottomleft"]
 NORMALIZED_MASK_SIZE = "64x64!"
@@ -223,16 +224,78 @@ def build_custom_border_color_variants(color_name: str, color_hex: str, family: 
     corner_out.unlink(missing_ok=True)
 
 
+def build_custom_border_rock_variants(rock_name: str, family: str, source_prefix: str) -> None:
+    frame_mask = MASK_ROOT / f"{source_prefix}-4x.png"
+    edge_mask = MASK_ROOT / f"{source_prefix}-1x.png"
+    corner_mask = MASK_ROOT / f"{source_prefix}-corner.png"
+    report_non_64_mask(frame_mask)
+    report_non_64_mask(edge_mask)
+    report_non_64_mask(corner_mask)
+
+    frame_out = ROCK_OUTPUT_DIR / f"{family}-{rock_name}-frame-base.png"
+    edge_out = ROCK_OUTPUT_DIR / f"{family}-{rock_name}-edge-base.png"
+    corner_out = ROCK_OUTPUT_DIR / f"{family}-{rock_name}-corner-base.png"
+
+    build_rock_variant(frame_mask, SLABBASE_DIR / f"{rock_name}.png", frame_out)
+    build_rock_variant(edge_mask, SLABBASE_DIR / f"{rock_name}.png", edge_out)
+    build_rock_variant(corner_mask, SLABBASE_DIR / f"{rock_name}.png", corner_out)
+
+    run("magick", str(frame_out), f"PNG32:{TILESET_ROCK_OUTPUT_DIR / f'{family}-{rock_name}-frame.png'}")
+    run("magick", str(edge_out), "-background", "none", "-gravity", "center", "-extent", NORMALIZED_MASK_SIZE, f"PNG32:{TILESET_ROCK_OUTPUT_DIR / f'{family}-{rock_name}-right.png'}")
+    run("magick", str(edge_out), "-background", "none", "-gravity", "center", "-extent", NORMALIZED_MASK_SIZE, "-rotate", "270", f"PNG32:{TILESET_ROCK_OUTPUT_DIR / f'{family}-{rock_name}-top.png'}")
+    run("magick", str(edge_out), "-background", "none", "-gravity", "center", "-extent", NORMALIZED_MASK_SIZE, "-rotate", "180", f"PNG32:{TILESET_ROCK_OUTPUT_DIR / f'{family}-{rock_name}-left.png'}")
+    run("magick", str(edge_out), "-background", "none", "-gravity", "center", "-extent", NORMALIZED_MASK_SIZE, "-rotate", "90", f"PNG32:{TILESET_ROCK_OUTPUT_DIR / f'{family}-{rock_name}-bottom.png'}")
+    run("magick", str(corner_out), f"PNG32:{TILESET_ROCK_OUTPUT_DIR / f'{family}-{rock_name}-topright.png'}")
+    run("magick", str(corner_out), "-rotate", "270", f"PNG32:{TILESET_ROCK_OUTPUT_DIR / f'{family}-{rock_name}-topleft.png'}")
+    run("magick", str(corner_out), "-rotate", "180", f"PNG32:{TILESET_ROCK_OUTPUT_DIR / f'{family}-{rock_name}-bottomleft.png'}")
+    run("magick", str(corner_out), "-rotate", "90", f"PNG32:{TILESET_ROCK_OUTPUT_DIR / f'{family}-{rock_name}-bottomright.png'}")
+
+    frame_out.unlink(missing_ok=True)
+    edge_out.unlink(missing_ok=True)
+    corner_out.unlink(missing_ok=True)
+
+
+def emit_tileset_parts(source_out: Path, tileset: str, variant_name: str, target_dir: Path) -> None:
+    if tileset in TWO_WAY_TILESETS:
+        run("magick", str(source_out), f"PNG32:{target_dir / f'{tileset}-{variant_name}-frame.png'}")
+        run("magick", str(source_out), f"PNG32:{target_dir / f'{tileset}-{variant_name}-top.png'}")
+        run("magick", str(source_out), f"PNG32:{target_dir / f'{tileset}-{variant_name}-bottom.png'}")
+        run("magick", str(source_out), "-rotate", "90", f"PNG32:{target_dir / f'{tileset}-{variant_name}-right.png'}")
+        run("magick", str(source_out), "-rotate", "90", f"PNG32:{target_dir / f'{tileset}-{variant_name}-left.png'}")
+        for part in CORNER_PARTS:
+            run("magick", str(source_out), f"PNG32:{target_dir / f'{tileset}-{variant_name}-{part}.png'}")
+        return
+
+    if tileset in ROTATION_INVARIANT_TILESETS:
+        run("magick", str(source_out), f"PNG32:{target_dir / f'{tileset}-{variant_name}-frame.png'}")
+        for part in EDGE_PARTS:
+            run("magick", str(source_out), f"PNG32:{target_dir / f'{tileset}-{variant_name}-{part}.png'}")
+        for part in CORNER_PARTS:
+            run("magick", str(source_out), f"PNG32:{target_dir / f'{tileset}-{variant_name}-{part}.png'}")
+        return
+
+    run("magick", str(source_out), f"PNG32:{target_dir / f'{tileset}-{variant_name}-frame.png'}")
+    run("magick", str(source_out), f"PNG32:{target_dir / f'{tileset}-{variant_name}-top.png'}")
+    run("magick", str(source_out), "-rotate", "90", f"PNG32:{target_dir / f'{tileset}-{variant_name}-right.png'}")
+    run("magick", str(source_out), "-rotate", "180", f"PNG32:{target_dir / f'{tileset}-{variant_name}-bottom.png'}")
+    run("magick", str(source_out), "-rotate", "270", f"PNG32:{target_dir / f'{tileset}-{variant_name}-left.png'}")
+    for part in CORNER_PARTS:
+        run("magick", str(source_out), f"PNG32:{target_dir / f'{tileset}-{variant_name}-{part}.png'}")
+
+
 def main() -> None:
     COLOR_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     ROCK_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     TILESET_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    TILESET_ROCK_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     for old_png in COLOR_OUTPUT_DIR.glob("*.png"):
         old_png.unlink()
     for old_png in ROCK_OUTPUT_DIR.glob("*.png"):
         old_png.unlink()
     for old_png in TILESET_OUTPUT_DIR.glob("*.png"):
+        old_png.unlink()
+    for old_png in TILESET_ROCK_OUTPUT_DIR.glob("*.png"):
         old_png.unlink()
 
     for tileset in TILESETS:
@@ -242,36 +305,18 @@ def main() -> None:
         for color_name, color_hex in COLOR_BASES.items():
             color_out = COLOR_OUTPUT_DIR / f"{tileset}-{color_name}.png"
             build_color_variant(mask_path, color_out, color_hex)
-
-            if tileset in TWO_WAY_TILESETS:
-                run("magick", str(color_out), f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-frame.png'}")
-                run("magick", str(color_out), f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-top.png'}")
-                run("magick", str(color_out), f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-bottom.png'}")
-                run("magick", str(color_out), "-rotate", "90", f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-right.png'}")
-                run("magick", str(color_out), "-rotate", "90", f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-left.png'}")
-                for part in CORNER_PARTS:
-                    run("magick", str(color_out), f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-{part}.png'}")
-            elif tileset in ROTATION_INVARIANT_TILESETS:
-                run("magick", str(color_out), f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-frame.png'}")
-                for part in EDGE_PARTS:
-                    run("magick", str(color_out), f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-{part}.png'}")
-                for part in CORNER_PARTS:
-                    run("magick", str(color_out), f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-{part}.png'}")
-            else:
-                run("magick", str(color_out), f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-frame.png'}")
-                run("magick", str(color_out), f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-top.png'}")
-                run("magick", str(color_out), "-rotate", "90", f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-right.png'}")
-                run("magick", str(color_out), "-rotate", "180", f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-bottom.png'}")
-                run("magick", str(color_out), "-rotate", "270", f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-left.png'}")
-                for part in CORNER_PARTS:
-                    run("magick", str(color_out), f"PNG32:{TILESET_OUTPUT_DIR / f'{tileset}-{color_name}-{part}.png'}")
+            emit_tileset_parts(color_out, tileset, color_name, TILESET_OUTPUT_DIR)
 
         for rock in ROCKS:
-            build_rock_variant(mask_path, SLABBASE_DIR / f"{rock}.png", ROCK_OUTPUT_DIR / f"{tileset}-{rock}.png")
+            rock_out = ROCK_OUTPUT_DIR / f"{tileset}-{rock}.png"
+            build_rock_variant(mask_path, SLABBASE_DIR / f"{rock}.png", rock_out)
+            emit_tileset_parts(rock_out, tileset, rock, TILESET_ROCK_OUTPUT_DIR)
 
     for family, source_prefix in CUSTOM_BORDER_TILESET_SOURCES.items():
         for color_name, color_hex in COLOR_BASES.items():
             build_custom_border_color_variants(color_name, color_hex, family, source_prefix)
+        for rock in ROCKS:
+            build_custom_border_rock_variants(rock, family, source_prefix)
 
 
 if __name__ == "__main__":

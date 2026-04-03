@@ -73,9 +73,9 @@ public class ItemGroutTrowel : Item
     ];
     private static readonly Dictionary<string, string[]> ShapePartsByCode = new()
     {
-        ["tileset1"] = TilesetParts,
+        ["tileset1"] = ["top", "right"],
         ["tileset2"] = TilesetParts,
-        ["tileset3"] = TilesetParts,
+        ["tileset3"] = ["top", "right"],
         ["tileset4"] = ["top"],
         ["tileset5"] = TilesetParts,
         ["tileset6"] = ["top"],
@@ -87,7 +87,7 @@ public class ItemGroutTrowel : Item
         ["tileset12"] = ["top"],
         ["tileset13"] = ["top"],
         ["tileset14"] = ["top"],
-        ["tileset15"] = TilesetParts,
+        ["tileset15"] = ["top"],
         ["tileset16"] = TilesetParts,
         ["border"] = BorderParts
     };
@@ -507,9 +507,22 @@ public class ItemGroutTrowel : Item
 
     private static AssetLocation GetCodeForShape(Block block, string color, string shapeCode, string part)
     {
-        string path = shapeCode == "border"
-            ? $"groutvsm-{color}-{part}"
-            : $"grouttilevsm-{color}-{shapeCode}-{part}";
+        string? rock = block.Variant?["rock"];
+        string path;
+
+        if (!string.IsNullOrWhiteSpace(rock))
+        {
+            path = shapeCode == "border"
+                ? $"groutrockvsm-{rock}-{part}"
+                : $"grouttilerockvsm-{rock}-{shapeCode}-{part}";
+        }
+        else
+        {
+            path = shapeCode == "border"
+                ? $"groutvsm-{color}-{part}"
+                : $"grouttilevsm-{color}-{shapeCode}-{part}";
+        }
+
         return new AssetLocation(block.Code.Domain, path);
     }
 
@@ -519,7 +532,9 @@ public class ItemGroutTrowel : Item
         return path != null
             && (path.StartsWith("groutvsm-")
                 || path.StartsWith("grouttestvsm-")
-                || path.StartsWith("grouttilevsm-"));
+                || path.StartsWith("grouttilevsm-")
+                || path.StartsWith("groutrockvsm-")
+                || path.StartsWith("grouttilerockvsm-"));
     }
 
 #pragma warning disable IDE0060

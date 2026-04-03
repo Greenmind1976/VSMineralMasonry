@@ -27,8 +27,13 @@ public class ItemPlaceGrout : Item
 
     private bool TryPlaceGrout(ItemSlot slot, IWorldAccessor world, BlockSelection blockSel)
     {
-        string color = Variant["color"] ?? "white";
-        Block? groutBlock = world.GetBlock(CodeWithPath($"groutvsm-{color}-blob"));
+        string? rock = Variant["rock"];
+        string? color = Variant["color"];
+        string blockCode = rock != null
+            ? $"groutrockvsm-{rock}-blob"
+            : $"groutvsm-{color ?? "white"}-blob";
+
+        Block? groutBlock = world.GetBlock(CodeWithPath(blockCode));
         if (groutBlock == null || groutBlock.Id == 0)
         {
             return false;

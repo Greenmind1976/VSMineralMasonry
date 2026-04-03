@@ -4660,5 +4660,15 @@
   "block-vsmineralmasonry-triangleoverlayvsm-chalk-topleft": "VSM Chalk Triangle",
   "block-vsmineralmasonry-triangleoverlayvsm-chalk-topright": "VSM Chalk Triangle Top Right",
   "block-vsmineralmasonry-triangleoverlayvsm-chalk-bottomleft": "VSM Chalk Triangle Bottom Left",
-  "block-vsmineralmasonry-triangleoverlayvsm-chalk-bottomright": "VSM Chalk Triangle Bottom Right"
+  "block-vsmineralmasonry-triangleoverlayvsm-chalk-bottomright": "VSM Chalk Triangle Bottom Right",
+  "item-vsmineralmasonry-rockgrout-andesite": "VSM Andesite Grout",
+  "item-vsmineralmasonry-rockgrout-basalt": "VSM Basalt Grout",
+  "item-vsmineralmasonry-rockgrout-chalk": "VSM Chalk Grout",
+  "item-vsmineralmasonry-rockgrout-chert": "VSM Chert Grout",
+  "item-vsmineralmasonry-rockgrout-granite": "VSM Granite Grout",
+  "item-vsmineralmasonry-rockgrout-limestone": "VSM Limestone Grout",
+  "item-vsmineralmasonry-rockgrout-phyllite": "VSM Phyllite Grout",
+  "item-vsmineralmasonry-rockgrout-shale": "VSM Shale Grout",
+  "item-vsmineralmasonry-rockgrout-slate": "VSM Slate Grout",
+  "item-vsmineralmasonry-rockgrout-whitemarble": "VSM White Marble Grout"
 }
