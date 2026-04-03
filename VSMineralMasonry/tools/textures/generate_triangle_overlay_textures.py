@@ -44,7 +44,7 @@ def generate() -> None:
         for part, polygon in PARTS.items():
             out_path = OUTPUT_DIR / f"{rock}-{part}.png"
             run(
-                "/opt/homebrew/bin/magick",
+                "magick",
                 str(a_path),
                 "(",
                 "-size",
