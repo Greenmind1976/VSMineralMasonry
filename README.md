@@ -14,7 +14,7 @@ This repo is not itself a buildable mod skeleton. It is a helper repo that:
   - Installs shared tools outside project repos:
     - Homebrew: `python`, `imagemagick`, `ffmpeg`
     - Python venv at `~/Documents/VSMods/.image-tools/venv`
-    - Python packages: `pillow`, `numpy`
+    - Python packages from [requirements-image-tools.txt](/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/requirements-image-tools.txt)
 - `activate-tools.sh`
   - Activates the shared venv in the current shell.
 - `bootstrap-mod.sh`
@@ -134,4 +134,5 @@ vsmod-tools
 - If `brew` is missing, install from <https://brew.sh/>.
 - `setup-image-tools.sh` is idempotent; re-running is safe.
 - If Python packages break after system updates, rerun setup.
+- Add new Python image-tool dependencies to [requirements-image-tools.txt](/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/requirements-image-tools.txt) so every repo reuses the same list.
 - You can keep your existing direct DLL-reference `.csproj` workflow; the NuGet template is just the cleaner bootstrap.
