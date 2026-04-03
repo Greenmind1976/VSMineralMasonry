@@ -14,12 +14,16 @@ PROJECT_ROOT = ROOT.parent
 SOURCE_BLOCK = ROOT / "assets/vsmineralmasonry/blocktypes/stone/muralslab.json"
 SOURCE_LANG = ROOT / "assets/vsmineralmasonry/lang/en.json"
 SOURCE_TEXTURE_ROOT = ROOT / "assets/vsmineralmasonry/textures/block/stone/muralslab"
+SOURCE_MURAL_BASEFACE_ROOT = ROOT / "assets/vsmineralmasonry/textures/block/stone/muralslab-basefaces"
+SOURCE_MURAL_OVERLAY_ROOT = ROOT / "assets/vsmineralmasonry/textures/block/stone/muralslab-overlays"
 SOURCE_SLABBASE_ROOT = ROOT / "assets/vsmineralmasonry/textures/block/stone/slabbase"
 
 DEBUG_ROOT = ROOT / "bin/Debug/Mods/mod/assets/vsmineralmasonry"
 DEBUG_BLOCK = DEBUG_ROOT / "blocktypes/stone/muralslab.json"
 DEBUG_LANG = DEBUG_ROOT / "lang/en.json"
 DEBUG_TEXTURE_ROOT = DEBUG_ROOT / "textures/block/stone/muralslab"
+DEBUG_MURAL_BASEFACE_ROOT = DEBUG_ROOT / "textures/block/stone/muralslab-basefaces"
+DEBUG_MURAL_OVERLAY_ROOT = DEBUG_ROOT / "textures/block/stone/muralslab-overlays"
 DEBUG_SLABBASE_ROOT = DEBUG_ROOT / "textures/block/stone/slabbase"
 
 ROCK_BASE_ROOT = PROJECT_ROOT / "textures/no-bevel-polished-vanilla-64"
@@ -48,6 +52,8 @@ ROCKS = [
     "chalk",
 ]
 TILES = [f"r{row}c{col}" for row in range(1, 4) for col in range(1, 4)]
+FACES = ("south", "north", "west", "east", "down", "up")
+OVERLAY_COMPOSED_FAMILIES = {"breccia", "travertine", "marble", "granite"}
 
 EXCLUDED_COMBINATIONS = {
     ("basalt", "polished", "bituminouscoal"),
@@ -158,6 +164,16 @@ def is_excluded(rock: str, finish: str, mineral: str) -> bool:
     return (rock, finish, mineral) in EXCLUDED_COMBINATIONS
 
 
+def uses_overlay_composition(family: str, finish: str, mineral: str, rock: str) -> bool:
+    if family in {"breccia", "travertine", "granite"}:
+        return True
+
+    if family == "marble":
+        return True
+
+    return False
+
+
 def colorize_overlay(source: Path, target: Path, mineral: str) -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
 
@@ -209,6 +225,31 @@ def colorize_overlay(source: Path, target: Path, mineral: str) -> None:
     )
 
 
+def strengthen_overlay_if_needed(source: Path, target: Path, family: str, mineral: str) -> Path:
+    if family == "marble" and mineral == "bituminouscoal":
+        target.parent.mkdir(parents=True, exist_ok=True)
+        subprocess.run(
+            [
+                "magick",
+                str(source),
+                "-channel",
+                "A",
+                "-morphology",
+                "Dilate",
+                "Diamond:1",
+                "-evaluate",
+                "multiply",
+                "2.0",
+                "+channel",
+                str(target),
+            ],
+            check=True,
+        )
+        return target
+
+    return source
+
+
 def generate_base_tile(target: Path, overlay: Path, rock_base: Path, finish: str) -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
     if finish == "polished":
@@ -257,10 +298,83 @@ def generate_face_files(base_tile: Path) -> None:
     subprocess.run(["magick", str(up), "-flip", str(down)], check=True)
 
 
+def face_output_map(prefix: Path) -> dict[str, Path]:
+    return {face: prefix.with_name(f"{prefix.name}-{face}face.png") for face in FACES}
+
+
+def generate_shared_base_faces() -> None:
+    if SOURCE_MURAL_BASEFACE_ROOT.exists():
+        shutil.rmtree(SOURCE_MURAL_BASEFACE_ROOT)
+    SOURCE_MURAL_BASEFACE_ROOT.mkdir(parents=True, exist_ok=True)
+    for rock in ROCKS:
+        rock_base = rock_base_source(rock)
+        if not rock_base.exists():
+            raise FileNotFoundError(f"Missing rock base: {rock_base}")
+        base_tile = SOURCE_MURAL_BASEFACE_ROOT / f"{rock}.png"
+        shutil.copy2(rock_base, base_tile)
+        generate_face_files(base_tile)
+
+
+def overlay_alpha_for_finish(finish: str) -> str:
+    return "0.85" if finish == "burnished" else "1.0"
+
+
+def generate_overlay_face_files(input_tile: Path, output_prefix: Path, finish: str) -> None:
+    outputs = face_output_map(output_prefix)
+    subprocess.run(
+        [
+            "magick",
+            str(input_tile),
+            "-channel",
+            "A",
+            "-evaluate",
+            "multiply",
+            overlay_alpha_for_finish(finish),
+            "+channel",
+            str(outputs["south"]),
+        ],
+        check=True,
+    )
+    subprocess.run(["magick", str(outputs["south"]), "-flop", str(outputs["north"])], check=True)
+    shutil.copy2(outputs["south"], outputs["west"])
+    subprocess.run(["magick", str(outputs["west"]), "-flop", str(outputs["east"])], check=True)
+    subprocess.run(["magick", str(outputs["west"]), "-flop", str(outputs["up"])], check=True)
+    subprocess.run(["magick", str(outputs["up"]), "-flip", str(outputs["down"])], check=True)
+
+
+def generate_shared_overlay_faces() -> None:
+    if SOURCE_MURAL_OVERLAY_ROOT.exists():
+        shutil.rmtree(SOURCE_MURAL_OVERLAY_ROOT)
+    SOURCE_MURAL_OVERLAY_ROOT.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="muralslab-overlays-") as temp_dir:
+        temp_root = Path(temp_dir)
+        for family in OVERLAY_COMPOSED_FAMILIES:
+            for finish in FINISHES:
+                for mineral in MINERALS:
+                    seed_mineral = overlay_seed_mineral(mineral)
+                    for tile in TILES:
+                        seed_overlay = overlay_source(family, seed_mineral, tile)
+                        if not seed_overlay.exists():
+                            raise FileNotFoundError(f"Missing overlay source: {seed_overlay}")
+                        colored_overlay = temp_root / family / finish / mineral / f"{tile}.png"
+                        colorize_overlay(seed_overlay, colored_overlay, mineral)
+                        overlay_input = strengthen_overlay_if_needed(
+                            colored_overlay,
+                            temp_root / family / finish / mineral / f"{tile}-strong.png",
+                            family,
+                            mineral,
+                        )
+                        output_prefix = SOURCE_MURAL_OVERLAY_ROOT / family / finish / mineral / tile
+                        output_prefix.parent.mkdir(parents=True, exist_ok=True)
+                        generate_overlay_face_files(overlay_input, output_prefix, finish)
+
+
 def rebuild_texture_bank() -> None:
     if SOURCE_TEXTURE_ROOT.exists():
         shutil.rmtree(SOURCE_TEXTURE_ROOT)
     SOURCE_TEXTURE_ROOT.mkdir(parents=True, exist_ok=True)
+    generate_shared_base_faces()
+    generate_shared_overlay_faces()
     with tempfile.TemporaryDirectory(prefix="muralslab-overlays-") as temp_dir:
         temp_root = Path(temp_dir)
         for family in FAMILIES:
@@ -269,6 +383,8 @@ def rebuild_texture_bank() -> None:
                     seed_mineral = overlay_seed_mineral(mineral)
                     for rock in ROCKS:
                         if is_excluded(rock, finish, mineral):
+                            continue
+                        if uses_overlay_composition(family, finish, mineral, rock):
                             continue
                         rock_base = rock_base_source(rock)
                         if not rock_base.exists():
@@ -350,18 +466,28 @@ def build_textures_by_type(states: dict[str, list[str]]) -> dict[str, dict]:
                         continue
                     for tile in states["tile"]:
                         key = f"muralslab-{family}-{finish}-{mineral}-{rock}-{tile}"
-                        base_prefix = (
-                            f"vsmineralmasonry:block/stone/muralslab/"
-                            f"{family}/{finish}/{mineral}/{rock}/{tile}"
-                        )
-                        textures[key] = {
-                            "south": {"base": f"{base_prefix}-southface"},
-                            "north": {"base": f"{base_prefix}-northface"},
-                            "west": {"base": f"{base_prefix}-westface"},
-                            "east": {"base": f"{base_prefix}-eastface"},
-                            "down": {"base": f"{base_prefix}-downface"},
-                            "up": {"base": f"{base_prefix}-upface"},
-                        }
+                        if uses_overlay_composition(family, finish, mineral, rock):
+                            base_prefix = f"vsmineralmasonry:block/stone/muralslab-basefaces/{rock}"
+                            overlay_prefix = (
+                                f"vsmineralmasonry:block/stone/muralslab-overlays/"
+                                f"{family}/{finish}/{mineral}/{tile}"
+                            )
+                            textures[key] = {
+                                face: {
+                                    "base": f"{base_prefix}-{face}face",
+                                    "overlays": [f"{overlay_prefix}-{face}face"],
+                                }
+                                for face in FACES
+                            }
+                        else:
+                            base_prefix = (
+                                f"vsmineralmasonry:block/stone/muralslab/"
+                                f"{family}/{finish}/{mineral}/{rock}/{tile}"
+                            )
+                            textures[key] = {
+                                face: {"base": f"{base_prefix}-{face}face"}
+                                for face in FACES
+                            }
     return textures
 
 
@@ -411,6 +537,12 @@ def sync_debug_copy() -> None:
     if DEBUG_TEXTURE_ROOT.exists():
         shutil.rmtree(DEBUG_TEXTURE_ROOT)
     shutil.copytree(SOURCE_TEXTURE_ROOT, DEBUG_TEXTURE_ROOT)
+    if DEBUG_MURAL_BASEFACE_ROOT.exists():
+        shutil.rmtree(DEBUG_MURAL_BASEFACE_ROOT)
+    shutil.copytree(SOURCE_MURAL_BASEFACE_ROOT, DEBUG_MURAL_BASEFACE_ROOT)
+    if DEBUG_MURAL_OVERLAY_ROOT.exists():
+        shutil.rmtree(DEBUG_MURAL_OVERLAY_ROOT)
+    shutil.copytree(SOURCE_MURAL_OVERLAY_ROOT, DEBUG_MURAL_OVERLAY_ROOT)
     sync_slabbase_textures(DEBUG_SLABBASE_ROOT)
 
 

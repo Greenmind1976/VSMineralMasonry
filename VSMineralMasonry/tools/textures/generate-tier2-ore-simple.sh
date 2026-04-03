@@ -9,6 +9,11 @@ MASTER_LISTS="$PROJECT_DIR/config/master-lists.json"
 MANIFEST="$PROJECT_DIR/assets/vsmineralmasonry/textures/review/ore-color-studies/ore-curated-mask-manifest.json"
 BEVEL_SCRIPT="$SCRIPT_DIR/apply-block-bevel.sh"
 
+if [ ! -f "$MANIFEST" ]; then
+  echo "Missing manifest: $MANIFEST" >&2
+  exit 1
+fi
+
 load_masks_from_manifest() {
   python3 - "$MANIFEST" "$1" <<'PY'
 import json, sys
