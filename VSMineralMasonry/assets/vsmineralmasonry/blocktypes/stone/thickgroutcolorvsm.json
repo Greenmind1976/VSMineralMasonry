@@ -62,7 +62,7 @@
     "trowelShapeParts": "frame,top,right,bottom,left,topleft,topright,bottomright,bottomleft,blob",
     "trowelShapeLabels": "Full Border,Top,Right,Bottom,Left,Top Left,Top Right,Bottom Right,Bottom Left,Blob",
     "handbook": {
-      "include": true
+      "include": false
     }
   },
   "renderPass": "Transparent",
@@ -84,34 +84,6 @@
     "z2": 1
   },
   "blockmaterial": "Stone",
-  "creativeinventory": {
-    "general": [
-      "*-black-frame",
-      "*-white-frame",
-      "*-gold-frame",
-      "*-silver-frame",
-      "*-red-frame",
-      "*-blue-frame",
-      "*-green-frame",
-      "*-yellow-frame",
-      "*-brown-frame",
-      "*-grey-frame",
-      "*-darkgrey-frame"
-    ],
-    "clutter": [
-      "*-black-frame",
-      "*-white-frame",
-      "*-gold-frame",
-      "*-silver-frame",
-      "*-red-frame",
-      "*-blue-frame",
-      "*-green-frame",
-      "*-yellow-frame",
-      "*-brown-frame",
-      "*-grey-frame",
-      "*-darkgrey-frame"
-    ]
-  },
   "replaceable": 5500,
   "resistance": 0,
   "lightAbsorption": 0,

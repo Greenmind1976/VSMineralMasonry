@@ -8,7 +8,9 @@ from pathlib import Path
 ROOT = Path("/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/VSMineralMasonry")
 OUTPUT_DIR = ROOT / "assets/vsmineralmasonry/textures/block/stone/grout"
 THICK_OUTPUT_DIR = ROOT / "assets/vsmineralmasonry/textures/block/stone/thickgrout"
+ROCK_OUTPUT_DIR = ROOT / "assets/vsmineralmasonry/textures/block/stone/groutrock"
 SLABBASE_DIR = ROOT / "assets/vsmineralmasonry/textures/block/stone/slabbase"
+BLOB_MASK_SOURCE = OUTPUT_DIR / "black-blob.png"
 
 PARTS = (
     "top",
@@ -20,6 +22,19 @@ PARTS = (
     "bottomleft",
     "bottomright",
     "frame",
+)
+
+ROCKS = (
+    "andesite",
+    "basalt",
+    "chalk",
+    "chert",
+    "granite",
+    "limestone",
+    "phyllite",
+    "shale",
+    "slate",
+    "whitemarble",
 )
 
 ALPHA_MULTIPLIER = "1.0"
@@ -179,6 +194,29 @@ def build_thick_part_from_rock(source: Path, out_path: Path, part: str) -> None:
         composite_strip_with_alpha(out_path, source, 62, 0, 1, 64, 0.4)
 
 
+def build_blob_from_rock(source: Path, out_path: Path) -> None:
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    run(
+        "magick",
+        str(source),
+        "-alpha",
+        "extract",
+        "-write",
+        "mpr:sourcealpha",
+        "+delete",
+        str(source),
+        "-alpha",
+        "off",
+        str(BLOB_MASK_SOURCE),
+        "-alpha",
+        "extract",
+        "-compose",
+        "CopyOpacity",
+        "-composite",
+        f"PNG32:{out_path}",
+    )
+
+
 def tint_texture(source: Path, out_path: Path, shadow: str, mid: str, highlight: str) -> None:
     run(
         "magick",
@@ -268,6 +306,7 @@ def tint_texture_single_color(source: Path, out_path: Path, color: str) -> None:
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     THICK_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    ROCK_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     for color, source in ROCK_SOURCES.items():
         for part in PARTS:
@@ -283,6 +322,15 @@ def main() -> None:
         for part in PARTS:
             tint_texture_single_color(OUTPUT_DIR / f"black-{part}.png", OUTPUT_DIR / f"{color}-{part}.png", hex_color)
             tint_texture_single_color(THICK_OUTPUT_DIR / f"black-{part}.png", THICK_OUTPUT_DIR / f"{color}-{part}.png", hex_color)
+
+    for old_png in ROCK_OUTPUT_DIR.glob("*.png"):
+        old_png.unlink()
+
+    for rock in ROCKS:
+        source = SLABBASE_DIR / f"{rock}.png"
+        for part in PARTS:
+            build_part_from_rock(source, ROCK_OUTPUT_DIR / f"{rock}-{part}.png", part)
+        build_blob_from_rock(source, ROCK_OUTPUT_DIR / f"{rock}-blob.png")
 
 
 if __name__ == "__main__":

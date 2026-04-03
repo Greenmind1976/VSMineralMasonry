@@ -46,7 +46,7 @@
     "trowelShapeParts": "frame,top,right,bottom,left,topleft,topright,bottomright,bottomleft,blob",
     "trowelShapeLabels": "Full Border,Top,Right,Bottom,Left,Top Left,Top Right,Bottom Right,Bottom Left,Blob",
     "handbook": {
-      "include": true
+      "include": false
     }
   },
   "renderPass": "Transparent",
@@ -68,14 +68,6 @@
     "z2": 1
   },
   "blockmaterial": "Stone",
-  "creativeinventory": {
-    "general": [
-      "*-frame"
-    ],
-    "clutter": [
-      "*-frame"
-    ]
-  },
   "replaceable": 5500,
   "resistance": 0,
   "lightAbsorption": 0,

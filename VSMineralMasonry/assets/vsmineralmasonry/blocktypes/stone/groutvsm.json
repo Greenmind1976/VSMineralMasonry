@@ -46,7 +46,7 @@
     "trowelShapeParts": "tileset1,tileset2,tileset3,tileset4,tileset5,tileset6,tileset7,tileset8,tileset9,tileset10,tileset11,tileset12,tileset13,tileset14,tileset15,tileset16,border",
     "trowelShapeLabels": "Tileset 1,Tileset 2,Tileset 3,Tileset 4,Tileset 5,Tileset 6,Tileset 7,Tileset 8,Tileset 9,Tileset 10,Tileset 11,Tileset 12,Tileset 13,Tileset 14,Tileset 15,Tileset 16,Border",
     "handbook": {
-      "include": true
+      "include": false
     }
   },
   "renderPass": "Transparent",
@@ -68,14 +68,6 @@
     "z2": 1
   },
   "blockmaterial": "Stone",
-  "creativeinventory": {
-    "general": [
-      "*-frame"
-    ],
-    "clutter": [
-      "*-frame"
-    ]
-  },
   "replaceable": 5500,
   "resistance": 0,
   "lightAbsorption": 0,
