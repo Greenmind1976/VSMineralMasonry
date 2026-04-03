@@ -53,7 +53,7 @@ ROCKS = [
 ]
 TILES = [f"r{row}c{col}" for row in range(1, 4) for col in range(1, 4)]
 FACES = ("south", "north", "west", "east", "down", "up")
-OVERLAY_COMPOSED_FAMILIES = {"breccia"}
+OVERLAY_COMPOSED_FAMILIES = {"breccia", "travertine"}
 
 EXCLUDED_COMBINATIONS = {
     ("basalt", "polished", "bituminouscoal"),
