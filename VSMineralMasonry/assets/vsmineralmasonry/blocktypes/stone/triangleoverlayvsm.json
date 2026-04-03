@@ -52,6 +52,8 @@
   },
   "attributes": {
     "ignoreSounds": true,
+    "trowelShapeParts": "topleft,topright,bottomright,bottomleft",
+    "trowelShapeLabels": "Top Left,Top Right,Bottom Right,Bottom Left",
     "handbook": {
       "include": true
     }

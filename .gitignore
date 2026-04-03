@@ -36,6 +36,13 @@ bld/
 [Ll]og/
 [Ll]ogs/
 workingdir/
+.DS_Store
+
+# Local review sheets and intermediate texture-generation outputs
+VSMineralMasonry/grout-colored-master-sheet*.svg
+VSMineralMasonry/grout-colored-master-sheet*.png
+VSMineralMasonry/assets/vsmineralmasonry/textures/block/stone/groutshapecolor/
+VSMineralMasonry/assets/vsmineralmasonry/textures/block/stone/groutshaperock/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
