@@ -53,7 +53,7 @@ ROCKS = [
 ]
 TILES = [f"r{row}c{col}" for row in range(1, 4) for col in range(1, 4)]
 FACES = ("south", "north", "west", "east", "down", "up")
-OVERLAY_COMPOSED_FAMILIES = {"breccia", "travertine"}
+OVERLAY_COMPOSED_FAMILIES = {"breccia", "travertine", "marble"}
 
 EXCLUDED_COMBINATIONS = {
     ("basalt", "polished", "bituminouscoal"),
@@ -164,6 +164,16 @@ def is_excluded(rock: str, finish: str, mineral: str) -> bool:
     return (rock, finish, mineral) in EXCLUDED_COMBINATIONS
 
 
+def uses_overlay_composition(family: str, finish: str, mineral: str, rock: str) -> bool:
+    if family in {"breccia", "travertine"}:
+        return True
+
+    if family == "marble":
+        return True
+
+    return False
+
+
 def colorize_overlay(source: Path, target: Path, mineral: str) -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
 
@@ -213,6 +223,31 @@ def colorize_overlay(source: Path, target: Path, mineral: str) -> None:
         ],
         check=True,
     )
+
+
+def strengthen_overlay_if_needed(source: Path, target: Path, family: str, mineral: str) -> Path:
+    if family == "marble" and mineral == "bituminouscoal":
+        target.parent.mkdir(parents=True, exist_ok=True)
+        subprocess.run(
+            [
+                "magick",
+                str(source),
+                "-channel",
+                "A",
+                "-morphology",
+                "Dilate",
+                "Diamond:1",
+                "-evaluate",
+                "multiply",
+                "2.0",
+                "+channel",
+                str(target),
+            ],
+            check=True,
+        )
+        return target
+
+    return source
 
 
 def generate_base_tile(target: Path, overlay: Path, rock_base: Path, finish: str) -> None:
@@ -323,9 +358,15 @@ def generate_shared_overlay_faces() -> None:
                             raise FileNotFoundError(f"Missing overlay source: {seed_overlay}")
                         colored_overlay = temp_root / family / finish / mineral / f"{tile}.png"
                         colorize_overlay(seed_overlay, colored_overlay, mineral)
+                        overlay_input = strengthen_overlay_if_needed(
+                            colored_overlay,
+                            temp_root / family / finish / mineral / f"{tile}-strong.png",
+                            family,
+                            mineral,
+                        )
                         output_prefix = SOURCE_MURAL_OVERLAY_ROOT / family / finish / mineral / tile
                         output_prefix.parent.mkdir(parents=True, exist_ok=True)
-                        generate_overlay_face_files(colored_overlay, output_prefix, finish)
+                        generate_overlay_face_files(overlay_input, output_prefix, finish)
 
 
 def rebuild_texture_bank() -> None:
@@ -337,13 +378,13 @@ def rebuild_texture_bank() -> None:
     with tempfile.TemporaryDirectory(prefix="muralslab-overlays-") as temp_dir:
         temp_root = Path(temp_dir)
         for family in FAMILIES:
-            if family in OVERLAY_COMPOSED_FAMILIES:
-                continue
             for finish in FINISHES:
                 for mineral in MINERALS:
                     seed_mineral = overlay_seed_mineral(mineral)
                     for rock in ROCKS:
                         if is_excluded(rock, finish, mineral):
+                            continue
+                        if uses_overlay_composition(family, finish, mineral, rock):
                             continue
                         rock_base = rock_base_source(rock)
                         if not rock_base.exists():
@@ -425,7 +466,7 @@ def build_textures_by_type(states: dict[str, list[str]]) -> dict[str, dict]:
                         continue
                     for tile in states["tile"]:
                         key = f"muralslab-{family}-{finish}-{mineral}-{rock}-{tile}"
-                        if family in OVERLAY_COMPOSED_FAMILIES:
+                        if uses_overlay_composition(family, finish, mineral, rock):
                             base_prefix = f"vsmineralmasonry:block/stone/muralslab-basefaces/{rock}"
                             overlay_prefix = (
                                 f"vsmineralmasonry:block/stone/muralslab-overlays/"
