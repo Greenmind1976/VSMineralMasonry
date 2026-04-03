@@ -9,6 +9,7 @@ fi
 
 TOOLS_DIR="${HOME}/Documents/VSMods/.image-tools"
 PY_VENV="${TOOLS_DIR}/venv"
+REQ_FILE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/requirements-image-tools.txt"
 
 echo "Creating tools folder at: ${TOOLS_DIR}"
 mkdir -p "${TOOLS_DIR}"
@@ -33,12 +34,27 @@ fi
 
 # shellcheck disable=SC1090
 source "${PY_VENV}/bin/activate"
-MISSING_PKGS="$(python - <<'PY'
+MISSING_PKGS="$(python - "$REQ_FILE" <<'PY'
 import importlib.util
+import pathlib
+import sys
+
+req_file = pathlib.Path(sys.argv[1])
+packages = []
+import_names = {"pillow": "PIL"}
+
+for line in req_file.read_text().splitlines():
+    line = line.strip()
+    if not line or line.startswith("#"):
+        continue
+    packages.append(line)
+
 missing = []
-for name in ("PIL", "numpy"):
-    if importlib.util.find_spec(name) is None:
-        missing.append(name)
+for package in packages:
+    module = import_names.get(package.lower(), package)
+    if importlib.util.find_spec(module) is None:
+        missing.append(package)
+
 print(" ".join(missing))
 PY
 )"
@@ -47,7 +63,7 @@ if [ -n "${MISSING_PKGS}" ]; then
   echo "Installing missing Python packages: ${MISSING_PKGS}"
   pip install ${MISSING_PKGS}
 else
-  echo "Python packages already present: pillow numpy"
+  echo "Python packages already present: $(tr '\n' ' ' < "${REQ_FILE}" | xargs)"
 fi
 
 cat <<INFO

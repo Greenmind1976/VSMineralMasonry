@@ -1,0 +1,28 @@
+{
+  "gimpDepthDefaults": {
+    "SHADOW_OPACITY": "0.20",
+    "HIGHLIGHT_OPACITY": "0.75",
+    "SPARKLE_OPACITY": "0.00",
+    "SPARKLE_BLACK_PCT": "90%",
+    "SPARKLE_WHITE_PCT": "95%",
+    "SPARKLE_BLUR": "0x0.15",
+    "DETAIL_MASK_BLACK_PCT": "45%",
+    "DETAIL_MASK_WHITE_PCT": "88%",
+    "DETAIL_MASK_POW": "1.35",
+    "BLACK_LEVEL_PCT": "5.88235%",
+    "WHITE_LEVEL_PCT": "94.11765%",
+    "GAUSSIAN_BLUR": "0x0.6"
+  },
+  "gimpDepthByMineral": {
+    "nativecopper": {
+      "SHADOW_OPACITY": "0.20",
+      "HIGHLIGHT_OPACITY": "0.75",
+      "SPARKLE_OPACITY": "0.00"
+    },
+    "sulfur": {
+      "SHADOW_OPACITY": "0.05",
+      "HIGHLIGHT_OPACITY": "0.75",
+      "SPARKLE_OPACITY": "0.00"
+    }
+  }
+}
