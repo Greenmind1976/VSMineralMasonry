@@ -53,7 +53,7 @@ ROCKS = [
 ]
 TILES = [f"r{row}c{col}" for row in range(1, 4) for col in range(1, 4)]
 FACES = ("south", "north", "west", "east", "down", "up")
-OVERLAY_COMPOSED_FAMILIES = {"breccia", "travertine", "marble"}
+OVERLAY_COMPOSED_FAMILIES = {"breccia", "travertine", "marble", "granite"}
 
 EXCLUDED_COMBINATIONS = {
     ("basalt", "polished", "bituminouscoal"),
@@ -165,7 +165,7 @@ def is_excluded(rock: str, finish: str, mineral: str) -> bool:
 
 
 def uses_overlay_composition(family: str, finish: str, mineral: str, rock: str) -> bool:
-    if family in {"breccia", "travertine"}:
+    if family in {"breccia", "travertine", "granite"}:
         return True
 
     if family == "marble":

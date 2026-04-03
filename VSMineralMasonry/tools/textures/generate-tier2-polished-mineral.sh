@@ -5,6 +5,11 @@ usage() {
   echo "Usage: $0 <mineral> <mask1.png|vanilla|vanilla:mineral> <mask2.png|vanilla|vanilla:mineral> <mask3.png|vanilla|vanilla:mineral> [--base-palette-mineral <mineral>] [--overlay2-mask1 <mask>] [--overlay2-mask2 <mask>] [--overlay2-mask3 <mask>] [--overlay2-palette-mineral <mineral>]" >&2
 }
 
+if [ "${1:-}" = "--help" ] || [ "${1:-}" = "-h" ]; then
+  usage
+  exit 0
+fi
+
 if [ "${1:-}" = "" ] || [ "${2:-}" = "" ] || [ "${3:-}" = "" ] || [ "${4:-}" = "" ]; then
   usage
   exit 1
