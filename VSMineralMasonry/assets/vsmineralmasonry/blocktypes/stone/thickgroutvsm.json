@@ -24,7 +24,8 @@
         "topleft",
         "topright",
         "bottomleft",
-        "bottomright"
+        "bottomright",
+        "blob"
       ]
     }
   ],
@@ -42,6 +43,8 @@
   },
   "attributes": {
     "ignoreSounds": true,
+    "trowelShapeParts": "frame,top,right,bottom,left,topleft,topright,bottomright,bottomleft,blob",
+    "trowelShapeLabels": "Full Border,Top,Right,Bottom,Left,Top Left,Top Right,Bottom Right,Bottom Left,Blob",
     "handbook": {
       "include": true
     }

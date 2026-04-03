@@ -23,6 +23,9 @@ PARTS = (
 )
 
 ALPHA_MULTIPLIER = "1.0"
+COLOR_SHADOW_FACTOR = 0.93
+COLOR_HIGHLIGHT_FACTOR = 1.03
+COLOR_DETAIL_SIGMOID = "1.4,50%"
 
 COLOR_BASES = {
     "gold": "#d0b35b",
@@ -219,8 +222,8 @@ def tint_texture(source: Path, out_path: Path, shadow: str, mid: str, highlight:
 
 
 def tint_texture_single_color(source: Path, out_path: Path, color: str) -> None:
-    shadow = shade_color(color, 0.82)
-    highlight = shade_color(color, 1.08)
+    shadow = shade_color(color, COLOR_SHADOW_FACTOR)
+    highlight = shade_color(color, COLOR_HIGHLIGHT_FACTOR)
     run(
         "magick",
         str(source),
@@ -236,7 +239,7 @@ def tint_texture_single_color(source: Path, out_path: Path, color: str) -> None:
         "Gray",
         "-auto-level",
         "-sigmoidal-contrast",
-        "3,54%",
+        COLOR_DETAIL_SIGMOID,
         "-write",
         "mpr:gray",
         "+delete",

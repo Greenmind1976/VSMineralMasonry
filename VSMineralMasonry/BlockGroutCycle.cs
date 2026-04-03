@@ -15,7 +15,8 @@ public class BlockGroutCycle : Block
         "topleft",
         "topright",
         "bottomleft",
-        "bottomright"
+        "bottomright",
+        "blob"
     };
 
     public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos)
