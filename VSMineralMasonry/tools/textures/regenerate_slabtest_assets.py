@@ -26,6 +26,7 @@ DEBUG_MURAL_BASEFACE_ROOT = DEBUG_ROOT / "textures/block/stone/muralslab-basefac
 DEBUG_MURAL_OVERLAY_ROOT = DEBUG_ROOT / "textures/block/stone/muralslab-overlays"
 DEBUG_SLABBASE_ROOT = DEBUG_ROOT / "textures/block/stone/slabbase"
 
+# Source folder names still use the older "polished" label, but they now feed the burnished-only live set.
 ROCK_BASE_ROOT = PROJECT_ROOT / "textures/no-bevel-polished-vanilla-64"
 ALT_ROCK_BASE_ROOT = PROJECT_ROOT / "textures/polished-vanilla-64"
 OVERLAY_SOURCE_ROOT = PROJECT_ROOT / "textures/overlay-source-3x3"
