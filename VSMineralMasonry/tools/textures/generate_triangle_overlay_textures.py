@@ -5,6 +5,7 @@ from pathlib import Path
 
 
 REPO_ROOT = Path("/Users/garretcoffman/Documents/VSMods/VSMineralMasonry")
+# Source folder name is historical; these textures now back the burnished stone set.
 TEXTURE_ROOT = REPO_ROOT / "textures" / "no-bevel-polished-vanilla-64"
 OUTPUT_DIR = REPO_ROOT / "VSMineralMasonry" / "assets" / "vsmineralmasonry" / "textures" / "block" / "stone" / "triangleoverlay"
 

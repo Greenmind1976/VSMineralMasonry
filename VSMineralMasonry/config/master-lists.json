@@ -91,7 +91,7 @@
   "recipePolicy": {
     "polishedMineral": {
       "mode": "selective",
-      "notes": "Full mineral x rock polished block variants may exist even when the recipe is not enabled. Use this section to control which polished mineral recipes are exposed to players.",
+      "notes": "Full mineral x rock burnished block variants may exist even when the recipe is not enabled. This legacy section now controls which burnished mineral recipes are exposed to players.",
       "enabledMinerals": [
         "malachite",
         "nativecopper"
