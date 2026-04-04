@@ -31,7 +31,7 @@ ALT_ROCK_BASE_ROOT = PROJECT_ROOT / "textures/polished-vanilla-64"
 OVERLAY_SOURCE_ROOT = PROJECT_ROOT / "textures/overlay-source-3x3"
 
 FAMILIES = ["breccia", "travertine", "granite", "marble"]
-FINISHES = ["polished", "burnished"]
+FINISHES = ["burnished"]
 MINERALS = [
     "bituminouscoal",
     "emerald",
@@ -56,56 +56,22 @@ FACES = ("south", "north", "west", "east", "down", "up")
 OVERLAY_COMPOSED_FAMILIES = {"breccia", "travertine", "marble", "granite"}
 
 EXCLUDED_COMBINATIONS = {
-    ("basalt", "polished", "bituminouscoal"),
     ("basalt", "burnished", "bituminouscoal"),
-    ("basalt", "burnished", "lignite"),
-    ("granite", "polished", "lignite"),
-    ("granite", "burnished", "lignite"),
-    ("granite", "burnished", "bituminouscoal"),
-    ("granite", "burnished", "silver"),
-    ("whitemarble", "polished", "quartz"),
-    ("whitemarble", "burnished", "quartz"),
-    ("whitemarble", "polished", "silver"),
-    ("whitemarble", "burnished", "silver"),
-    ("slate", "polished", "lignite"),
-    ("slate", "burnished", "lignite"),
-    ("slate", "burnished", "bituminouscoal"),
-    ("chert", "polished", "lignite"),
-    ("chert", "burnished", "lignite"),
-    ("chert", "burnished", "bituminouscoal"),
-    ("phyllite", "polished", "lignite"),
-    ("phyllite", "burnished", "lignite"),
-    ("phyllite", "burnished", "bituminouscoal"),
-    ("phyllite", "burnished", "silver"),
-    ("andesite", "polished", "lignite"),
-    ("andesite", "burnished", "lignite"),
-    ("andesite", "burnished", "bituminouscoal"),
-    ("andesite", "burnished", "silver"),
-    ("limestone", "polished", "silver"),
-    ("limestone", "burnished", "silver"),
-    ("limestone", "burnished", "lignite"),
-    ("limestone", "burnished", "quartz"),
-    ("shale", "polished", "lignite"),
-    ("shale", "burnished", "lignite"),
-    ("shale", "burnished", "bituminouscoal"),
-    ("chalk", "polished", "silver"),
-    ("chalk", "burnished", "silver"),
-    ("chalk", "burnished", "lignite"),
-    ("chalk", "burnished", "quartz"),
-    ("granite", "polished", "emerald"),
-    ("chert", "polished", "emerald"),
-    ("phyllite", "polished", "emerald"),
-    ("andesite", "polished", "emerald"),
-    ("limestone", "polished", "emerald"),
-    ("basalt", "burnished", "emerald"),
-    ("granite", "burnished", "emerald"),
-    ("slate", "burnished", "emerald"),
-    ("chert", "burnished", "emerald"),
-    ("phyllite", "burnished", "emerald"),
     ("andesite", "burnished", "emerald"),
+    ("andesite", "burnished", "lignite"),
+    ("chalk", "burnished", "silver"),
+    ("chert", "burnished", "emerald"),
+    ("chert", "burnished", "lignite"),
+    ("granite", "burnished", "emerald"),
+    ("granite", "burnished", "lignite"),
     ("limestone", "burnished", "emerald"),
-    ("shale", "burnished", "emerald"),
-    ("chalk", "burnished", "emerald"),
+    ("limestone", "burnished", "silver"),
+    ("phyllite", "burnished", "emerald"),
+    ("phyllite", "burnished", "lignite"),
+    ("shale", "burnished", "lignite"),
+    ("slate", "burnished", "lignite"),
+    ("whitemarble", "burnished", "quartz"),
+    ("whitemarble", "burnished", "silver"),
 }
 
 DISPLAY_NAMES = {
@@ -164,14 +130,8 @@ def is_excluded(rock: str, finish: str, mineral: str) -> bool:
     return (rock, finish, mineral) in EXCLUDED_COMBINATIONS
 
 
-def uses_overlay_composition(family: str, finish: str, mineral: str, rock: str) -> bool:
-    if family in {"breccia", "travertine", "granite"}:
-        return True
-
-    if family == "marble":
-        return True
-
-    return False
+def uses_overlay_composition(family: str) -> bool:
+    return family in OVERLAY_COMPOSED_FAMILIES
 
 
 def colorize_overlay(source: Path, target: Path, mineral: str) -> None:
@@ -250,33 +210,10 @@ def strengthen_overlay_if_needed(source: Path, target: Path, family: str, minera
     return source
 
 
-def generate_base_tile(target: Path, overlay: Path, rock_base: Path, finish: str) -> None:
+def generate_base_tile(target: Path, overlay: Path, rock_base: Path) -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
-    if finish == "polished":
-        subprocess.run(
-            ["magick", str(rock_base), str(overlay), "-compose", "over", "-composite", str(target)],
-            check=True,
-        )
-        return
-
     subprocess.run(
-        [
-            "magick",
-            str(rock_base),
-            "(",
-            str(overlay),
-            "-channel",
-            "a",
-            "-evaluate",
-            "multiply",
-            "0.4",
-            "+channel",
-            ")",
-            "-compose",
-            "over",
-            "-composite",
-            str(target),
-        ],
+        ["magick", str(rock_base), str(overlay), "-compose", "over", "-composite", str(target)],
         check=True,
     )
 
@@ -315,11 +252,7 @@ def generate_shared_base_faces() -> None:
         generate_face_files(base_tile)
 
 
-def overlay_alpha_for_finish(finish: str) -> str:
-    return "0.85" if finish == "burnished" else "1.0"
-
-
-def generate_overlay_face_files(input_tile: Path, output_prefix: Path, finish: str) -> None:
+def generate_overlay_face_files(input_tile: Path, output_prefix: Path) -> None:
     outputs = face_output_map(output_prefix)
     subprocess.run(
         [
@@ -329,7 +262,7 @@ def generate_overlay_face_files(input_tile: Path, output_prefix: Path, finish: s
             "A",
             "-evaluate",
             "multiply",
-            overlay_alpha_for_finish(finish),
+            "1.0",
             "+channel",
             str(outputs["south"]),
         ],
@@ -366,7 +299,7 @@ def generate_shared_overlay_faces() -> None:
                         )
                         output_prefix = SOURCE_MURAL_OVERLAY_ROOT / family / finish / mineral / tile
                         output_prefix.parent.mkdir(parents=True, exist_ok=True)
-                        generate_overlay_face_files(overlay_input, output_prefix, finish)
+                        generate_overlay_face_files(overlay_input, output_prefix)
 
 
 def rebuild_texture_bank() -> None:
@@ -384,7 +317,7 @@ def rebuild_texture_bank() -> None:
                     for rock in ROCKS:
                         if is_excluded(rock, finish, mineral):
                             continue
-                        if uses_overlay_composition(family, finish, mineral, rock):
+                        if uses_overlay_composition(family):
                             continue
                         rock_base = rock_base_source(rock)
                         if not rock_base.exists():
@@ -405,7 +338,7 @@ def rebuild_texture_bank() -> None:
                                 / rock
                                 / f"{tile}.png"
                             )
-                            generate_base_tile(base_tile, colored_overlay, rock_base, finish)
+                            generate_base_tile(base_tile, colored_overlay, rock_base)
                             generate_face_files(base_tile)
 
 
@@ -466,7 +399,7 @@ def build_textures_by_type(states: dict[str, list[str]]) -> dict[str, dict]:
                         continue
                     for tile in states["tile"]:
                         key = f"muralslab-{family}-{finish}-{mineral}-{rock}-{tile}"
-                        if uses_overlay_composition(family, finish, mineral, rock):
+                        if uses_overlay_composition(family):
                             base_prefix = f"vsmineralmasonry:block/stone/muralslab-basefaces/{rock}"
                             overlay_prefix = (
                                 f"vsmineralmasonry:block/stone/muralslab-overlays/"
