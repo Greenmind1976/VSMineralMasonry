@@ -1,13 +1,13 @@
 # VSMineralMasonry
 
-Decorative stone masonry blocks for Vintage Story, built from curated overlay patterns and polished rock textures.
+Decorative stone masonry blocks for Vintage Story, built from curated overlay patterns and burnished rock textures.
 
 ## Current Live Set
 
 The current live mod ships with:
 
 - `5` overlay/decor families
-- `2` finishes
+- `1` finish
 - `5` colorways
 - `10` supported host rocks
 
@@ -19,9 +19,8 @@ The current live mod ships with:
 - `marble`
 - `triangleoverlay`
 
-## Finishes
+## Finish
 
-- `polished`
 - `burnished`
 
 ## Colorways
@@ -68,13 +67,17 @@ Current live host rocks:
 Current live block/content set:
 
 - `muralslab`
-  - baked mural textures
+  - overlay-composed mural textures for the live stone families
 - `slabcycle`
   - same mural set with tool-driven tile cycling/alignment
-- `rockpolishedvsm`
-  - standalone polished base-rock blocks using the current host rock set
+- `burnished`
+  - standalone burnished base-rock blocks using the current host rock set
+- `burnishedbevel`
+  - standalone one-side bevel blocks using the burnished slabbase textures
+- `burnishedbevel4`
+  - standalone four-side bevel blocks using the burnished slabbase textures
 - `triangleoverlayvsm`
-  - placeable triangular polished-stone decor pieces for corners, diagonals, and trim work
+  - placeable triangular burnished-stone decor pieces for corners, diagonals, and trim work
 
 ## Tool Behavior
 
@@ -107,19 +110,19 @@ The live build currently depends on these source folders:
 - [`/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/no-bevel-polished-vanilla-64`](/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/no-bevel-polished-vanilla-64)
 - [`/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/polished-vanilla-64`](/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/textures/polished-vanilla-64)
 
-Everything else in the project texture tree is archival or reference material.
+Those folder names still include `polished` for historical reasons, but they now feed the burnished-only live set.
 
 ## Notes On Scope
 
-This mod currently uses baked textures rather than runtime composition.
+The mural/slab system now uses shared base faces plus reusable overlay textures instead of shipping a full baked mural bank.
 
 That choice was made because:
 
 - it gives predictable in-game results
-- it avoids orientation issues during normal mural use
-- it keeps the art workflow straightforward
+- it keeps the mod size down dramatically
+- it still keeps the art workflow straightforward
 
-The tradeoff is mod size, so the live set is curated rather than fully combinatorial.
+The tradeoff is larger generated JSON for mural/slab bindings, so the live set is curated rather than fully combinatorial.
 
 ## Development
 
