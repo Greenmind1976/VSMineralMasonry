@@ -31,16 +31,23 @@ def dump_json(path: Path, data: dict) -> None:
 
 def main() -> None:
     muralslab = json.loads(MURALSLAB_BLOCK.read_text())
-    states = {group["code"]: group["states"] for group in muralslab["variantgroups"]}
     muralslab_allowed = muralslab["allowedVariants"]
 
     allowed_variants = []
-    creative_variants = []
+    creative_variant_candidates = {}
     for code in muralslab_allowed:
         cycle_code = code.replace("muralslab-", "slabcycle-")
         allowed_variants.append(cycle_code)
         if cycle_code.endswith("-r1c1"):
-            creative_variants.append(cycle_code)
+            _, family, finish, mineral, rock, _ = cycle_code.split("-", 5)
+            key = (family, mineral, rock)
+            creative_variant_candidates.setdefault(key, {})[finish] = cycle_code
+
+    creative_variants = []
+    for key in sorted(creative_variant_candidates):
+        variants = creative_variant_candidates[key]
+        if "burnished" in variants:
+            creative_variants.append(variants["burnished"])
 
     textures_by_type = {}
     for key, value in muralslab["texturesByType"].items():

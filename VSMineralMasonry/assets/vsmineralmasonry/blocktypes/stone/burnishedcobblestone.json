@@ -1,0 +1,1995 @@
+{
+  "code": "burnishedcobblestone",
+  "class": "BlockCobblestoneCycle",
+  "replaceable": 120,
+  "blockmaterial": "Stone",
+  "storageFlags": 5,
+  "variantgroups": [
+    {
+      "code": "rock",
+      "states": [
+        "basalt",
+        "granite",
+        "whitemarble",
+        "slate",
+        "chert",
+        "phyllite",
+        "andesite",
+        "limestone",
+        "shale",
+        "chalk"
+      ]
+    },
+    {
+      "code": "tile",
+      "states": [
+        "r1c1",
+        "r1c2",
+        "r1c3",
+        "r2c1",
+        "r2c2",
+        "r2c3",
+        "r3c1",
+        "r3c2",
+        "r3c3"
+      ]
+    }
+  ],
+  "attributes": {
+    "canChisel": true,
+    "handbook": {
+      "groupBy": [
+        "burnishedcobblestone-{rock}"
+      ]
+    }
+  },
+  "creativeinventory": {
+    "general": [
+      "*-basalt-r1c1",
+      "*-granite-r1c1",
+      "*-whitemarble-r1c1",
+      "*-slate-r1c1",
+      "*-chert-r1c1",
+      "*-phyllite-r1c1",
+      "*-andesite-r1c1",
+      "*-limestone-r1c1",
+      "*-shale-r1c1",
+      "*-chalk-r1c1"
+    ],
+    "construction": [
+      "*-basalt-r1c1",
+      "*-granite-r1c1",
+      "*-whitemarble-r1c1",
+      "*-slate-r1c1",
+      "*-chert-r1c1",
+      "*-phyllite-r1c1",
+      "*-andesite-r1c1",
+      "*-limestone-r1c1",
+      "*-shale-r1c1",
+      "*-chalk-r1c1"
+    ]
+  },
+  "shape": {
+    "base": "game:block/basic/cube"
+  },
+  "drawtype": "cube",
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "allowedVariants": [
+    "burnishedcobblestone-basalt-r1c1",
+    "burnishedcobblestone-basalt-r1c2",
+    "burnishedcobblestone-basalt-r1c3",
+    "burnishedcobblestone-basalt-r2c1",
+    "burnishedcobblestone-basalt-r2c2",
+    "burnishedcobblestone-basalt-r2c3",
+    "burnishedcobblestone-basalt-r3c1",
+    "burnishedcobblestone-basalt-r3c2",
+    "burnishedcobblestone-basalt-r3c3",
+    "burnishedcobblestone-granite-r1c1",
+    "burnishedcobblestone-granite-r1c2",
+    "burnishedcobblestone-granite-r1c3",
+    "burnishedcobblestone-granite-r2c1",
+    "burnishedcobblestone-granite-r2c2",
+    "burnishedcobblestone-granite-r2c3",
+    "burnishedcobblestone-granite-r3c1",
+    "burnishedcobblestone-granite-r3c2",
+    "burnishedcobblestone-granite-r3c3",
+    "burnishedcobblestone-whitemarble-r1c1",
+    "burnishedcobblestone-whitemarble-r1c2",
+    "burnishedcobblestone-whitemarble-r1c3",
+    "burnishedcobblestone-whitemarble-r2c1",
+    "burnishedcobblestone-whitemarble-r2c2",
+    "burnishedcobblestone-whitemarble-r2c3",
+    "burnishedcobblestone-whitemarble-r3c1",
+    "burnishedcobblestone-whitemarble-r3c2",
+    "burnishedcobblestone-whitemarble-r3c3",
+    "burnishedcobblestone-slate-r1c1",
+    "burnishedcobblestone-slate-r1c2",
+    "burnishedcobblestone-slate-r1c3",
+    "burnishedcobblestone-slate-r2c1",
+    "burnishedcobblestone-slate-r2c2",
+    "burnishedcobblestone-slate-r2c3",
+    "burnishedcobblestone-slate-r3c1",
+    "burnishedcobblestone-slate-r3c2",
+    "burnishedcobblestone-slate-r3c3",
+    "burnishedcobblestone-chert-r1c1",
+    "burnishedcobblestone-chert-r1c2",
+    "burnishedcobblestone-chert-r1c3",
+    "burnishedcobblestone-chert-r2c1",
+    "burnishedcobblestone-chert-r2c2",
+    "burnishedcobblestone-chert-r2c3",
+    "burnishedcobblestone-chert-r3c1",
+    "burnishedcobblestone-chert-r3c2",
+    "burnishedcobblestone-chert-r3c3",
+    "burnishedcobblestone-phyllite-r1c1",
+    "burnishedcobblestone-phyllite-r1c2",
+    "burnishedcobblestone-phyllite-r1c3",
+    "burnishedcobblestone-phyllite-r2c1",
+    "burnishedcobblestone-phyllite-r2c2",
+    "burnishedcobblestone-phyllite-r2c3",
+    "burnishedcobblestone-phyllite-r3c1",
+    "burnishedcobblestone-phyllite-r3c2",
+    "burnishedcobblestone-phyllite-r3c3",
+    "burnishedcobblestone-andesite-r1c1",
+    "burnishedcobblestone-andesite-r1c2",
+    "burnishedcobblestone-andesite-r1c3",
+    "burnishedcobblestone-andesite-r2c1",
+    "burnishedcobblestone-andesite-r2c2",
+    "burnishedcobblestone-andesite-r2c3",
+    "burnishedcobblestone-andesite-r3c1",
+    "burnishedcobblestone-andesite-r3c2",
+    "burnishedcobblestone-andesite-r3c3",
+    "burnishedcobblestone-limestone-r1c1",
+    "burnishedcobblestone-limestone-r1c2",
+    "burnishedcobblestone-limestone-r1c3",
+    "burnishedcobblestone-limestone-r2c1",
+    "burnishedcobblestone-limestone-r2c2",
+    "burnishedcobblestone-limestone-r2c3",
+    "burnishedcobblestone-limestone-r3c1",
+    "burnishedcobblestone-limestone-r3c2",
+    "burnishedcobblestone-limestone-r3c3",
+    "burnishedcobblestone-shale-r1c1",
+    "burnishedcobblestone-shale-r1c2",
+    "burnishedcobblestone-shale-r1c3",
+    "burnishedcobblestone-shale-r2c1",
+    "burnishedcobblestone-shale-r2c2",
+    "burnishedcobblestone-shale-r2c3",
+    "burnishedcobblestone-shale-r3c1",
+    "burnishedcobblestone-shale-r3c2",
+    "burnishedcobblestone-shale-r3c3",
+    "burnishedcobblestone-chalk-r1c1",
+    "burnishedcobblestone-chalk-r1c2",
+    "burnishedcobblestone-chalk-r1c3",
+    "burnishedcobblestone-chalk-r2c1",
+    "burnishedcobblestone-chalk-r2c2",
+    "burnishedcobblestone-chalk-r2c3",
+    "burnishedcobblestone-chalk-r3c1",
+    "burnishedcobblestone-chalk-r3c2",
+    "burnishedcobblestone-chalk-r3c3"
+  ],
+  "texturesByType": {
+    "burnishedcobblestone-basalt-r1c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c1-upface"
+      }
+    },
+    "burnishedcobblestone-basalt-r1c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c2-upface"
+      }
+    },
+    "burnishedcobblestone-basalt-r1c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r1c3-upface"
+      }
+    },
+    "burnishedcobblestone-basalt-r2c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c1-upface"
+      }
+    },
+    "burnishedcobblestone-basalt-r2c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c2-upface"
+      }
+    },
+    "burnishedcobblestone-basalt-r2c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r2c3-upface"
+      }
+    },
+    "burnishedcobblestone-basalt-r3c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c1-upface"
+      }
+    },
+    "burnishedcobblestone-basalt-r3c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c2-upface"
+      }
+    },
+    "burnishedcobblestone-basalt-r3c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/basalt-r3c3-upface"
+      }
+    },
+    "burnishedcobblestone-granite-r1c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c1-upface"
+      }
+    },
+    "burnishedcobblestone-granite-r1c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c2-upface"
+      }
+    },
+    "burnishedcobblestone-granite-r1c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r1c3-upface"
+      }
+    },
+    "burnishedcobblestone-granite-r2c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c1-upface"
+      }
+    },
+    "burnishedcobblestone-granite-r2c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c2-upface"
+      }
+    },
+    "burnishedcobblestone-granite-r2c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r2c3-upface"
+      }
+    },
+    "burnishedcobblestone-granite-r3c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c1-upface"
+      }
+    },
+    "burnishedcobblestone-granite-r3c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c2-upface"
+      }
+    },
+    "burnishedcobblestone-granite-r3c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/granite-r3c3-upface"
+      }
+    },
+    "burnishedcobblestone-whitemarble-r1c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c1-upface"
+      }
+    },
+    "burnishedcobblestone-whitemarble-r1c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c2-upface"
+      }
+    },
+    "burnishedcobblestone-whitemarble-r1c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r1c3-upface"
+      }
+    },
+    "burnishedcobblestone-whitemarble-r2c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c1-upface"
+      }
+    },
+    "burnishedcobblestone-whitemarble-r2c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c2-upface"
+      }
+    },
+    "burnishedcobblestone-whitemarble-r2c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r2c3-upface"
+      }
+    },
+    "burnishedcobblestone-whitemarble-r3c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c1-upface"
+      }
+    },
+    "burnishedcobblestone-whitemarble-r3c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c2-upface"
+      }
+    },
+    "burnishedcobblestone-whitemarble-r3c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/whitemarble-r3c3-upface"
+      }
+    },
+    "burnishedcobblestone-slate-r1c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c1-upface"
+      }
+    },
+    "burnishedcobblestone-slate-r1c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c2-upface"
+      }
+    },
+    "burnishedcobblestone-slate-r1c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r1c3-upface"
+      }
+    },
+    "burnishedcobblestone-slate-r2c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c1-upface"
+      }
+    },
+    "burnishedcobblestone-slate-r2c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c2-upface"
+      }
+    },
+    "burnishedcobblestone-slate-r2c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r2c3-upface"
+      }
+    },
+    "burnishedcobblestone-slate-r3c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c1-upface"
+      }
+    },
+    "burnishedcobblestone-slate-r3c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c2-upface"
+      }
+    },
+    "burnishedcobblestone-slate-r3c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/slate-r3c3-upface"
+      }
+    },
+    "burnishedcobblestone-chert-r1c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c1-upface"
+      }
+    },
+    "burnishedcobblestone-chert-r1c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c2-upface"
+      }
+    },
+    "burnishedcobblestone-chert-r1c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r1c3-upface"
+      }
+    },
+    "burnishedcobblestone-chert-r2c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c1-upface"
+      }
+    },
+    "burnishedcobblestone-chert-r2c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c2-upface"
+      }
+    },
+    "burnishedcobblestone-chert-r2c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r2c3-upface"
+      }
+    },
+    "burnishedcobblestone-chert-r3c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c1-upface"
+      }
+    },
+    "burnishedcobblestone-chert-r3c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c2-upface"
+      }
+    },
+    "burnishedcobblestone-chert-r3c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chert-r3c3-upface"
+      }
+    },
+    "burnishedcobblestone-phyllite-r1c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c1-upface"
+      }
+    },
+    "burnishedcobblestone-phyllite-r1c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c2-upface"
+      }
+    },
+    "burnishedcobblestone-phyllite-r1c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r1c3-upface"
+      }
+    },
+    "burnishedcobblestone-phyllite-r2c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c1-upface"
+      }
+    },
+    "burnishedcobblestone-phyllite-r2c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c2-upface"
+      }
+    },
+    "burnishedcobblestone-phyllite-r2c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r2c3-upface"
+      }
+    },
+    "burnishedcobblestone-phyllite-r3c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c1-upface"
+      }
+    },
+    "burnishedcobblestone-phyllite-r3c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c2-upface"
+      }
+    },
+    "burnishedcobblestone-phyllite-r3c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/phyllite-r3c3-upface"
+      }
+    },
+    "burnishedcobblestone-andesite-r1c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c1-upface"
+      }
+    },
+    "burnishedcobblestone-andesite-r1c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c2-upface"
+      }
+    },
+    "burnishedcobblestone-andesite-r1c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r1c3-upface"
+      }
+    },
+    "burnishedcobblestone-andesite-r2c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c1-upface"
+      }
+    },
+    "burnishedcobblestone-andesite-r2c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c2-upface"
+      }
+    },
+    "burnishedcobblestone-andesite-r2c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r2c3-upface"
+      }
+    },
+    "burnishedcobblestone-andesite-r3c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c1-upface"
+      }
+    },
+    "burnishedcobblestone-andesite-r3c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c2-upface"
+      }
+    },
+    "burnishedcobblestone-andesite-r3c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/andesite-r3c3-upface"
+      }
+    },
+    "burnishedcobblestone-limestone-r1c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c1-upface"
+      }
+    },
+    "burnishedcobblestone-limestone-r1c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c2-upface"
+      }
+    },
+    "burnishedcobblestone-limestone-r1c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r1c3-upface"
+      }
+    },
+    "burnishedcobblestone-limestone-r2c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c1-upface"
+      }
+    },
+    "burnishedcobblestone-limestone-r2c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c2-upface"
+      }
+    },
+    "burnishedcobblestone-limestone-r2c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r2c3-upface"
+      }
+    },
+    "burnishedcobblestone-limestone-r3c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c1-upface"
+      }
+    },
+    "burnishedcobblestone-limestone-r3c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c2-upface"
+      }
+    },
+    "burnishedcobblestone-limestone-r3c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/limestone-r3c3-upface"
+      }
+    },
+    "burnishedcobblestone-shale-r1c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c1-upface"
+      }
+    },
+    "burnishedcobblestone-shale-r1c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c2-upface"
+      }
+    },
+    "burnishedcobblestone-shale-r1c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r1c3-upface"
+      }
+    },
+    "burnishedcobblestone-shale-r2c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c1-upface"
+      }
+    },
+    "burnishedcobblestone-shale-r2c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c2-upface"
+      }
+    },
+    "burnishedcobblestone-shale-r2c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r2c3-upface"
+      }
+    },
+    "burnishedcobblestone-shale-r3c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c1-upface"
+      }
+    },
+    "burnishedcobblestone-shale-r3c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c2-upface"
+      }
+    },
+    "burnishedcobblestone-shale-r3c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/shale-r3c3-upface"
+      }
+    },
+    "burnishedcobblestone-chalk-r1c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c1-upface"
+      }
+    },
+    "burnishedcobblestone-chalk-r1c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c2-upface"
+      }
+    },
+    "burnishedcobblestone-chalk-r1c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r1c3-upface"
+      }
+    },
+    "burnishedcobblestone-chalk-r2c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c1-upface"
+      }
+    },
+    "burnishedcobblestone-chalk-r2c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c2-upface"
+      }
+    },
+    "burnishedcobblestone-chalk-r2c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r2c3-upface"
+      }
+    },
+    "burnishedcobblestone-chalk-r3c1": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c1-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c1-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c1-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c1-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c1-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c1-upface"
+      }
+    },
+    "burnishedcobblestone-chalk-r3c2": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c2-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c2-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c2-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c2-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c2-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c2-upface"
+      }
+    },
+    "burnishedcobblestone-chalk-r3c3": {
+      "south": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c3-southface"
+      },
+      "north": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c3-northface"
+      },
+      "west": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c3-westface"
+      },
+      "east": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c3-eastface"
+      },
+      "down": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c3-downface"
+      },
+      "up": {
+        "base": "vsmineralmasonry:block/stone/burnishedcobblestone/chalk-r3c3-upface"
+      }
+    }
+  },
+  "sounds": {
+    "walk": "walk/stone",
+    "byTool": {
+      "Pickaxe": {
+        "hit": "block/rock-hit-pickaxe",
+        "break": "block/rock-break-pickaxe"
+      }
+    }
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  }
+}
