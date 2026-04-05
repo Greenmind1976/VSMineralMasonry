@@ -7,6 +7,7 @@ public class VSMineralMasonryModSystem : ModSystem
     public override void Start(ICoreAPI api)
     {
         api.RegisterBlockClass("BlockSlabCycle", typeof(BlockSlabCycle));
+        api.RegisterBlockClass("BlockCobblestoneCycle", typeof(BlockCobblestoneCycle));
         api.RegisterBlockClass("BlockGroutCycle", typeof(BlockGroutCycle));
         api.RegisterBlockClass("BlockTriangleOverlayCycle", typeof(BlockTriangleOverlayCycle));
         api.RegisterItemClass("ItemPlaceGrout", typeof(ItemPlaceGrout));
