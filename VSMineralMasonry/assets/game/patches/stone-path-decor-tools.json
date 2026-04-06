@@ -14,5 +14,13 @@
     "value": {
       "name": "CycleStonePathDecor"
     }
+  },
+  {
+    "file": "game:itemtypes/tool/wrench",
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "RemoveGroutDecor"
+    }
   }
 ]

@@ -86,6 +86,7 @@ For `slabcycle` blocks:
 - `wrench`
   - cycles only the clicked block through its local `3x3` tile set
   - useful for checkerboards, mixed layouts, and manual tile picking
+  - removes clicked grout decor instead of trying to cycle grout variants
 - `hammer`
   - auto-aligns the local `3x3` mural layout on the clicked face plane
   - useful when you want adjacent blocks to snap into a coherent mural pattern
