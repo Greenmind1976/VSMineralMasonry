@@ -391,37 +391,41 @@ def build_allowed_variants(states: dict[str, list[str]]) -> list[str]:
 
 
 def build_textures_by_type(states: dict[str, list[str]]) -> dict[str, dict]:
+    overlay_faces = {
+        face: {
+            "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}-{face}face",
+            "overlays": [
+                f"vsmineralmasonry:block/stone/muralslab-overlays/{{family}}/{{finish}}/{{mineral}}/{{tile}}-{face}face"
+            ],
+        }
+        for face in FACES
+    }
+
+    direct_faces = {
+        face: {
+            "base": f"vsmineralmasonry:block/stone/muralslab/{{family}}/{{finish}}/{{mineral}}/{{rock}}/{{tile}}-{face}face"
+        }
+        for face in FACES
+    }
+
+    overlay_families = [family for family in states["family"] if uses_overlay_composition(family)]
+    direct_families = [family for family in states["family"] if not uses_overlay_composition(family)]
+
     textures = {}
-    for family in states["family"]:
-        for finish in states["finish"]:
-            for mineral in states["mineral"]:
-                for rock in states["rock"]:
-                    if is_excluded(rock, finish, mineral):
-                        continue
-                    for tile in states["tile"]:
-                        key = f"muralslab-{family}-{finish}-{mineral}-{rock}-{tile}"
-                        if uses_overlay_composition(family):
-                            base_prefix = f"vsmineralmasonry:block/stone/muralslab-basefaces/{rock}"
-                            overlay_prefix = (
-                                f"vsmineralmasonry:block/stone/muralslab-overlays/"
-                                f"{family}/{finish}/{mineral}/{tile}"
-                            )
-                            textures[key] = {
-                                face: {
-                                    "base": f"{base_prefix}-{face}face",
-                                    "overlays": [f"{overlay_prefix}-{face}face"],
-                                }
-                                for face in FACES
-                            }
-                        else:
-                            base_prefix = (
-                                f"vsmineralmasonry:block/stone/muralslab/"
-                                f"{family}/{finish}/{mineral}/{rock}/{tile}"
-                            )
-                            textures[key] = {
-                                face: {"base": f"{base_prefix}-{face}face"}
-                                for face in FACES
-                            }
+    if overlay_families:
+        if len(overlay_families) == len(states["family"]):
+            textures["*"] = overlay_faces
+        else:
+            for family in overlay_families:
+                textures[f"muralslab-{family}-*"] = overlay_faces
+
+    if direct_families:
+        if len(direct_families) == len(states["family"]):
+            textures["*"] = direct_faces
+        else:
+            for family in direct_families:
+                textures[f"muralslab-{family}-*"] = direct_faces
+
     return textures
 
 
