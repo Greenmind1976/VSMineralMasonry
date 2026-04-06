@@ -29,6 +29,19 @@ def dump_json(path: Path, data: dict) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=True) + "\n")
 
 
+def build_compact_textures_by_type() -> dict:
+    faces = ("south", "north", "west", "east", "down", "up")
+    textures = {}
+    for face in faces:
+        textures[face] = {
+            "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}-{face}face",
+            "overlays": [
+                f"vsmineralmasonry:block/stone/muralslab-overlays/{{family}}/{{finish}}/{{mineral}}/{{tile}}-{face}face"
+            ]
+        }
+    return {"*": textures}
+
+
 def main() -> None:
     muralslab = json.loads(MURALSLAB_BLOCK.read_text())
     muralslab_allowed = muralslab["allowedVariants"]
@@ -48,10 +61,6 @@ def main() -> None:
         variants = creative_variant_candidates[key]
         if "burnished" in variants:
             creative_variants.append(variants["burnished"])
-
-    textures_by_type = {}
-    for key, value in muralslab["texturesByType"].items():
-        textures_by_type[key.replace("muralslab-", "slabcycle-")] = value
 
     slabcycle = {
         "code": "slabcycle",
@@ -75,7 +84,7 @@ def main() -> None:
         "replaceable": muralslab["replaceable"],
         "resistance": muralslab["resistance"],
         "requiredMiningTier": muralslab["requiredMiningTier"],
-        "texturesByType": textures_by_type,
+        "texturesByType": build_compact_textures_by_type(),
     }
 
     dump_json(SLABCYCLE_BLOCK, slabcycle)
