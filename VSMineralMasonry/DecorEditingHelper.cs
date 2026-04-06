@@ -33,7 +33,9 @@ public static class DecorEditingHelper
 
     public static bool IsEditableDecor(Block? block)
     {
-        return block is BlockGroutCycle || block is BlockTriangleOverlayCycle;
+        return block is BlockGroutCycle
+            || block is BlockTriangleOverlayCycle
+            || block is BlockStonePathDecorCycle;
     }
 
     private static DecorTarget? GetSelectedDecorAt(IWorldAccessor world, BlockPos pos, BlockSelection blockSel)

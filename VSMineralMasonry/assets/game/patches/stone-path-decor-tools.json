@@ -1,0 +1,18 @@
+[
+  {
+    "file": "game:itemtypes/tool/hammer",
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "CycleStonePathDecor"
+    }
+  },
+  {
+    "file": "game:itemtypes/tool/wrench",
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "CycleStonePathDecor"
+    }
+  }
+]

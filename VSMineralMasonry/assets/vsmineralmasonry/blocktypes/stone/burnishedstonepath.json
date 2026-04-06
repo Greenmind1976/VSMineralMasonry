@@ -1,0 +1,190 @@
+{
+  "code": "burnishedstonepath",
+  "class": "BlockStonePathDecorCycle",
+  "behaviors": [
+    {
+      "name": "Decor",
+      "properties": {
+        "sides": [
+          "up"
+        ],
+        "notFullFace": true,
+        "thickness": 0.0,
+        "removable": false
+      }
+    }
+  ],
+  "replaceable": 120,
+  "blockmaterial": "Stone",
+  "storageFlags": 5,
+  "variantgroups": [
+    {
+      "code": "rock",
+      "states": [
+        "andesite",
+        "basalt",
+        "chalk",
+        "chert",
+        "granite",
+        "limestone",
+        "phyllite",
+        "shale",
+        "slate",
+        "whitemarble"
+      ]
+    },
+    {
+      "code": "tile",
+      "states": [
+        "r1c1",
+        "r1c2",
+        "r1c3",
+        "r2c1",
+        "r2c2",
+        "r2c3",
+        "r3c1",
+        "r3c2",
+        "r3c3"
+      ]
+    }
+  ],
+  "attributes": {
+    "ignoreSounds": true,
+    "handbook": {
+      "include": false
+    }
+  },
+  "shapeInventory": {
+    "base": "game:block/basic/layers/0voxel",
+    "rotateX": 90
+  },
+  "textures": {
+    "all": {
+      "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}-{tile}"
+    }
+  },
+  "allowedVariants": [
+    "burnishedstonepath-andesite-r1c1",
+    "burnishedstonepath-andesite-r1c2",
+    "burnishedstonepath-andesite-r1c3",
+    "burnishedstonepath-andesite-r2c1",
+    "burnishedstonepath-andesite-r2c2",
+    "burnishedstonepath-andesite-r2c3",
+    "burnishedstonepath-andesite-r3c1",
+    "burnishedstonepath-andesite-r3c2",
+    "burnishedstonepath-andesite-r3c3",
+    "burnishedstonepath-basalt-r1c1",
+    "burnishedstonepath-basalt-r1c2",
+    "burnishedstonepath-basalt-r1c3",
+    "burnishedstonepath-basalt-r2c1",
+    "burnishedstonepath-basalt-r2c2",
+    "burnishedstonepath-basalt-r2c3",
+    "burnishedstonepath-basalt-r3c1",
+    "burnishedstonepath-basalt-r3c2",
+    "burnishedstonepath-basalt-r3c3",
+    "burnishedstonepath-chalk-r1c1",
+    "burnishedstonepath-chalk-r1c2",
+    "burnishedstonepath-chalk-r1c3",
+    "burnishedstonepath-chalk-r2c1",
+    "burnishedstonepath-chalk-r2c2",
+    "burnishedstonepath-chalk-r2c3",
+    "burnishedstonepath-chalk-r3c1",
+    "burnishedstonepath-chalk-r3c2",
+    "burnishedstonepath-chalk-r3c3",
+    "burnishedstonepath-chert-r1c1",
+    "burnishedstonepath-chert-r1c2",
+    "burnishedstonepath-chert-r1c3",
+    "burnishedstonepath-chert-r2c1",
+    "burnishedstonepath-chert-r2c2",
+    "burnishedstonepath-chert-r2c3",
+    "burnishedstonepath-chert-r3c1",
+    "burnishedstonepath-chert-r3c2",
+    "burnishedstonepath-chert-r3c3",
+    "burnishedstonepath-granite-r1c1",
+    "burnishedstonepath-granite-r1c2",
+    "burnishedstonepath-granite-r1c3",
+    "burnishedstonepath-granite-r2c1",
+    "burnishedstonepath-granite-r2c2",
+    "burnishedstonepath-granite-r2c3",
+    "burnishedstonepath-granite-r3c1",
+    "burnishedstonepath-granite-r3c2",
+    "burnishedstonepath-granite-r3c3",
+    "burnishedstonepath-limestone-r1c1",
+    "burnishedstonepath-limestone-r1c2",
+    "burnishedstonepath-limestone-r1c3",
+    "burnishedstonepath-limestone-r2c1",
+    "burnishedstonepath-limestone-r2c2",
+    "burnishedstonepath-limestone-r2c3",
+    "burnishedstonepath-limestone-r3c1",
+    "burnishedstonepath-limestone-r3c2",
+    "burnishedstonepath-limestone-r3c3",
+    "burnishedstonepath-phyllite-r1c1",
+    "burnishedstonepath-phyllite-r1c2",
+    "burnishedstonepath-phyllite-r1c3",
+    "burnishedstonepath-phyllite-r2c1",
+    "burnishedstonepath-phyllite-r2c2",
+    "burnishedstonepath-phyllite-r2c3",
+    "burnishedstonepath-phyllite-r3c1",
+    "burnishedstonepath-phyllite-r3c2",
+    "burnishedstonepath-phyllite-r3c3",
+    "burnishedstonepath-shale-r1c1",
+    "burnishedstonepath-shale-r1c2",
+    "burnishedstonepath-shale-r1c3",
+    "burnishedstonepath-shale-r2c1",
+    "burnishedstonepath-shale-r2c2",
+    "burnishedstonepath-shale-r2c3",
+    "burnishedstonepath-shale-r3c1",
+    "burnishedstonepath-shale-r3c2",
+    "burnishedstonepath-shale-r3c3",
+    "burnishedstonepath-slate-r1c1",
+    "burnishedstonepath-slate-r1c2",
+    "burnishedstonepath-slate-r1c3",
+    "burnishedstonepath-slate-r2c1",
+    "burnishedstonepath-slate-r2c2",
+    "burnishedstonepath-slate-r2c3",
+    "burnishedstonepath-slate-r3c1",
+    "burnishedstonepath-slate-r3c2",
+    "burnishedstonepath-slate-r3c3",
+    "burnishedstonepath-whitemarble-r1c1",
+    "burnishedstonepath-whitemarble-r1c2",
+    "burnishedstonepath-whitemarble-r1c3",
+    "burnishedstonepath-whitemarble-r2c1",
+    "burnishedstonepath-whitemarble-r2c2",
+    "burnishedstonepath-whitemarble-r2c3",
+    "burnishedstonepath-whitemarble-r3c1",
+    "burnishedstonepath-whitemarble-r3c2",
+    "burnishedstonepath-whitemarble-r3c3"
+  ],
+  "vertexflags": {
+    "zOffset": 1
+  },
+  "renderPass": "Transparent",
+  "drawtype": "surfacelayer",
+  "doNotRenderAtLod2": true,
+  "randomizeRotations": false,
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "selectionBox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 1,
+    "z2": 1
+  },
+  "resistance": 0,
+  "lightAbsorption": 0,
+  "drops": [],
+  "materialDensity": 400,
+  "guiTransform": {
+    "origin": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    }
+  }
+}
