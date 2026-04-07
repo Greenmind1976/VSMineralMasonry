@@ -6,10 +6,10 @@ namespace VSMineralMasonry;
 
 public class BlockSlabCycle : Block
 {
-    private const int Rows = 3;
-    private const int Columns = 3;
-    private const int RowOrigin = 1;
-    private const int ColumnOrigin = 1;
+    private const int Rows = 5;
+    private const int Columns = 5;
+    private const int RowOrigin = 2;
+    private const int ColumnOrigin = 2;
 
     public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
     {

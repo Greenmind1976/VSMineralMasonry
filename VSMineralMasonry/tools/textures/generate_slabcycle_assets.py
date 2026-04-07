@@ -16,8 +16,6 @@ DISPLAY_NAMES = {
     "bituminouscoal": "Black Coal",
     "whitemarble": "White Marble",
 }
-
-
 def title_name(code: str) -> str:
     if code in DISPLAY_NAMES:
         return DISPLAY_NAMES[code]
@@ -32,14 +30,36 @@ def dump_json(path: Path, data: dict) -> None:
 def build_compact_textures_by_type() -> dict:
     faces = ("south", "north", "west", "east", "down", "up")
     textures = {}
+    wildcard_faces = {}
     for face in faces:
-        textures[face] = {
-            "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}-{face}face",
+        wildcard_faces[face] = {
+            "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}1-{face}face",
             "overlays": [
                 f"vsmineralmasonry:block/stone/muralslab-overlays/{{family}}/{{finish}}/{{mineral}}/{{tile}}-{face}face"
-            ]
+            ],
+            "alternates": [
+                {
+                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}2-{face}face",
+                    "overlays": [
+                        f"vsmineralmasonry:block/stone/muralslab-overlays/{{family}}/{{finish}}/{{mineral}}/{{tile}}-{face}face"
+                    ],
+                },
+                {
+                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}3-{face}face",
+                    "overlays": [
+                        f"vsmineralmasonry:block/stone/muralslab-overlays/{{family}}/{{finish}}/{{mineral}}/{{tile}}-{face}face"
+                    ],
+                },
+                {
+                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}4-{face}face",
+                    "overlays": [
+                        f"vsmineralmasonry:block/stone/muralslab-overlays/{{family}}/{{finish}}/{{mineral}}/{{tile}}-{face}face"
+                    ],
+                },
+            ],
         }
-    return {"*": textures}
+    textures["*"] = wildcard_faces
+    return textures
 
 
 def main() -> None:

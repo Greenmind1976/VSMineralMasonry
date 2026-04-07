@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import shutil
 import subprocess
+import tempfile
 from pathlib import Path
 
 
@@ -11,8 +12,7 @@ ROOT = Path("/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/VSMineralMas
 PROJECT_ROOT = ROOT.parent
 
 SOURCE_ROOT = PROJECT_ROOT / "textures/cobblestone-source-3x3"
-COBBLE_BASE_OVERRIDE_ROOT = PROJECT_ROOT / "textures/cobblestone-rock-bases"
-SLABBASE_ROOT = ROOT / "assets/vsmineralmasonry/textures/block/stone/slabbase"
+BASEFACE_ROOT = ROOT / "assets/vsmineralmasonry/textures/block/stone/muralslab-basefaces"
 TEXTURE_ROOT = ROOT / "assets/vsmineralmasonry/textures/block/stone/burnishedcobblestone"
 BLOCK_PATH = ROOT / "assets/vsmineralmasonry/blocktypes/stone/burnishedcobblestone.json"
 LANG_PATH = ROOT / "assets/vsmineralmasonry/lang/en.json"
@@ -51,28 +51,21 @@ def dump_json(path: Path, data: dict) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=True) + "\n")
 
 
-def cobble_base_source(rock: str) -> Path:
-    override = COBBLE_BASE_OVERRIDE_ROOT / f"{rock}.png"
-    if override.exists():
-        return override
-    return SLABBASE_ROOT / f"{rock}.png"
+def generate_overlay_face_files(input_tile: Path, output_prefix: Path) -> None:
+    south = output_prefix.with_name(f"{output_prefix.name}-southface.png")
+    north = output_prefix.with_name(f"{output_prefix.name}-northface.png")
+    west = output_prefix.with_name(f"{output_prefix.name}-westface.png")
+    east = output_prefix.with_name(f"{output_prefix.name}-eastface.png")
+    down = output_prefix.with_name(f"{output_prefix.name}-downface.png")
+    up = output_prefix.with_name(f"{output_prefix.name}-upface.png")
 
+    shutil.copy2(input_tile, south)
+    shutil.copy2(input_tile, west)
+    subprocess.run(["magick", str(input_tile), "-flop", "PNG32:" + str(up)], check=True)
 
-def generate_face_files(base_tile: Path) -> None:
-    south = base_tile.with_name(f"{base_tile.stem}-southface.png")
-    north = base_tile.with_name(f"{base_tile.stem}-northface.png")
-    west = base_tile.with_name(f"{base_tile.stem}-westface.png")
-    east = base_tile.with_name(f"{base_tile.stem}-eastface.png")
-    down = base_tile.with_name(f"{base_tile.stem}-downface.png")
-    up = base_tile.with_name(f"{base_tile.stem}-upface.png")
-
-    shutil.copy2(base_tile, south)
-    shutil.copy2(base_tile, west)
-    subprocess.run(["magick", str(base_tile), "-flop", str(up)], check=True)
-
-    subprocess.run(["magick", str(south), "-flop", str(north)], check=True)
-    subprocess.run(["magick", str(west), "-flop", str(east)], check=True)
-    subprocess.run(["magick", str(up), "-flip", str(down)], check=True)
+    subprocess.run(["magick", str(south), "-flop", "PNG32:" + str(north)], check=True)
+    subprocess.run(["magick", str(west), "-flop", "PNG32:" + str(east)], check=True)
+    subprocess.run(["magick", str(up), "-flip", "PNG32:" + str(down)], check=True)
 
 
 def build_textures() -> None:
@@ -80,20 +73,11 @@ def build_textures() -> None:
         shutil.rmtree(TEXTURE_ROOT)
     TEXTURE_ROOT.mkdir(parents=True, exist_ok=True)
 
-    for rock in ROCKS:
-        base = cobble_base_source(rock)
-        if not base.exists():
-            raise FileNotFoundError(f"Missing rock base: {base}")
-        for tile in TILES:
-            overlay = SOURCE_ROOT / f"{tile}.png"
-            if not overlay.exists():
-                raise FileNotFoundError(f"Missing cobblestone overlay source: {overlay}")
-            out = TEXTURE_ROOT / f"{rock}-{tile}.png"
-            subprocess.run(
-                ["magick", str(base), str(overlay), "-compose", "Over", "-composite", str(out)],
-                check=True,
-            )
-            generate_face_files(out)
+    for tile in TILES:
+        overlay = SOURCE_ROOT / f"{tile}.png"
+        if not overlay.exists():
+            raise FileNotFoundError(f"Missing cobblestone overlay source: {overlay}")
+        generate_overlay_face_files(overlay, TEXTURE_ROOT / tile)
 
     if DEBUG_TEXTURE_ROOT.exists():
         shutil.rmtree(DEBUG_TEXTURE_ROOT)
@@ -103,14 +87,34 @@ def build_textures() -> None:
 def build_block() -> dict:
     creative = [f"*-{rock}-r1c1" for rock in ROCKS]
     textures_by_type = {}
-    for rock in ROCKS:
-        for tile in TILES:
-            key = f"burnishedcobblestone-{rock}-{tile}"
-            prefix = f"vsmineralmasonry:block/stone/burnishedcobblestone/{rock}-{tile}"
-            textures_by_type[key] = {
-                face: {"base": f"{prefix}-{face}face"}
-                for face in FACES
-            }
+    textures_by_type["*"] = {}
+    for face in FACES:
+        textures_by_type["*"][face] = {
+            "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}1-{face}face",
+            "overlays": [
+                f"vsmineralmasonry:block/stone/burnishedcobblestone/{{tile}}-{face}face"
+            ],
+            "alternates": [
+                {
+                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}2-{face}face",
+                    "overlays": [
+                        f"vsmineralmasonry:block/stone/burnishedcobblestone/{{tile}}-{face}face"
+                    ],
+                },
+                {
+                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}3-{face}face",
+                    "overlays": [
+                        f"vsmineralmasonry:block/stone/burnishedcobblestone/{{tile}}-{face}face"
+                    ],
+                },
+                {
+                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}4-{face}face",
+                    "overlays": [
+                        f"vsmineralmasonry:block/stone/burnishedcobblestone/{{tile}}-{face}face"
+                    ],
+                },
+            ],
+        }
 
     block = {
         "code": "burnishedcobblestone",

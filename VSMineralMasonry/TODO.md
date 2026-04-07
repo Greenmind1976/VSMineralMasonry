@@ -1,3 +1,3 @@
 # TODO
 
-- Check into beveled blocks and other shape options.
+No open items currently.

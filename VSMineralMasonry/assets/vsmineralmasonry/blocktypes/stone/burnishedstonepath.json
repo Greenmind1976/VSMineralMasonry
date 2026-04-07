@@ -58,9 +58,34 @@
     "base": "game:block/basic/layers/0voxel",
     "rotateX": 90
   },
-  "textures": {
-    "all": {
-      "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}-{tile}"
+  "texturesByType": {
+    "*": {
+      "all": {
+        "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}1-{tile}",
+        "overlays": [
+          "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
+        ],
+        "alternates": [
+          {
+            "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}2-{tile}",
+            "overlays": [
+              "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
+            ]
+          },
+          {
+            "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}3-{tile}",
+            "overlays": [
+              "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
+            ]
+          },
+          {
+            "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}4-{tile}",
+            "overlays": [
+              "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
+            ]
+          }
+        ]
+      }
     }
   },
   "allowedVariants": [

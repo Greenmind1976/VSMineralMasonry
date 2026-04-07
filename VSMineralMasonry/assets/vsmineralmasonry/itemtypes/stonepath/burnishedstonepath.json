@@ -20,7 +20,10 @@
   ],
   "textures": {
     "all": {
-      "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}-r1c1"
+      "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}1-r1c1",
+      "overlays": [
+        "vsmineralmasonry:block/stone/burnishedstonepath/overlay-r1c1"
+      ]
     }
   },
   "creativeinventory": {

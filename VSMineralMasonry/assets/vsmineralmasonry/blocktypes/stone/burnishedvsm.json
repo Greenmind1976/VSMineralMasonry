@@ -43,9 +43,22 @@
   "heldTpIdleAnimation": "holdbothhandslarge",
   "heldRightReadyAnimation": "heldblockready",
   "heldTpUseAnimation": "twohandplaceblock",
-  "textures": {
-    "all": {
-      "base": "vsmineralmasonry:block/stone/slabbase/{rock}"
+  "texturesByType": {
+    "*": {
+      "all": {
+        "base": "vsmineralmasonry:block/stone/slabbase/{rock}1",
+        "alternates": [
+          {
+            "base": "vsmineralmasonry:block/stone/slabbase/{rock}2"
+          },
+          {
+            "base": "vsmineralmasonry:block/stone/slabbase/{rock}3"
+          },
+          {
+            "base": "vsmineralmasonry:block/stone/slabbase/{rock}4"
+          }
+        ]
+      }
     }
   },
   "sounds": {

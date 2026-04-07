@@ -72,10 +72,14 @@ Current live block/content set:
   - same mural set with tool-driven tile cycling/alignment
 - `burnished`
   - standalone burnished base-rock blocks using the current host rock set
-- `burnishedbevel`
-  - standalone one-side bevel blocks using the burnished slabbase textures
-- `burnishedbevel4`
-  - standalone four-side bevel blocks using the burnished slabbase textures
+- `burnishedpillar`
+  - standalone full-block pillar blocks using the non-mineral burnished slabbase textures
+- `burnishedpillarbase`
+  - square-to-round pillar base blocks for transitions into the main pillar body
+- `burnishedpillartop`
+  - square-to-round pillar top blocks for transitions out of the main pillar body
+- `burnishedthinpillar`
+  - standalone round-ish thin pillar blocks using the non-mineral burnished slabbase textures
 - `triangleoverlayvsm`
   - placeable triangular burnished-stone decor pieces for corners, diagonals, and trim work
 
