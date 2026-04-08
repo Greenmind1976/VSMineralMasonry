@@ -49,7 +49,7 @@ public class BlockStonePathDecorCycle : Block
                     continue;
                 }
 
-                string tile = $"r{rowOffset + RowOrigin + 1}c{colOffset + ColumnOrigin + 1}";
+                string tile = $"r{rowOffset + RowOrigin + 1}c{ColumnOrigin - colOffset + 1}";
                 Block? mapped = world.GetBlock(decor.CodeWithParts(tile));
                 if (mapped == null || mapped.Id == 0 || mapped.Id == decor.Id)
                 {

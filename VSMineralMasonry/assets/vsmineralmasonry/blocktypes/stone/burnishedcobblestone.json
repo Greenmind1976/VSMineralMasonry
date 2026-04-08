@@ -1,6 +1,6 @@
 {
   "code": "burnishedcobblestone",
-  "class": "BlockCobblestoneCycle",
+  "class": "BlockCobblestoneCycle5x5",
   "replaceable": 120,
   "blockmaterial": "Stone",
   "storageFlags": 5,
@@ -26,12 +26,28 @@
         "r1c1",
         "r1c2",
         "r1c3",
+        "r1c4",
+        "r1c5",
         "r2c1",
         "r2c2",
         "r2c3",
+        "r2c4",
+        "r2c5",
         "r3c1",
         "r3c2",
-        "r3c3"
+        "r3c3",
+        "r3c4",
+        "r3c5",
+        "r4c1",
+        "r4c2",
+        "r4c3",
+        "r4c4",
+        "r4c5",
+        "r5c1",
+        "r5c2",
+        "r5c3",
+        "r5c4",
+        "r5c5"
       ]
     }
   ],
@@ -80,116 +96,276 @@
     "burnishedcobblestone-basalt-r1c1",
     "burnishedcobblestone-basalt-r1c2",
     "burnishedcobblestone-basalt-r1c3",
+    "burnishedcobblestone-basalt-r1c4",
+    "burnishedcobblestone-basalt-r1c5",
     "burnishedcobblestone-basalt-r2c1",
     "burnishedcobblestone-basalt-r2c2",
     "burnishedcobblestone-basalt-r2c3",
+    "burnishedcobblestone-basalt-r2c4",
+    "burnishedcobblestone-basalt-r2c5",
     "burnishedcobblestone-basalt-r3c1",
     "burnishedcobblestone-basalt-r3c2",
     "burnishedcobblestone-basalt-r3c3",
+    "burnishedcobblestone-basalt-r3c4",
+    "burnishedcobblestone-basalt-r3c5",
+    "burnishedcobblestone-basalt-r4c1",
+    "burnishedcobblestone-basalt-r4c2",
+    "burnishedcobblestone-basalt-r4c3",
+    "burnishedcobblestone-basalt-r4c4",
+    "burnishedcobblestone-basalt-r4c5",
+    "burnishedcobblestone-basalt-r5c1",
+    "burnishedcobblestone-basalt-r5c2",
+    "burnishedcobblestone-basalt-r5c3",
+    "burnishedcobblestone-basalt-r5c4",
+    "burnishedcobblestone-basalt-r5c5",
     "burnishedcobblestone-granite-r1c1",
     "burnishedcobblestone-granite-r1c2",
     "burnishedcobblestone-granite-r1c3",
+    "burnishedcobblestone-granite-r1c4",
+    "burnishedcobblestone-granite-r1c5",
     "burnishedcobblestone-granite-r2c1",
     "burnishedcobblestone-granite-r2c2",
     "burnishedcobblestone-granite-r2c3",
+    "burnishedcobblestone-granite-r2c4",
+    "burnishedcobblestone-granite-r2c5",
     "burnishedcobblestone-granite-r3c1",
     "burnishedcobblestone-granite-r3c2",
     "burnishedcobblestone-granite-r3c3",
+    "burnishedcobblestone-granite-r3c4",
+    "burnishedcobblestone-granite-r3c5",
+    "burnishedcobblestone-granite-r4c1",
+    "burnishedcobblestone-granite-r4c2",
+    "burnishedcobblestone-granite-r4c3",
+    "burnishedcobblestone-granite-r4c4",
+    "burnishedcobblestone-granite-r4c5",
+    "burnishedcobblestone-granite-r5c1",
+    "burnishedcobblestone-granite-r5c2",
+    "burnishedcobblestone-granite-r5c3",
+    "burnishedcobblestone-granite-r5c4",
+    "burnishedcobblestone-granite-r5c5",
     "burnishedcobblestone-whitemarble-r1c1",
     "burnishedcobblestone-whitemarble-r1c2",
     "burnishedcobblestone-whitemarble-r1c3",
+    "burnishedcobblestone-whitemarble-r1c4",
+    "burnishedcobblestone-whitemarble-r1c5",
     "burnishedcobblestone-whitemarble-r2c1",
     "burnishedcobblestone-whitemarble-r2c2",
     "burnishedcobblestone-whitemarble-r2c3",
+    "burnishedcobblestone-whitemarble-r2c4",
+    "burnishedcobblestone-whitemarble-r2c5",
     "burnishedcobblestone-whitemarble-r3c1",
     "burnishedcobblestone-whitemarble-r3c2",
     "burnishedcobblestone-whitemarble-r3c3",
+    "burnishedcobblestone-whitemarble-r3c4",
+    "burnishedcobblestone-whitemarble-r3c5",
+    "burnishedcobblestone-whitemarble-r4c1",
+    "burnishedcobblestone-whitemarble-r4c2",
+    "burnishedcobblestone-whitemarble-r4c3",
+    "burnishedcobblestone-whitemarble-r4c4",
+    "burnishedcobblestone-whitemarble-r4c5",
+    "burnishedcobblestone-whitemarble-r5c1",
+    "burnishedcobblestone-whitemarble-r5c2",
+    "burnishedcobblestone-whitemarble-r5c3",
+    "burnishedcobblestone-whitemarble-r5c4",
+    "burnishedcobblestone-whitemarble-r5c5",
     "burnishedcobblestone-slate-r1c1",
     "burnishedcobblestone-slate-r1c2",
     "burnishedcobblestone-slate-r1c3",
+    "burnishedcobblestone-slate-r1c4",
+    "burnishedcobblestone-slate-r1c5",
     "burnishedcobblestone-slate-r2c1",
     "burnishedcobblestone-slate-r2c2",
     "burnishedcobblestone-slate-r2c3",
+    "burnishedcobblestone-slate-r2c4",
+    "burnishedcobblestone-slate-r2c5",
     "burnishedcobblestone-slate-r3c1",
     "burnishedcobblestone-slate-r3c2",
     "burnishedcobblestone-slate-r3c3",
+    "burnishedcobblestone-slate-r3c4",
+    "burnishedcobblestone-slate-r3c5",
+    "burnishedcobblestone-slate-r4c1",
+    "burnishedcobblestone-slate-r4c2",
+    "burnishedcobblestone-slate-r4c3",
+    "burnishedcobblestone-slate-r4c4",
+    "burnishedcobblestone-slate-r4c5",
+    "burnishedcobblestone-slate-r5c1",
+    "burnishedcobblestone-slate-r5c2",
+    "burnishedcobblestone-slate-r5c3",
+    "burnishedcobblestone-slate-r5c4",
+    "burnishedcobblestone-slate-r5c5",
     "burnishedcobblestone-chert-r1c1",
     "burnishedcobblestone-chert-r1c2",
     "burnishedcobblestone-chert-r1c3",
+    "burnishedcobblestone-chert-r1c4",
+    "burnishedcobblestone-chert-r1c5",
     "burnishedcobblestone-chert-r2c1",
     "burnishedcobblestone-chert-r2c2",
     "burnishedcobblestone-chert-r2c3",
+    "burnishedcobblestone-chert-r2c4",
+    "burnishedcobblestone-chert-r2c5",
     "burnishedcobblestone-chert-r3c1",
     "burnishedcobblestone-chert-r3c2",
     "burnishedcobblestone-chert-r3c3",
+    "burnishedcobblestone-chert-r3c4",
+    "burnishedcobblestone-chert-r3c5",
+    "burnishedcobblestone-chert-r4c1",
+    "burnishedcobblestone-chert-r4c2",
+    "burnishedcobblestone-chert-r4c3",
+    "burnishedcobblestone-chert-r4c4",
+    "burnishedcobblestone-chert-r4c5",
+    "burnishedcobblestone-chert-r5c1",
+    "burnishedcobblestone-chert-r5c2",
+    "burnishedcobblestone-chert-r5c3",
+    "burnishedcobblestone-chert-r5c4",
+    "burnishedcobblestone-chert-r5c5",
     "burnishedcobblestone-phyllite-r1c1",
     "burnishedcobblestone-phyllite-r1c2",
     "burnishedcobblestone-phyllite-r1c3",
+    "burnishedcobblestone-phyllite-r1c4",
+    "burnishedcobblestone-phyllite-r1c5",
     "burnishedcobblestone-phyllite-r2c1",
     "burnishedcobblestone-phyllite-r2c2",
     "burnishedcobblestone-phyllite-r2c3",
+    "burnishedcobblestone-phyllite-r2c4",
+    "burnishedcobblestone-phyllite-r2c5",
     "burnishedcobblestone-phyllite-r3c1",
     "burnishedcobblestone-phyllite-r3c2",
     "burnishedcobblestone-phyllite-r3c3",
+    "burnishedcobblestone-phyllite-r3c4",
+    "burnishedcobblestone-phyllite-r3c5",
+    "burnishedcobblestone-phyllite-r4c1",
+    "burnishedcobblestone-phyllite-r4c2",
+    "burnishedcobblestone-phyllite-r4c3",
+    "burnishedcobblestone-phyllite-r4c4",
+    "burnishedcobblestone-phyllite-r4c5",
+    "burnishedcobblestone-phyllite-r5c1",
+    "burnishedcobblestone-phyllite-r5c2",
+    "burnishedcobblestone-phyllite-r5c3",
+    "burnishedcobblestone-phyllite-r5c4",
+    "burnishedcobblestone-phyllite-r5c5",
     "burnishedcobblestone-andesite-r1c1",
     "burnishedcobblestone-andesite-r1c2",
     "burnishedcobblestone-andesite-r1c3",
+    "burnishedcobblestone-andesite-r1c4",
+    "burnishedcobblestone-andesite-r1c5",
     "burnishedcobblestone-andesite-r2c1",
     "burnishedcobblestone-andesite-r2c2",
     "burnishedcobblestone-andesite-r2c3",
+    "burnishedcobblestone-andesite-r2c4",
+    "burnishedcobblestone-andesite-r2c5",
     "burnishedcobblestone-andesite-r3c1",
     "burnishedcobblestone-andesite-r3c2",
     "burnishedcobblestone-andesite-r3c3",
+    "burnishedcobblestone-andesite-r3c4",
+    "burnishedcobblestone-andesite-r3c5",
+    "burnishedcobblestone-andesite-r4c1",
+    "burnishedcobblestone-andesite-r4c2",
+    "burnishedcobblestone-andesite-r4c3",
+    "burnishedcobblestone-andesite-r4c4",
+    "burnishedcobblestone-andesite-r4c5",
+    "burnishedcobblestone-andesite-r5c1",
+    "burnishedcobblestone-andesite-r5c2",
+    "burnishedcobblestone-andesite-r5c3",
+    "burnishedcobblestone-andesite-r5c4",
+    "burnishedcobblestone-andesite-r5c5",
     "burnishedcobblestone-limestone-r1c1",
     "burnishedcobblestone-limestone-r1c2",
     "burnishedcobblestone-limestone-r1c3",
+    "burnishedcobblestone-limestone-r1c4",
+    "burnishedcobblestone-limestone-r1c5",
     "burnishedcobblestone-limestone-r2c1",
     "burnishedcobblestone-limestone-r2c2",
     "burnishedcobblestone-limestone-r2c3",
+    "burnishedcobblestone-limestone-r2c4",
+    "burnishedcobblestone-limestone-r2c5",
     "burnishedcobblestone-limestone-r3c1",
     "burnishedcobblestone-limestone-r3c2",
     "burnishedcobblestone-limestone-r3c3",
+    "burnishedcobblestone-limestone-r3c4",
+    "burnishedcobblestone-limestone-r3c5",
+    "burnishedcobblestone-limestone-r4c1",
+    "burnishedcobblestone-limestone-r4c2",
+    "burnishedcobblestone-limestone-r4c3",
+    "burnishedcobblestone-limestone-r4c4",
+    "burnishedcobblestone-limestone-r4c5",
+    "burnishedcobblestone-limestone-r5c1",
+    "burnishedcobblestone-limestone-r5c2",
+    "burnishedcobblestone-limestone-r5c3",
+    "burnishedcobblestone-limestone-r5c4",
+    "burnishedcobblestone-limestone-r5c5",
     "burnishedcobblestone-shale-r1c1",
     "burnishedcobblestone-shale-r1c2",
     "burnishedcobblestone-shale-r1c3",
+    "burnishedcobblestone-shale-r1c4",
+    "burnishedcobblestone-shale-r1c5",
     "burnishedcobblestone-shale-r2c1",
     "burnishedcobblestone-shale-r2c2",
     "burnishedcobblestone-shale-r2c3",
+    "burnishedcobblestone-shale-r2c4",
+    "burnishedcobblestone-shale-r2c5",
     "burnishedcobblestone-shale-r3c1",
     "burnishedcobblestone-shale-r3c2",
     "burnishedcobblestone-shale-r3c3",
+    "burnishedcobblestone-shale-r3c4",
+    "burnishedcobblestone-shale-r3c5",
+    "burnishedcobblestone-shale-r4c1",
+    "burnishedcobblestone-shale-r4c2",
+    "burnishedcobblestone-shale-r4c3",
+    "burnishedcobblestone-shale-r4c4",
+    "burnishedcobblestone-shale-r4c5",
+    "burnishedcobblestone-shale-r5c1",
+    "burnishedcobblestone-shale-r5c2",
+    "burnishedcobblestone-shale-r5c3",
+    "burnishedcobblestone-shale-r5c4",
+    "burnishedcobblestone-shale-r5c5",
     "burnishedcobblestone-chalk-r1c1",
     "burnishedcobblestone-chalk-r1c2",
     "burnishedcobblestone-chalk-r1c3",
+    "burnishedcobblestone-chalk-r1c4",
+    "burnishedcobblestone-chalk-r1c5",
     "burnishedcobblestone-chalk-r2c1",
     "burnishedcobblestone-chalk-r2c2",
     "burnishedcobblestone-chalk-r2c3",
+    "burnishedcobblestone-chalk-r2c4",
+    "burnishedcobblestone-chalk-r2c5",
     "burnishedcobblestone-chalk-r3c1",
     "burnishedcobblestone-chalk-r3c2",
-    "burnishedcobblestone-chalk-r3c3"
+    "burnishedcobblestone-chalk-r3c3",
+    "burnishedcobblestone-chalk-r3c4",
+    "burnishedcobblestone-chalk-r3c5",
+    "burnishedcobblestone-chalk-r4c1",
+    "burnishedcobblestone-chalk-r4c2",
+    "burnishedcobblestone-chalk-r4c3",
+    "burnishedcobblestone-chalk-r4c4",
+    "burnishedcobblestone-chalk-r4c5",
+    "burnishedcobblestone-chalk-r5c1",
+    "burnishedcobblestone-chalk-r5c2",
+    "burnishedcobblestone-chalk-r5c3",
+    "burnishedcobblestone-chalk-r5c4",
+    "burnishedcobblestone-chalk-r5c5"
   ],
   "texturesByType": {
     "*": {
       "south": {
-        "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}1-southface",
+        "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}1-southface",
         "overlays": [
           "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-southface"
         ],
         "alternates": [
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}2-southface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}2-southface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-southface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}3-southface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}3-southface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-southface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}4-southface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}4-southface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-southface"
             ]
@@ -197,25 +373,25 @@
         ]
       },
       "north": {
-        "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}1-northface",
+        "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}1-northface",
         "overlays": [
           "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-northface"
         ],
         "alternates": [
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}2-northface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}2-northface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-northface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}3-northface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}3-northface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-northface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}4-northface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}4-northface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-northface"
             ]
@@ -223,25 +399,25 @@
         ]
       },
       "west": {
-        "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}1-westface",
+        "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}1-westface",
         "overlays": [
           "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-westface"
         ],
         "alternates": [
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}2-westface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}2-westface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-westface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}3-westface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}3-westface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-westface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}4-westface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}4-westface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-westface"
             ]
@@ -249,25 +425,25 @@
         ]
       },
       "east": {
-        "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}1-eastface",
+        "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}1-eastface",
         "overlays": [
           "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-eastface"
         ],
         "alternates": [
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}2-eastface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}2-eastface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-eastface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}3-eastface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}3-eastface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-eastface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}4-eastface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}4-eastface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-eastface"
             ]
@@ -275,25 +451,25 @@
         ]
       },
       "down": {
-        "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}1-downface",
+        "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}1-downface",
         "overlays": [
           "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-downface"
         ],
         "alternates": [
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}2-downface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}2-downface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-downface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}3-downface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}3-downface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-downface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}4-downface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}4-downface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-downface"
             ]
@@ -301,25 +477,25 @@
         ]
       },
       "up": {
-        "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}1-upface",
+        "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}1-upface",
         "overlays": [
           "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-upface"
         ],
         "alternates": [
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}2-upface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}2-upface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-upface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}3-upface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}3-upface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-upface"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/muralslab-basefaces/{rock}4-upface",
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}4-upface",
             "overlays": [
               "vsmineralmasonry:block/stone/burnishedcobblestone/{tile}-upface"
             ]

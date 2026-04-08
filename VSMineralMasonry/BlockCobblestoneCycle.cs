@@ -6,10 +6,10 @@ namespace VSMineralMasonry;
 
 public class BlockCobblestoneCycle : Block
 {
-    private const int Rows = 3;
-    private const int Columns = 3;
-    private const int RowOrigin = 1;
-    private const int ColumnOrigin = 1;
+    protected virtual int Rows => 3;
+    protected virtual int Columns => 3;
+    protected virtual int RowOrigin => 1;
+    protected virtual int ColumnOrigin => 1;
 
     public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
     {
@@ -36,7 +36,7 @@ public class BlockCobblestoneCycle : Block
                 return true;
             }
 
-            AutoAlignLocal3x3(world, byPlayer, blockSel);
+            AutoAlignLocal(world, byPlayer, blockSel);
             return true;
         }
 
@@ -66,7 +66,7 @@ public class BlockCobblestoneCycle : Block
         return block ?? this;
     }
 
-    private void AutoAlignLocal3x3(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+    private void AutoAlignLocal(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
     {
         (Vec3i colStep, Vec3i rowStep) = GetPlaneAxes(byPlayer, blockSel.Face);
         BlockPos origin = blockSel.Position;
@@ -112,7 +112,7 @@ public class BlockCobblestoneCycle : Block
         world.BlockAccessor.ExchangeBlock(nextBlock.Id, pos);
     }
 
-    private static string NextTile(string currentTile)
+    private string NextTile(string currentTile)
     {
         int currentIndex = TileIndex(currentTile);
         int nextIndex = (currentIndex + 1) % (Rows * Columns);
@@ -121,7 +121,7 @@ public class BlockCobblestoneCycle : Block
         return $"r{row}c{column}";
     }
 
-    private static int TileIndex(string tile)
+    private int TileIndex(string tile)
     {
         if (tile.Length == 4 &&
             tile[0] == 'r' &&

@@ -11,8 +11,7 @@ from pathlib import Path
 ROOT = Path("/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/VSMineralMasonry")
 PROJECT_ROOT = ROOT.parent
 
-SOURCE_ROOT = PROJECT_ROOT / "textures/cobblestone-source-3x3"
-BASEFACE_ROOT = ROOT / "assets/vsmineralmasonry/textures/block/stone/muralslab-basefaces"
+SOURCE_ROOT = PROJECT_ROOT / "textures/cobblestone-source-5x5"
 TEXTURE_ROOT = ROOT / "assets/vsmineralmasonry/textures/block/stone/burnishedcobblestone"
 BLOCK_PATH = ROOT / "assets/vsmineralmasonry/blocktypes/stone/burnishedcobblestone.json"
 LANG_PATH = ROOT / "assets/vsmineralmasonry/lang/en.json"
@@ -21,6 +20,7 @@ DEBUG_ROOT = ROOT / "bin/Debug/Mods/mod/assets/vsmineralmasonry"
 DEBUG_TEXTURE_ROOT = DEBUG_ROOT / "textures/block/stone/burnishedcobblestone"
 DEBUG_BLOCK_PATH = DEBUG_ROOT / "blocktypes/stone/burnishedcobblestone.json"
 DEBUG_LANG_PATH = DEBUG_ROOT / "lang/en.json"
+BASEFACE_PATH = "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}{variant}-{face}face"
 
 ROCKS = [
     "basalt",
@@ -34,7 +34,7 @@ ROCKS = [
     "shale",
     "chalk",
 ]
-TILES = [f"r{row}c{col}" for row in range(1, 4) for col in range(1, 4)]
+TILES = [f"r{row}c{col}" for row in range(1, 6) for col in range(1, 6)]
 FACES = ("south", "north", "west", "east", "down", "up")
 
 DISPLAY_NAMES = {
@@ -59,9 +59,57 @@ def generate_overlay_face_files(input_tile: Path, output_prefix: Path) -> None:
     down = output_prefix.with_name(f"{output_prefix.name}-downface.png")
     up = output_prefix.with_name(f"{output_prefix.name}-upface.png")
 
-    shutil.copy2(input_tile, south)
-    shutil.copy2(input_tile, west)
-    subprocess.run(["magick", str(input_tile), "-flop", "PNG32:" + str(up)], check=True)
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmp = Path(tmpdir)
+        mask_gray = tmp / "mask-gray.png"
+        mask_alpha = tmp / "mask-alpha.png"
+        base_overlay = tmp / "base-overlay.png"
+        up_overlay = tmp / "up-overlay.png"
+
+        subprocess.run(
+            [
+                "magick",
+                str(input_tile),
+                "-colorspace",
+                "Gray",
+                "PNG32:" + str(mask_gray),
+            ],
+            check=True,
+        )
+
+        subprocess.run(
+            [
+                "magick",
+                str(mask_gray),
+                "-sigmoidal-contrast",
+                "4,50%",
+                "-negate",
+                "PNG32:" + str(mask_alpha),
+            ],
+            check=True,
+        )
+
+        subprocess.run(
+            [
+                "magick",
+                "-size",
+                "64x64",
+                "xc:#121212",
+                str(mask_alpha),
+                "-alpha",
+                "off",
+                "-compose",
+                "CopyOpacity",
+                "-composite",
+                "PNG32:" + str(base_overlay),
+            ],
+            check=True,
+        )
+
+        shutil.copy2(base_overlay, south)
+        shutil.copy2(base_overlay, west)
+        subprocess.run(["magick", str(base_overlay), "-flop", "PNG32:" + str(up_overlay)], check=True)
+        shutil.copy2(up_overlay, up)
 
     subprocess.run(["magick", str(south), "-flop", "PNG32:" + str(north)], check=True)
     subprocess.run(["magick", str(west), "-flop", "PNG32:" + str(east)], check=True)
@@ -90,25 +138,25 @@ def build_block() -> dict:
     textures_by_type["*"] = {}
     for face in FACES:
         textures_by_type["*"][face] = {
-            "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}1-{face}face",
+            "base": BASEFACE_PATH.format(rock="{rock}", variant="1", face=face),
             "overlays": [
                 f"vsmineralmasonry:block/stone/burnishedcobblestone/{{tile}}-{face}face"
             ],
             "alternates": [
                 {
-                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}2-{face}face",
+                    "base": BASEFACE_PATH.format(rock="{rock}", variant="2", face=face),
                     "overlays": [
                         f"vsmineralmasonry:block/stone/burnishedcobblestone/{{tile}}-{face}face"
                     ],
                 },
                 {
-                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}3-{face}face",
+                    "base": BASEFACE_PATH.format(rock="{rock}", variant="3", face=face),
                     "overlays": [
                         f"vsmineralmasonry:block/stone/burnishedcobblestone/{{tile}}-{face}face"
                     ],
                 },
                 {
-                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}4-{face}face",
+                    "base": BASEFACE_PATH.format(rock="{rock}", variant="4", face=face),
                     "overlays": [
                         f"vsmineralmasonry:block/stone/burnishedcobblestone/{{tile}}-{face}face"
                     ],
@@ -118,7 +166,7 @@ def build_block() -> dict:
 
     block = {
         "code": "burnishedcobblestone",
-        "class": "BlockCobblestoneCycle",
+        "class": "BlockCobblestoneCycle5x5",
         "replaceable": 120,
         "blockmaterial": "Stone",
         "storageFlags": 5,

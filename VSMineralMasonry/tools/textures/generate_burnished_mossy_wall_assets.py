@@ -15,14 +15,16 @@ SOURCE_ROOT = PROJECT_ROOT / "textures/mossy-wall-source-3x3"
 TEXTURE_ROOT = ROOT / "assets/vsmineralmasonry/textures/block/stone/burnishedmossywall"
 BLOCK_PATH = ROOT / "assets/vsmineralmasonry/blocktypes/stone/burnishedmossywall.json"
 LANG_PATH = ROOT / "assets/vsmineralmasonry/lang/en.json"
+COBBLESTONE_OVERLAY_ROOT = PROJECT_ROOT / "workingdir/backups/cobblestone-3x3-20260407-173523/burnishedcobblestone"
 
 DEBUG_ROOT = ROOT / "bin/Debug/Mods/mod/assets/vsmineralmasonry"
 DEBUG_TEXTURE_ROOT = DEBUG_ROOT / "textures/block/stone/burnishedmossywall"
 DEBUG_BLOCK_PATH = DEBUG_ROOT / "blocktypes/stone/burnishedmossywall.json"
 DEBUG_LANG_PATH = DEBUG_ROOT / "lang/en.json"
+BASEFACE_PATH = "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}{variant}-{face}face"
 
-TOP_MOSS = PROJECT_ROOT / "workingdir/rock-texture-fixed/moss-base.png"
-SIDE_MOSS = PROJECT_ROOT / "workingdir/rock-texture-fixed/moss3.png"
+TOP_MOSS = PROJECT_ROOT / "workingdir/backups/original-moss-source/moss-base-original.png"
+SIDE_MOSS = PROJECT_ROOT / "workingdir/backups/original-moss-source/moss3-original.png"
 
 ROCKS = [
     "andesite",
@@ -36,10 +38,12 @@ ROCKS = [
     "slate",
     "whitemarble",
 ]
+GRAY_UNDERLAY_ROCKS = {"basalt", "shale", "slate"}
 TILES = [f"r{row}c{col}" for row in range(1, 4) for col in range(1, 4)]
 FACES = ("south", "north", "west", "east", "down", "up")
-INNER_SHADOW_ALPHA = "0.10"
-OUTER_SHADOW_ALPHA = "0.12"
+MOSS_OPACITY = "0.75"
+GRAY_UNDERLAY_COLOR = "#6e6e6e"
+MOSS_THRESHOLD = "70%"
 
 DISPLAY_NAMES = {
     "whitemarble": "White Marble",
@@ -71,30 +75,59 @@ def prepare_mask(tile: Path, out_path: Path) -> None:
     )
 
 
-def render_overlay_face(moss: Path, mask: Path, out_path: Path) -> None:
+def render_overlay_face(
+    moss: Path,
+    mask: Path,
+    stone_overlay_source: Path,
+    out_path: Path,
+    *,
+    use_gray_underlay: bool,
+) -> None:
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
         moss_rgba = tmp / "moss-rgba.png"
+        stone_rgba = tmp / "stone-rgba.png"
+        moss_overlay = tmp / "moss-overlay.png"
         moss_masked = tmp / "moss-masked.png"
+        stone_masked = tmp / "stone-masked.png"
         inverse_mask = tmp / "inverse-mask.png"
-        binary_mask = tmp / "binary-mask.png"
-        eroded_mask = tmp / "eroded-mask.png"
-        edge_mask = tmp / "edge-mask.png"
-        dilated_mask = tmp / "dilated-mask.png"
-        outer_shadow_mask = tmp / "outer-shadow-mask.png"
-        shadow_overlay = tmp / "shadow-overlay.png"
-        outer_shadow_overlay = tmp / "outer-shadow-overlay.png"
+        moss_selector = tmp / "moss-selector.png"
         subprocess.run(["magick", str(moss), "PNG32:" + str(moss_rgba)], check=True)
         subprocess.run(["magick", str(mask), "-negate", "PNG32:" + str(inverse_mask)], check=True)
         subprocess.run(
             [
                 "magick",
-                str(mask),
+                str(inverse_mask),
                 "-threshold",
-                "50%",
+                MOSS_THRESHOLD,
+                "PNG32:" + str(moss_selector),
+            ],
+            check=True,
+        )
+        if use_gray_underlay:
+            subprocess.run(
+                [
+                    "magick",
+                    "-size",
+                    "64x64",
+                    f"xc:{GRAY_UNDERLAY_COLOR}",
+                    "PNG32:" + str(stone_rgba),
+                ],
+                check=True,
+            )
+        else:
+            subprocess.run(["magick", str(stone_overlay_source), "PNG32:" + str(stone_rgba)], check=True)
+        subprocess.run(
+            [
+                "magick",
+                str(stone_rgba),
+                str(inverse_mask),
                 "-alpha",
                 "off",
-                "PNG32:" + str(binary_mask),
+                "-compose",
+                "CopyOpacity",
+                "-composite",
+                "PNG32:" + str(stone_masked),
             ],
             check=True,
         )
@@ -102,7 +135,7 @@ def render_overlay_face(moss: Path, mask: Path, out_path: Path) -> None:
             [
                 "magick",
                 str(moss_rgba),
-                str(inverse_mask),
+                str(moss_selector),
                 "-alpha",
                 "off",
                 "-compose",
@@ -112,114 +145,25 @@ def render_overlay_face(moss: Path, mask: Path, out_path: Path) -> None:
             ],
             check=True,
         )
-        shutil.copy2(moss_masked, out_path)
         subprocess.run(
             [
                 "magick",
-                str(binary_mask),
-                "-morphology",
-                "Erode",
-                "Diamond",
-                "PNG32:" + str(eroded_mask),
-            ],
-            check=True,
-        )
-        subprocess.run(
-            [
-                "magick",
-                str(binary_mask),
-                str(eroded_mask),
-                "-compose",
-                "Difference",
-                "-composite",
-                "PNG32:" + str(edge_mask),
-            ],
-            check=True,
-        )
-        subprocess.run(
-            [
-                "magick",
-                "-size",
-                "64x64",
-                "xc:black",
-                str(edge_mask),
-                "-alpha",
-                "off",
-                "-compose",
-                "CopyOpacity",
-                "-composite",
+                str(moss_masked),
                 "-channel",
-                "A",
+                "Alpha",
                 "-evaluate",
                 "multiply",
-                INNER_SHADOW_ALPHA,
+                MOSS_OPACITY,
                 "+channel",
-                "PNG32:" + str(shadow_overlay),
+                "PNG32:" + str(moss_overlay),
             ],
             check=True,
         )
         subprocess.run(
             [
                 "magick",
-                str(out_path),
-                str(shadow_overlay),
-                "-compose",
-                "Over",
-                "-composite",
-                "PNG32:" + str(out_path),
-            ],
-            check=True,
-        )
-        subprocess.run(
-            [
-                "magick",
-                str(binary_mask),
-                "-morphology",
-                "Dilate",
-                "Diamond",
-                "PNG32:" + str(dilated_mask),
-            ],
-            check=True,
-        )
-        subprocess.run(
-            [
-                "magick",
-                str(dilated_mask),
-                str(binary_mask),
-                "-compose",
-                "Difference",
-                "-composite",
-                "PNG32:" + str(outer_shadow_mask),
-            ],
-            check=True,
-        )
-        subprocess.run(
-            [
-                "magick",
-                "-size",
-                "64x64",
-                "xc:black",
-                str(outer_shadow_mask),
-                "-alpha",
-                "off",
-                "-compose",
-                "CopyOpacity",
-                "-composite",
-                "-channel",
-                "A",
-                "-evaluate",
-                "multiply",
-                OUTER_SHADOW_ALPHA,
-                "+channel",
-                "PNG32:" + str(outer_shadow_overlay),
-            ],
-            check=True,
-        )
-        subprocess.run(
-            [
-                "magick",
-                str(out_path),
-                str(outer_shadow_overlay),
+                str(stone_masked),
+                str(moss_overlay),
                 "-compose",
                 "Over",
                 "-composite",
@@ -242,22 +186,27 @@ def build_textures() -> None:
                 raise FileNotFoundError(f"Missing source tile: {src}")
             prepare_mask(src, tmp / f"{tile}-mask.png")
 
-        for tile in TILES:
-            mask = tmp / f"{tile}-mask.png"
-            south = TEXTURE_ROOT / f"{tile}-southface.png"
-            west = TEXTURE_ROOT / f"{tile}-westface.png"
-            up = TEXTURE_ROOT / f"{tile}-upface.png"
-            up_raw = tmp / f"{tile}-up-raw.png"
+        for rock in ROCKS:
+            use_gray_underlay = rock in GRAY_UNDERLAY_ROCKS
+            for tile in TILES:
+                mask = tmp / f"{tile}-mask.png"
+                south = TEXTURE_ROOT / f"{rock}-{tile}-southface.png"
+                west = TEXTURE_ROOT / f"{rock}-{tile}-westface.png"
+                up = TEXTURE_ROOT / f"{rock}-{tile}-upface.png"
+                up_raw = tmp / f"{rock}-{tile}-up-raw.png"
+                south_stone = COBBLESTONE_OVERLAY_ROOT / f"{tile}-southface.png"
+                west_stone = COBBLESTONE_OVERLAY_ROOT / f"{tile}-westface.png"
+                up_stone = COBBLESTONE_OVERLAY_ROOT / f"{tile}-upface.png"
 
-            render_overlay_face(SIDE_MOSS, mask, south)
-            shutil.copy2(south, west)
-            render_overlay_face(TOP_MOSS, mask, up_raw)
+                render_overlay_face(SIDE_MOSS, mask, south_stone, south, use_gray_underlay=use_gray_underlay)
+                render_overlay_face(SIDE_MOSS, mask, west_stone, west, use_gray_underlay=use_gray_underlay)
+                render_overlay_face(TOP_MOSS, mask, up_stone, up_raw, use_gray_underlay=use_gray_underlay)
 
-            subprocess.run(["magick", str(south), "-flop", "PNG32:" + str(TEXTURE_ROOT / f"{tile}-northface.png")], check=True)
-            subprocess.run(["magick", str(west), "-flop", "PNG32:" + str(TEXTURE_ROOT / f"{tile}-eastface.png")], check=True)
-            subprocess.run(["magick", str(up_raw), "-flop", "PNG32:" + str(up)], check=True)
-            subprocess.run(["magick", str(up), "-flip", "PNG32:" + str(TEXTURE_ROOT / f"{tile}-downface.png")], check=True)
-            shutil.copy2(south, TEXTURE_ROOT / f"{tile}.png")
+                subprocess.run(["magick", str(south), "-flop", "PNG32:" + str(TEXTURE_ROOT / f"{rock}-{tile}-northface.png")], check=True)
+                subprocess.run(["magick", str(west), "-flop", "PNG32:" + str(TEXTURE_ROOT / f"{rock}-{tile}-eastface.png")], check=True)
+                subprocess.run(["magick", str(up_raw), "-flop", "PNG32:" + str(up)], check=True)
+                subprocess.run(["magick", str(up), "-flip", "PNG32:" + str(TEXTURE_ROOT / f"{rock}-{tile}-downface.png")], check=True)
+                shutil.copy2(south, TEXTURE_ROOT / f"{rock}-{tile}.png")
 
     if DEBUG_TEXTURE_ROOT.exists():
         shutil.rmtree(DEBUG_TEXTURE_ROOT)
@@ -269,27 +218,27 @@ def build_block() -> None:
     textures_by_type = {"*": {}}
     for face in FACES:
         textures_by_type["*"][face] = {
-            "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}1-{face}face",
+            "base": BASEFACE_PATH.format(rock="{rock}", variant="1", face=face),
             "overlays": [
-                f"vsmineralmasonry:block/stone/burnishedmossywall/{{tile}}-{face}face"
+                f"vsmineralmasonry:block/stone/burnishedmossywall/{{rock}}-{{tile}}-{face}face"
             ],
             "alternates": [
                 {
-                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}2-{face}face",
+                    "base": BASEFACE_PATH.format(rock="{rock}", variant="2", face=face),
                     "overlays": [
-                        f"vsmineralmasonry:block/stone/burnishedmossywall/{{tile}}-{face}face"
+                        f"vsmineralmasonry:block/stone/burnishedmossywall/{{rock}}-{{tile}}-{face}face"
                     ],
                 },
                 {
-                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}3-{face}face",
+                    "base": BASEFACE_PATH.format(rock="{rock}", variant="3", face=face),
                     "overlays": [
-                        f"vsmineralmasonry:block/stone/burnishedmossywall/{{tile}}-{face}face"
+                        f"vsmineralmasonry:block/stone/burnishedmossywall/{{rock}}-{{tile}}-{face}face"
                     ],
                 },
                 {
-                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}4-{face}face",
+                    "base": BASEFACE_PATH.format(rock="{rock}", variant="4", face=face),
                     "overlays": [
-                        f"vsmineralmasonry:block/stone/burnishedmossywall/{{tile}}-{face}face"
+                        f"vsmineralmasonry:block/stone/burnishedmossywall/{{rock}}-{{tile}}-{face}face"
                     ],
                 },
             ],

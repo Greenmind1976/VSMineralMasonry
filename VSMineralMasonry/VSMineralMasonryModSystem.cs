@@ -8,6 +8,7 @@ public class VSMineralMasonryModSystem : ModSystem
     {
         api.RegisterBlockClass("BlockSlabCycle", typeof(BlockSlabCycle));
         api.RegisterBlockClass("BlockCobblestoneCycle", typeof(BlockCobblestoneCycle));
+        api.RegisterBlockClass("BlockCobblestoneCycle5x5", typeof(BlockCobblestoneCycle5x5));
         api.RegisterBlockClass("BlockStonePathDecorCycle", typeof(BlockStonePathDecorCycle));
         api.RegisterBlockClass("BlockGroutCycle", typeof(BlockGroutCycle));
         api.RegisterBlockClass("BlockTriangleOverlayCycle", typeof(BlockTriangleOverlayCycle));
