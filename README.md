@@ -51,6 +51,10 @@ The mod currently centers on four content pillars:
 Grout is intended to be easy to make and easy to spend.
 
 - Colored grout is currently mixed from `mortar + dye` in a barrel
+- Rock grout is mixed in two steps:
+- `hammer + loose rock -> crushed stone`
+- `10 crushed stone + 10L water -> 20L stone slurry`
+- `10L stone slurry + 10 mortar -> 50 rock grout`
 - Grout batches are intentionally generous because removed grout is destroyed
 - The goal is for grout to feel like disposable finish material, not a precious building resource
 
