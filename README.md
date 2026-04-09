@@ -1,138 +1,79 @@
-# VSMod Template
+# VSMineralMasonry
 
-Bootstrap helper for Vintage Story mod projects with a reusable local toolchain for texture/script workflows.
+`VSMineralMasonry` is a Vintage Story building mod focused on elegant burnished stonework, grout-based customization, decorative path surfaces, and a smaller set of mossy accents.
 
-This repo is not itself a buildable mod skeleton. It is a helper repo that:
+## Current Direction
 
-- installs shared local tooling once
-- creates a new mod from the official Vintage Story templates
-- bootstraps the extra files you usually want in a real repo
+The mod currently centers on four content pillars:
 
-## Included
+- Burnished masonry for refined structural building pieces
+- Grout systems for visual customization and finish work
+- Decorative surface details like flagstone paths and overlays
+- Moss accents for aged, overgrown variation without taking over the whole set
 
-- `setup-image-tools.sh`
-  - Installs shared tools outside project repos:
-    - Homebrew: `python`, `imagemagick`, `ffmpeg`
-    - Python venv at `~/Documents/VSMods/.image-tools/venv`
-    - Python packages from [requirements-image-tools.txt](/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/requirements-image-tools.txt)
-- `activate-tools.sh`
-  - Activates the shared venv in the current shell.
-- `bootstrap-mod.sh`
-  - Adds starter repo files after `dotnet new`
-  - Creates `VERSION`, `RELEASE_NOTES.md`, `TODO.md`, `.gitignore`, `README.md`, and `release.sh` when missing.
-- `new-mod.sh`
-  - Wraps `dotnet new vsmod` / `vsmoddll`
-  - Runs the bootstrap step automatically
+## Included Content
 
-## Why this layout
+## Burnished Masonry
 
-You asked to keep tooling out of each mod repo. This helper installs tools once in a shared folder:
+- Burnished stone blocks
+- Burnished arches
+- Burnished pillars
+- Burnished pillar bases and tops
+- Burnished thin pillars
+- Burnished thin pillar bases and tops
+- Mural slabs
 
-- `~/Documents/VSMods/.image-tools`
+## Decor And Surface Details
 
-Any mod repo can reuse the same environment.
+- Burnished cobblestone decor
+- Burnished flagstone path
+- Burnished mossy flagstone path
+- Triangle overlay decor
+- Slab-cycle decor
 
-## First-time setup (tools)
+## Moss Accents
 
-From this repo:
+- Mossy masonry variants
+- Mossy cobblestone
+- Mossy flagstone path
 
-```bash
-chmod +x setup-image-tools.sh activate-tools.sh
-./setup-image-tools.sh
-```
+`mossrockwall` is currently retired from the active content lineup to keep the moss set tighter and more cohesive. A backup copy is preserved under `workingdir/backups/` in case it is restored later.
 
-## Official VS project bootstrap (NuGet template)
+## Grout System
 
-Vintage Story’s current recommended bootstrap is the official template package.
+- Grout
+- Rock grout
+- Colored grout variants
+- Rock-specific grout variants
+- Tile grout variants
+- Thick grout variants
 
-Install template package:
+Grout is intended to be easy to make and easy to spend.
 
-```bash
-dotnet new install VintageStory.Mod.Templates
-```
+- Colored grout is currently mixed from `mortar + dye` in a barrel
+- Grout batches are intentionally generous because removed grout is destroyed
+- The goal is for grout to feel like disposable finish material, not a precious building resource
 
-Set your game path for local API references:
+## Tools
 
-```bash
-export VINTAGE_STORY="/Applications/Vintage Story.app/Contents/Resources"
-```
+- Grout trowel
+- Grout sponge
 
-Create a new mod project:
+## Current Design Read
 
-```bash
-dotnet new vsmod -n MyMod
-```
+The mod is meant to feel like a builder's toolkit first:
 
-Or DLL-only variant:
+- polished masonry for main structures
+- grout for finish work and customization
+- paths and overlays for added detail
+- moss as a smaller atmospheric accent layer
 
-```bash
-dotnet new vsmoddll -n MyMod
-```
+## Development Notes
 
-Then build:
+- Use `dotnet build` for normal verification
+- Do not run `build-install.sh` as part of routine edit/test work
+- Texture and asset generation helpers live under `VSMineralMasonry/tools/`
 
-```bash
-dotnet build
-```
+## Status
 
-## Quick project creation helper
-
-Use the included wrapper script:
-
-```bash
-chmod +x new-mod.sh
-./new-mod.sh MyMod
-```
-
-Options:
-
-```bash
-./new-mod.sh MyMod vsmoddll
-./new-mod.sh MyMod vsmod ~/Documents/VSMods
-```
-
-## Daily usage
-
-In any mod repo shell:
-
-```bash
-source ~/Documents/VSMods/VSMod-Template/activate-tools.sh
-```
-
-Then tools are available:
-
-- `python` with `Pillow` + `numpy`
-- `magick` (ImageMagick)
-- `ffmpeg`
-
-## Suggested workflow for a new mod
-
-1. Run `./new-mod.sh MyMod`.
-2. Activate shared tools.
-3. Update the generated `README.md`, `modinfo.json`, `VERSION`, and `RELEASE_NOTES.md`.
-4. Add texture scripts under `tools/textures/` in the mod repo if needed.
-5. Run build/test loop (`dotnet build`, in-game validation).
-
-## Optional shell helper
-
-To auto-load tools when entering any VSMods folder, add this to `~/.zshrc`:
-
-```bash
-vsmod-tools() {
-  source ~/Documents/VSMods/VSMod-Template/activate-tools.sh
-}
-```
-
-Then run:
-
-```bash
-vsmod-tools
-```
-
-## Notes
-
-- If `brew` is missing, install from <https://brew.sh/>.
-- `setup-image-tools.sh` is idempotent; re-running is safe.
-- If Python packages break after system updates, rerun setup.
-- Add new Python image-tool dependencies to [requirements-image-tools.txt](/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/requirements-image-tools.txt) so every repo reuses the same list.
-- You can keep your existing direct DLL-reference `.csproj` workflow; the NuGet template is just the cleaner bootstrap.
+This mod is still being actively shaped. Names, recipes, and the exact moss/decor lineup may continue to evolve as the set gets refined.

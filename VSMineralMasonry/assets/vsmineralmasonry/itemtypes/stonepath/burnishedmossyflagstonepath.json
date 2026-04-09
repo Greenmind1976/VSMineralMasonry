@@ -1,0 +1,87 @@
+{
+  "code": "burnishedmossyflagstonepathitem",
+  "class": "ItemPlaceStonePath",
+  "variantgroups": [
+    {
+      "code": "rock",
+      "states": [
+        "andesite",
+        "basalt",
+        "chalk",
+        "chert",
+        "granite",
+        "limestone",
+        "phyllite",
+        "shale",
+        "slate",
+        "whitemarble"
+      ]
+    }
+  ],
+  "textures": {
+    "all": {
+      "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}1-upface",
+      "overlays": [
+        "vsmineralmasonry:block/stone/burnishedmossywall/{rock}-r1c1-upface"
+      ]
+    }
+  },
+  "creativeinventory": {
+    "general": [
+      "*-andesite",
+      "*-basalt",
+      "*-chalk",
+      "*-chert",
+      "*-granite",
+      "*-limestone",
+      "*-phyllite",
+      "*-shale",
+      "*-slate",
+      "*-whitemarble"
+    ],
+    "construction": [
+      "*-andesite",
+      "*-basalt",
+      "*-chalk",
+      "*-chert",
+      "*-granite",
+      "*-limestone",
+      "*-phyllite",
+      "*-shale",
+      "*-slate",
+      "*-whitemarble"
+    ]
+  },
+  "maxstacksize": 64,
+  "materialDensity": 800,
+  "attributes": {
+    "pathBlockCode": "burnishedmossyflagstonepath",
+    "handbook": {
+      "include": true
+    }
+  },
+  "guiTransform": {
+    "rotate": true,
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": -20, "y": -35, "z": 0 },
+    "origin": { "x": 0.5, "y": 0.5, "z": 0.5 },
+    "scale": 3.2
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 90, "y": 0, "z": 0 },
+    "origin": { "x": 0.5, "y": 0.5, "z": 0.5 },
+    "scale": 3.2
+  },
+  "fpHandTransform": {
+    "translation": { "x": -0.15, "y": -0.05, "z": 0.15 },
+    "rotation": { "x": 0, "y": 90, "z": 0 },
+    "origin": { "x": 0.5, "y": 0.5, "z": 0.5 },
+    "scale": 1.6
+  },
+  "tpHandTransform": {
+    "translation": { "x": -1.1, "y": -0.3, "z": -0.2 },
+    "rotation": { "x": 0, "y": 0, "z": 0 },
+    "scale": 0.9
+  }
+}

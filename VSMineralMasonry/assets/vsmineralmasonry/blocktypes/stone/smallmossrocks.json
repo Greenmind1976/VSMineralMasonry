@@ -1,5 +1,5 @@
 {
-  "code": "smallmossrocks",
+  "code": "mossycobblestone",
   "class": "BlockSlabCycle",
   "replaceable": 120,
   "blockmaterial": "Stone",
@@ -55,7 +55,7 @@
     "canChisel": true,
     "handbook": {
       "groupBy": [
-        "smallmossrocks-{rock}"
+        "mossycobblestone-{rock}"
       ]
     }
   },
@@ -93,281 +93,281 @@
   "heldRightReadyAnimation": "heldblockready",
   "heldTpUseAnimation": "twohandplaceblock",
   "allowedVariants": [
-    "smallmossrocks-andesite-r1c1",
-    "smallmossrocks-andesite-r1c2",
-    "smallmossrocks-andesite-r1c3",
-    "smallmossrocks-andesite-r1c4",
-    "smallmossrocks-andesite-r1c5",
-    "smallmossrocks-andesite-r2c1",
-    "smallmossrocks-andesite-r2c2",
-    "smallmossrocks-andesite-r2c3",
-    "smallmossrocks-andesite-r2c4",
-    "smallmossrocks-andesite-r2c5",
-    "smallmossrocks-andesite-r3c1",
-    "smallmossrocks-andesite-r3c2",
-    "smallmossrocks-andesite-r3c3",
-    "smallmossrocks-andesite-r3c4",
-    "smallmossrocks-andesite-r3c5",
-    "smallmossrocks-andesite-r4c1",
-    "smallmossrocks-andesite-r4c2",
-    "smallmossrocks-andesite-r4c3",
-    "smallmossrocks-andesite-r4c4",
-    "smallmossrocks-andesite-r4c5",
-    "smallmossrocks-andesite-r5c1",
-    "smallmossrocks-andesite-r5c2",
-    "smallmossrocks-andesite-r5c3",
-    "smallmossrocks-andesite-r5c4",
-    "smallmossrocks-andesite-r5c5",
-    "smallmossrocks-basalt-r1c1",
-    "smallmossrocks-basalt-r1c2",
-    "smallmossrocks-basalt-r1c3",
-    "smallmossrocks-basalt-r1c4",
-    "smallmossrocks-basalt-r1c5",
-    "smallmossrocks-basalt-r2c1",
-    "smallmossrocks-basalt-r2c2",
-    "smallmossrocks-basalt-r2c3",
-    "smallmossrocks-basalt-r2c4",
-    "smallmossrocks-basalt-r2c5",
-    "smallmossrocks-basalt-r3c1",
-    "smallmossrocks-basalt-r3c2",
-    "smallmossrocks-basalt-r3c3",
-    "smallmossrocks-basalt-r3c4",
-    "smallmossrocks-basalt-r3c5",
-    "smallmossrocks-basalt-r4c1",
-    "smallmossrocks-basalt-r4c2",
-    "smallmossrocks-basalt-r4c3",
-    "smallmossrocks-basalt-r4c4",
-    "smallmossrocks-basalt-r4c5",
-    "smallmossrocks-basalt-r5c1",
-    "smallmossrocks-basalt-r5c2",
-    "smallmossrocks-basalt-r5c3",
-    "smallmossrocks-basalt-r5c4",
-    "smallmossrocks-basalt-r5c5",
-    "smallmossrocks-chalk-r1c1",
-    "smallmossrocks-chalk-r1c2",
-    "smallmossrocks-chalk-r1c3",
-    "smallmossrocks-chalk-r1c4",
-    "smallmossrocks-chalk-r1c5",
-    "smallmossrocks-chalk-r2c1",
-    "smallmossrocks-chalk-r2c2",
-    "smallmossrocks-chalk-r2c3",
-    "smallmossrocks-chalk-r2c4",
-    "smallmossrocks-chalk-r2c5",
-    "smallmossrocks-chalk-r3c1",
-    "smallmossrocks-chalk-r3c2",
-    "smallmossrocks-chalk-r3c3",
-    "smallmossrocks-chalk-r3c4",
-    "smallmossrocks-chalk-r3c5",
-    "smallmossrocks-chalk-r4c1",
-    "smallmossrocks-chalk-r4c2",
-    "smallmossrocks-chalk-r4c3",
-    "smallmossrocks-chalk-r4c4",
-    "smallmossrocks-chalk-r4c5",
-    "smallmossrocks-chalk-r5c1",
-    "smallmossrocks-chalk-r5c2",
-    "smallmossrocks-chalk-r5c3",
-    "smallmossrocks-chalk-r5c4",
-    "smallmossrocks-chalk-r5c5",
-    "smallmossrocks-chert-r1c1",
-    "smallmossrocks-chert-r1c2",
-    "smallmossrocks-chert-r1c3",
-    "smallmossrocks-chert-r1c4",
-    "smallmossrocks-chert-r1c5",
-    "smallmossrocks-chert-r2c1",
-    "smallmossrocks-chert-r2c2",
-    "smallmossrocks-chert-r2c3",
-    "smallmossrocks-chert-r2c4",
-    "smallmossrocks-chert-r2c5",
-    "smallmossrocks-chert-r3c1",
-    "smallmossrocks-chert-r3c2",
-    "smallmossrocks-chert-r3c3",
-    "smallmossrocks-chert-r3c4",
-    "smallmossrocks-chert-r3c5",
-    "smallmossrocks-chert-r4c1",
-    "smallmossrocks-chert-r4c2",
-    "smallmossrocks-chert-r4c3",
-    "smallmossrocks-chert-r4c4",
-    "smallmossrocks-chert-r4c5",
-    "smallmossrocks-chert-r5c1",
-    "smallmossrocks-chert-r5c2",
-    "smallmossrocks-chert-r5c3",
-    "smallmossrocks-chert-r5c4",
-    "smallmossrocks-chert-r5c5",
-    "smallmossrocks-granite-r1c1",
-    "smallmossrocks-granite-r1c2",
-    "smallmossrocks-granite-r1c3",
-    "smallmossrocks-granite-r1c4",
-    "smallmossrocks-granite-r1c5",
-    "smallmossrocks-granite-r2c1",
-    "smallmossrocks-granite-r2c2",
-    "smallmossrocks-granite-r2c3",
-    "smallmossrocks-granite-r2c4",
-    "smallmossrocks-granite-r2c5",
-    "smallmossrocks-granite-r3c1",
-    "smallmossrocks-granite-r3c2",
-    "smallmossrocks-granite-r3c3",
-    "smallmossrocks-granite-r3c4",
-    "smallmossrocks-granite-r3c5",
-    "smallmossrocks-granite-r4c1",
-    "smallmossrocks-granite-r4c2",
-    "smallmossrocks-granite-r4c3",
-    "smallmossrocks-granite-r4c4",
-    "smallmossrocks-granite-r4c5",
-    "smallmossrocks-granite-r5c1",
-    "smallmossrocks-granite-r5c2",
-    "smallmossrocks-granite-r5c3",
-    "smallmossrocks-granite-r5c4",
-    "smallmossrocks-granite-r5c5",
-    "smallmossrocks-limestone-r1c1",
-    "smallmossrocks-limestone-r1c2",
-    "smallmossrocks-limestone-r1c3",
-    "smallmossrocks-limestone-r1c4",
-    "smallmossrocks-limestone-r1c5",
-    "smallmossrocks-limestone-r2c1",
-    "smallmossrocks-limestone-r2c2",
-    "smallmossrocks-limestone-r2c3",
-    "smallmossrocks-limestone-r2c4",
-    "smallmossrocks-limestone-r2c5",
-    "smallmossrocks-limestone-r3c1",
-    "smallmossrocks-limestone-r3c2",
-    "smallmossrocks-limestone-r3c3",
-    "smallmossrocks-limestone-r3c4",
-    "smallmossrocks-limestone-r3c5",
-    "smallmossrocks-limestone-r4c1",
-    "smallmossrocks-limestone-r4c2",
-    "smallmossrocks-limestone-r4c3",
-    "smallmossrocks-limestone-r4c4",
-    "smallmossrocks-limestone-r4c5",
-    "smallmossrocks-limestone-r5c1",
-    "smallmossrocks-limestone-r5c2",
-    "smallmossrocks-limestone-r5c3",
-    "smallmossrocks-limestone-r5c4",
-    "smallmossrocks-limestone-r5c5",
-    "smallmossrocks-phyllite-r1c1",
-    "smallmossrocks-phyllite-r1c2",
-    "smallmossrocks-phyllite-r1c3",
-    "smallmossrocks-phyllite-r1c4",
-    "smallmossrocks-phyllite-r1c5",
-    "smallmossrocks-phyllite-r2c1",
-    "smallmossrocks-phyllite-r2c2",
-    "smallmossrocks-phyllite-r2c3",
-    "smallmossrocks-phyllite-r2c4",
-    "smallmossrocks-phyllite-r2c5",
-    "smallmossrocks-phyllite-r3c1",
-    "smallmossrocks-phyllite-r3c2",
-    "smallmossrocks-phyllite-r3c3",
-    "smallmossrocks-phyllite-r3c4",
-    "smallmossrocks-phyllite-r3c5",
-    "smallmossrocks-phyllite-r4c1",
-    "smallmossrocks-phyllite-r4c2",
-    "smallmossrocks-phyllite-r4c3",
-    "smallmossrocks-phyllite-r4c4",
-    "smallmossrocks-phyllite-r4c5",
-    "smallmossrocks-phyllite-r5c1",
-    "smallmossrocks-phyllite-r5c2",
-    "smallmossrocks-phyllite-r5c3",
-    "smallmossrocks-phyllite-r5c4",
-    "smallmossrocks-phyllite-r5c5",
-    "smallmossrocks-shale-r1c1",
-    "smallmossrocks-shale-r1c2",
-    "smallmossrocks-shale-r1c3",
-    "smallmossrocks-shale-r1c4",
-    "smallmossrocks-shale-r1c5",
-    "smallmossrocks-shale-r2c1",
-    "smallmossrocks-shale-r2c2",
-    "smallmossrocks-shale-r2c3",
-    "smallmossrocks-shale-r2c4",
-    "smallmossrocks-shale-r2c5",
-    "smallmossrocks-shale-r3c1",
-    "smallmossrocks-shale-r3c2",
-    "smallmossrocks-shale-r3c3",
-    "smallmossrocks-shale-r3c4",
-    "smallmossrocks-shale-r3c5",
-    "smallmossrocks-shale-r4c1",
-    "smallmossrocks-shale-r4c2",
-    "smallmossrocks-shale-r4c3",
-    "smallmossrocks-shale-r4c4",
-    "smallmossrocks-shale-r4c5",
-    "smallmossrocks-shale-r5c1",
-    "smallmossrocks-shale-r5c2",
-    "smallmossrocks-shale-r5c3",
-    "smallmossrocks-shale-r5c4",
-    "smallmossrocks-shale-r5c5",
-    "smallmossrocks-slate-r1c1",
-    "smallmossrocks-slate-r1c2",
-    "smallmossrocks-slate-r1c3",
-    "smallmossrocks-slate-r1c4",
-    "smallmossrocks-slate-r1c5",
-    "smallmossrocks-slate-r2c1",
-    "smallmossrocks-slate-r2c2",
-    "smallmossrocks-slate-r2c3",
-    "smallmossrocks-slate-r2c4",
-    "smallmossrocks-slate-r2c5",
-    "smallmossrocks-slate-r3c1",
-    "smallmossrocks-slate-r3c2",
-    "smallmossrocks-slate-r3c3",
-    "smallmossrocks-slate-r3c4",
-    "smallmossrocks-slate-r3c5",
-    "smallmossrocks-slate-r4c1",
-    "smallmossrocks-slate-r4c2",
-    "smallmossrocks-slate-r4c3",
-    "smallmossrocks-slate-r4c4",
-    "smallmossrocks-slate-r4c5",
-    "smallmossrocks-slate-r5c1",
-    "smallmossrocks-slate-r5c2",
-    "smallmossrocks-slate-r5c3",
-    "smallmossrocks-slate-r5c4",
-    "smallmossrocks-slate-r5c5",
-    "smallmossrocks-whitemarble-r1c1",
-    "smallmossrocks-whitemarble-r1c2",
-    "smallmossrocks-whitemarble-r1c3",
-    "smallmossrocks-whitemarble-r1c4",
-    "smallmossrocks-whitemarble-r1c5",
-    "smallmossrocks-whitemarble-r2c1",
-    "smallmossrocks-whitemarble-r2c2",
-    "smallmossrocks-whitemarble-r2c3",
-    "smallmossrocks-whitemarble-r2c4",
-    "smallmossrocks-whitemarble-r2c5",
-    "smallmossrocks-whitemarble-r3c1",
-    "smallmossrocks-whitemarble-r3c2",
-    "smallmossrocks-whitemarble-r3c3",
-    "smallmossrocks-whitemarble-r3c4",
-    "smallmossrocks-whitemarble-r3c5",
-    "smallmossrocks-whitemarble-r4c1",
-    "smallmossrocks-whitemarble-r4c2",
-    "smallmossrocks-whitemarble-r4c3",
-    "smallmossrocks-whitemarble-r4c4",
-    "smallmossrocks-whitemarble-r4c5",
-    "smallmossrocks-whitemarble-r5c1",
-    "smallmossrocks-whitemarble-r5c2",
-    "smallmossrocks-whitemarble-r5c3",
-    "smallmossrocks-whitemarble-r5c4",
-    "smallmossrocks-whitemarble-r5c5"
+    "mossycobblestone-andesite-r1c1",
+    "mossycobblestone-andesite-r1c2",
+    "mossycobblestone-andesite-r1c3",
+    "mossycobblestone-andesite-r1c4",
+    "mossycobblestone-andesite-r1c5",
+    "mossycobblestone-andesite-r2c1",
+    "mossycobblestone-andesite-r2c2",
+    "mossycobblestone-andesite-r2c3",
+    "mossycobblestone-andesite-r2c4",
+    "mossycobblestone-andesite-r2c5",
+    "mossycobblestone-andesite-r3c1",
+    "mossycobblestone-andesite-r3c2",
+    "mossycobblestone-andesite-r3c3",
+    "mossycobblestone-andesite-r3c4",
+    "mossycobblestone-andesite-r3c5",
+    "mossycobblestone-andesite-r4c1",
+    "mossycobblestone-andesite-r4c2",
+    "mossycobblestone-andesite-r4c3",
+    "mossycobblestone-andesite-r4c4",
+    "mossycobblestone-andesite-r4c5",
+    "mossycobblestone-andesite-r5c1",
+    "mossycobblestone-andesite-r5c2",
+    "mossycobblestone-andesite-r5c3",
+    "mossycobblestone-andesite-r5c4",
+    "mossycobblestone-andesite-r5c5",
+    "mossycobblestone-basalt-r1c1",
+    "mossycobblestone-basalt-r1c2",
+    "mossycobblestone-basalt-r1c3",
+    "mossycobblestone-basalt-r1c4",
+    "mossycobblestone-basalt-r1c5",
+    "mossycobblestone-basalt-r2c1",
+    "mossycobblestone-basalt-r2c2",
+    "mossycobblestone-basalt-r2c3",
+    "mossycobblestone-basalt-r2c4",
+    "mossycobblestone-basalt-r2c5",
+    "mossycobblestone-basalt-r3c1",
+    "mossycobblestone-basalt-r3c2",
+    "mossycobblestone-basalt-r3c3",
+    "mossycobblestone-basalt-r3c4",
+    "mossycobblestone-basalt-r3c5",
+    "mossycobblestone-basalt-r4c1",
+    "mossycobblestone-basalt-r4c2",
+    "mossycobblestone-basalt-r4c3",
+    "mossycobblestone-basalt-r4c4",
+    "mossycobblestone-basalt-r4c5",
+    "mossycobblestone-basalt-r5c1",
+    "mossycobblestone-basalt-r5c2",
+    "mossycobblestone-basalt-r5c3",
+    "mossycobblestone-basalt-r5c4",
+    "mossycobblestone-basalt-r5c5",
+    "mossycobblestone-chalk-r1c1",
+    "mossycobblestone-chalk-r1c2",
+    "mossycobblestone-chalk-r1c3",
+    "mossycobblestone-chalk-r1c4",
+    "mossycobblestone-chalk-r1c5",
+    "mossycobblestone-chalk-r2c1",
+    "mossycobblestone-chalk-r2c2",
+    "mossycobblestone-chalk-r2c3",
+    "mossycobblestone-chalk-r2c4",
+    "mossycobblestone-chalk-r2c5",
+    "mossycobblestone-chalk-r3c1",
+    "mossycobblestone-chalk-r3c2",
+    "mossycobblestone-chalk-r3c3",
+    "mossycobblestone-chalk-r3c4",
+    "mossycobblestone-chalk-r3c5",
+    "mossycobblestone-chalk-r4c1",
+    "mossycobblestone-chalk-r4c2",
+    "mossycobblestone-chalk-r4c3",
+    "mossycobblestone-chalk-r4c4",
+    "mossycobblestone-chalk-r4c5",
+    "mossycobblestone-chalk-r5c1",
+    "mossycobblestone-chalk-r5c2",
+    "mossycobblestone-chalk-r5c3",
+    "mossycobblestone-chalk-r5c4",
+    "mossycobblestone-chalk-r5c5",
+    "mossycobblestone-chert-r1c1",
+    "mossycobblestone-chert-r1c2",
+    "mossycobblestone-chert-r1c3",
+    "mossycobblestone-chert-r1c4",
+    "mossycobblestone-chert-r1c5",
+    "mossycobblestone-chert-r2c1",
+    "mossycobblestone-chert-r2c2",
+    "mossycobblestone-chert-r2c3",
+    "mossycobblestone-chert-r2c4",
+    "mossycobblestone-chert-r2c5",
+    "mossycobblestone-chert-r3c1",
+    "mossycobblestone-chert-r3c2",
+    "mossycobblestone-chert-r3c3",
+    "mossycobblestone-chert-r3c4",
+    "mossycobblestone-chert-r3c5",
+    "mossycobblestone-chert-r4c1",
+    "mossycobblestone-chert-r4c2",
+    "mossycobblestone-chert-r4c3",
+    "mossycobblestone-chert-r4c4",
+    "mossycobblestone-chert-r4c5",
+    "mossycobblestone-chert-r5c1",
+    "mossycobblestone-chert-r5c2",
+    "mossycobblestone-chert-r5c3",
+    "mossycobblestone-chert-r5c4",
+    "mossycobblestone-chert-r5c5",
+    "mossycobblestone-granite-r1c1",
+    "mossycobblestone-granite-r1c2",
+    "mossycobblestone-granite-r1c3",
+    "mossycobblestone-granite-r1c4",
+    "mossycobblestone-granite-r1c5",
+    "mossycobblestone-granite-r2c1",
+    "mossycobblestone-granite-r2c2",
+    "mossycobblestone-granite-r2c3",
+    "mossycobblestone-granite-r2c4",
+    "mossycobblestone-granite-r2c5",
+    "mossycobblestone-granite-r3c1",
+    "mossycobblestone-granite-r3c2",
+    "mossycobblestone-granite-r3c3",
+    "mossycobblestone-granite-r3c4",
+    "mossycobblestone-granite-r3c5",
+    "mossycobblestone-granite-r4c1",
+    "mossycobblestone-granite-r4c2",
+    "mossycobblestone-granite-r4c3",
+    "mossycobblestone-granite-r4c4",
+    "mossycobblestone-granite-r4c5",
+    "mossycobblestone-granite-r5c1",
+    "mossycobblestone-granite-r5c2",
+    "mossycobblestone-granite-r5c3",
+    "mossycobblestone-granite-r5c4",
+    "mossycobblestone-granite-r5c5",
+    "mossycobblestone-limestone-r1c1",
+    "mossycobblestone-limestone-r1c2",
+    "mossycobblestone-limestone-r1c3",
+    "mossycobblestone-limestone-r1c4",
+    "mossycobblestone-limestone-r1c5",
+    "mossycobblestone-limestone-r2c1",
+    "mossycobblestone-limestone-r2c2",
+    "mossycobblestone-limestone-r2c3",
+    "mossycobblestone-limestone-r2c4",
+    "mossycobblestone-limestone-r2c5",
+    "mossycobblestone-limestone-r3c1",
+    "mossycobblestone-limestone-r3c2",
+    "mossycobblestone-limestone-r3c3",
+    "mossycobblestone-limestone-r3c4",
+    "mossycobblestone-limestone-r3c5",
+    "mossycobblestone-limestone-r4c1",
+    "mossycobblestone-limestone-r4c2",
+    "mossycobblestone-limestone-r4c3",
+    "mossycobblestone-limestone-r4c4",
+    "mossycobblestone-limestone-r4c5",
+    "mossycobblestone-limestone-r5c1",
+    "mossycobblestone-limestone-r5c2",
+    "mossycobblestone-limestone-r5c3",
+    "mossycobblestone-limestone-r5c4",
+    "mossycobblestone-limestone-r5c5",
+    "mossycobblestone-phyllite-r1c1",
+    "mossycobblestone-phyllite-r1c2",
+    "mossycobblestone-phyllite-r1c3",
+    "mossycobblestone-phyllite-r1c4",
+    "mossycobblestone-phyllite-r1c5",
+    "mossycobblestone-phyllite-r2c1",
+    "mossycobblestone-phyllite-r2c2",
+    "mossycobblestone-phyllite-r2c3",
+    "mossycobblestone-phyllite-r2c4",
+    "mossycobblestone-phyllite-r2c5",
+    "mossycobblestone-phyllite-r3c1",
+    "mossycobblestone-phyllite-r3c2",
+    "mossycobblestone-phyllite-r3c3",
+    "mossycobblestone-phyllite-r3c4",
+    "mossycobblestone-phyllite-r3c5",
+    "mossycobblestone-phyllite-r4c1",
+    "mossycobblestone-phyllite-r4c2",
+    "mossycobblestone-phyllite-r4c3",
+    "mossycobblestone-phyllite-r4c4",
+    "mossycobblestone-phyllite-r4c5",
+    "mossycobblestone-phyllite-r5c1",
+    "mossycobblestone-phyllite-r5c2",
+    "mossycobblestone-phyllite-r5c3",
+    "mossycobblestone-phyllite-r5c4",
+    "mossycobblestone-phyllite-r5c5",
+    "mossycobblestone-shale-r1c1",
+    "mossycobblestone-shale-r1c2",
+    "mossycobblestone-shale-r1c3",
+    "mossycobblestone-shale-r1c4",
+    "mossycobblestone-shale-r1c5",
+    "mossycobblestone-shale-r2c1",
+    "mossycobblestone-shale-r2c2",
+    "mossycobblestone-shale-r2c3",
+    "mossycobblestone-shale-r2c4",
+    "mossycobblestone-shale-r2c5",
+    "mossycobblestone-shale-r3c1",
+    "mossycobblestone-shale-r3c2",
+    "mossycobblestone-shale-r3c3",
+    "mossycobblestone-shale-r3c4",
+    "mossycobblestone-shale-r3c5",
+    "mossycobblestone-shale-r4c1",
+    "mossycobblestone-shale-r4c2",
+    "mossycobblestone-shale-r4c3",
+    "mossycobblestone-shale-r4c4",
+    "mossycobblestone-shale-r4c5",
+    "mossycobblestone-shale-r5c1",
+    "mossycobblestone-shale-r5c2",
+    "mossycobblestone-shale-r5c3",
+    "mossycobblestone-shale-r5c4",
+    "mossycobblestone-shale-r5c5",
+    "mossycobblestone-slate-r1c1",
+    "mossycobblestone-slate-r1c2",
+    "mossycobblestone-slate-r1c3",
+    "mossycobblestone-slate-r1c4",
+    "mossycobblestone-slate-r1c5",
+    "mossycobblestone-slate-r2c1",
+    "mossycobblestone-slate-r2c2",
+    "mossycobblestone-slate-r2c3",
+    "mossycobblestone-slate-r2c4",
+    "mossycobblestone-slate-r2c5",
+    "mossycobblestone-slate-r3c1",
+    "mossycobblestone-slate-r3c2",
+    "mossycobblestone-slate-r3c3",
+    "mossycobblestone-slate-r3c4",
+    "mossycobblestone-slate-r3c5",
+    "mossycobblestone-slate-r4c1",
+    "mossycobblestone-slate-r4c2",
+    "mossycobblestone-slate-r4c3",
+    "mossycobblestone-slate-r4c4",
+    "mossycobblestone-slate-r4c5",
+    "mossycobblestone-slate-r5c1",
+    "mossycobblestone-slate-r5c2",
+    "mossycobblestone-slate-r5c3",
+    "mossycobblestone-slate-r5c4",
+    "mossycobblestone-slate-r5c5",
+    "mossycobblestone-whitemarble-r1c1",
+    "mossycobblestone-whitemarble-r1c2",
+    "mossycobblestone-whitemarble-r1c3",
+    "mossycobblestone-whitemarble-r1c4",
+    "mossycobblestone-whitemarble-r1c5",
+    "mossycobblestone-whitemarble-r2c1",
+    "mossycobblestone-whitemarble-r2c2",
+    "mossycobblestone-whitemarble-r2c3",
+    "mossycobblestone-whitemarble-r2c4",
+    "mossycobblestone-whitemarble-r2c5",
+    "mossycobblestone-whitemarble-r3c1",
+    "mossycobblestone-whitemarble-r3c2",
+    "mossycobblestone-whitemarble-r3c3",
+    "mossycobblestone-whitemarble-r3c4",
+    "mossycobblestone-whitemarble-r3c5",
+    "mossycobblestone-whitemarble-r4c1",
+    "mossycobblestone-whitemarble-r4c2",
+    "mossycobblestone-whitemarble-r4c3",
+    "mossycobblestone-whitemarble-r4c4",
+    "mossycobblestone-whitemarble-r4c5",
+    "mossycobblestone-whitemarble-r5c1",
+    "mossycobblestone-whitemarble-r5c2",
+    "mossycobblestone-whitemarble-r5c3",
+    "mossycobblestone-whitemarble-r5c4",
+    "mossycobblestone-whitemarble-r5c5"
   ],
   "texturesByType": {
     "*": {
       "south": {
         "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}1-southface",
         "overlays": [
-          "vsmineralmasonry:block/stone/smallmossrocks/{tile}-southface"
+          "vsmineralmasonry:block/stone/mossycobblestone/{tile}-southface"
         ],
         "alternates": [
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}2-southface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-southface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-southface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}3-southface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-southface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-southface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}4-southface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-southface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-southface"
             ]
           }
         ]
@@ -375,25 +375,25 @@
       "north": {
         "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}1-northface",
         "overlays": [
-          "vsmineralmasonry:block/stone/smallmossrocks/{tile}-northface"
+          "vsmineralmasonry:block/stone/mossycobblestone/{tile}-northface"
         ],
         "alternates": [
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}2-northface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-northface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-northface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}3-northface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-northface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-northface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}4-northface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-northface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-northface"
             ]
           }
         ]
@@ -401,25 +401,25 @@
       "west": {
         "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}1-westface",
         "overlays": [
-          "vsmineralmasonry:block/stone/smallmossrocks/{tile}-westface"
+          "vsmineralmasonry:block/stone/mossycobblestone/{tile}-westface"
         ],
         "alternates": [
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}2-westface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-westface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-westface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}3-westface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-westface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-westface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}4-westface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-westface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-westface"
             ]
           }
         ]
@@ -427,25 +427,25 @@
       "east": {
         "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}1-eastface",
         "overlays": [
-          "vsmineralmasonry:block/stone/smallmossrocks/{tile}-eastface"
+          "vsmineralmasonry:block/stone/mossycobblestone/{tile}-eastface"
         ],
         "alternates": [
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}2-eastface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-eastface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-eastface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}3-eastface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-eastface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-eastface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}4-eastface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-eastface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-eastface"
             ]
           }
         ]
@@ -453,25 +453,25 @@
       "down": {
         "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}1-downface",
         "overlays": [
-          "vsmineralmasonry:block/stone/smallmossrocks/{tile}-downface"
+          "vsmineralmasonry:block/stone/mossycobblestone/{tile}-downface"
         ],
         "alternates": [
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}2-downface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-downface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-downface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}3-downface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-downface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-downface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}4-downface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-downface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-downface"
             ]
           }
         ]
@@ -479,25 +479,25 @@
       "up": {
         "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}1-upface",
         "overlays": [
-          "vsmineralmasonry:block/stone/smallmossrocks/{tile}-upface"
+          "vsmineralmasonry:block/stone/mossycobblestone/{tile}-upface"
         ],
         "alternates": [
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}2-upface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-upface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-upface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}3-upface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-upface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-upface"
             ]
           },
           {
             "base": "vsmineralmasonry:block/stone/muralslab-basefaces-overlay/{rock}4-upface",
             "overlays": [
-              "vsmineralmasonry:block/stone/smallmossrocks/{tile}-upface"
+              "vsmineralmasonry:block/stone/mossycobblestone/{tile}-upface"
             ]
           }
         ]

@@ -1,5 +1,5 @@
 {
-  "code": "burnishedstonepathitem",
+  "code": "burnishedflagstonepathitem",
   "class": "ItemPlaceStonePath",
   "variantgroups": [
     {
@@ -55,11 +55,13 @@
   "maxstacksize": 64,
   "materialDensity": 800,
   "attributes": {
+    "pathBlockCode": "burnishedflagstonepath",
     "handbook": {
       "include": true
     }
   },
   "guiTransform": {
+    "rotate": true,
     "translation": { "x": 0, "y": 0, "z": 0 },
     "rotation": { "x": -20, "y": -35, "z": 0 },
     "origin": { "x": 0.5, "y": 0.5, "z": 0.5 },

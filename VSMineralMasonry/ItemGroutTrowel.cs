@@ -189,7 +189,7 @@ public class ItemGroutTrowel : Item
             return;
         }
 
-        if (TryCycleTarget(slot, byEntity.World, blockSel))
+        if (TryCycleTarget(slot, byEntity, blockSel))
         {
             handling = EnumHandHandling.Handled;
         }
@@ -200,8 +200,9 @@ public class ItemGroutTrowel : Item
         return DecorEditingHelper.GetSelectedDecor(world, blockSel) != null;
     }
 
-    private static bool TryCycleTarget(ItemSlot slot, IWorldAccessor world, BlockSelection blockSel)
+    private static bool TryCycleTarget(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel)
     {
+        IWorldAccessor world = byEntity.World;
         DecorEditingHelper.DecorTarget? target = DecorEditingHelper.GetSelectedDecor(world, blockSel);
 
         if (target == null)
@@ -220,7 +221,13 @@ public class ItemGroutTrowel : Item
             return false;
         }
 
-        return world.BlockAccessor.SetDecor(nextBlock, target.Position, target.DecorIndex);
+        bool changed = world.BlockAccessor.SetDecor(nextBlock, target.Position, target.DecorIndex);
+        if (changed)
+        {
+            slot.Itemstack?.Collectible.DamageItem(world, byEntity, slot, 1);
+        }
+
+        return changed;
     }
 
     private static Block? GetNextCycleBlock(ItemSlot slot, IWorldAccessor world, Block block)

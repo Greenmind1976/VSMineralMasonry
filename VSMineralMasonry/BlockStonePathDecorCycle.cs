@@ -37,6 +37,7 @@ public class BlockStonePathDecorCycle : Block
         }
 
         BlockPos origin = target.Position;
+        bool mirrorColumns = cycleBlock.Attributes?["autoAlignMirrorColumns"].AsBool(false) ?? false;
 
         for (int rowOffset = -RowOrigin; rowOffset < Rows - RowOrigin; rowOffset++)
         {
@@ -49,7 +50,10 @@ public class BlockStonePathDecorCycle : Block
                     continue;
                 }
 
-                string tile = $"r{rowOffset + RowOrigin + 1}c{ColumnOrigin - colOffset + 1}";
+                int column = mirrorColumns
+                    ? ColumnOrigin - colOffset + 1
+                    : colOffset + ColumnOrigin + 1;
+                string tile = $"r{rowOffset + RowOrigin + 1}c{column}";
                 Block? mapped = world.GetBlock(decor.CodeWithParts(tile));
                 if (mapped == null || mapped.Id == 0 || mapped.Id == decor.Id)
                 {

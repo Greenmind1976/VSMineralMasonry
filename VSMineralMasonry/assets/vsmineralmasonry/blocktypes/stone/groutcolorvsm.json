@@ -18,15 +18,14 @@
       "states": [
         "black",
         "white",
-        "gold",
-        "silver",
+        "orange",
+        "purple",
+        "pink",
         "red",
         "blue",
         "green",
         "yellow",
-        "brown",
-        "grey",
-        "darkgrey"
+        "grey"
       ]
     },
     {

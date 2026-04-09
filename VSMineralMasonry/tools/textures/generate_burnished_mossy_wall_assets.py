@@ -204,7 +204,7 @@ def build_textures() -> None:
 
                 subprocess.run(["magick", str(south), "-flop", "PNG32:" + str(TEXTURE_ROOT / f"{rock}-{tile}-northface.png")], check=True)
                 subprocess.run(["magick", str(west), "-flop", "PNG32:" + str(TEXTURE_ROOT / f"{rock}-{tile}-eastface.png")], check=True)
-                subprocess.run(["magick", str(up_raw), "-flop", "PNG32:" + str(up)], check=True)
+                shutil.copy2(up_raw, up)
                 subprocess.run(["magick", str(up), "-flip", "PNG32:" + str(TEXTURE_ROOT / f"{rock}-{tile}-downface.png")], check=True)
                 shutil.copy2(south, TEXTURE_ROOT / f"{rock}-{tile}.png")
 
