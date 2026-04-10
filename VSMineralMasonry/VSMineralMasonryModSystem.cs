@@ -16,6 +16,7 @@ public class VSMineralMasonryModSystem : ModSystem
         api.RegisterItemClass("ItemPlaceStonePath", typeof(ItemPlaceStonePath));
         api.RegisterItemClass("ItemGroutTrowel", typeof(ItemGroutTrowel));
         api.RegisterItemClass("ItemGroutSponge", typeof(ItemGroutSponge));
+        api.RegisterItemClass("ItemStonePolish", typeof(ItemStonePolish));
         api.RegisterCollectibleBehaviorClass("PreserveGroutOnChisel", typeof(CollectibleBehaviorPreserveGroutOnChisel));
         api.RegisterCollectibleBehaviorClass("CycleStonePathDecor", typeof(CollectibleBehaviorCycleStonePathDecor));
         api.RegisterCollectibleBehaviorClass("RemoveGroutDecor", typeof(CollectibleBehaviorRemoveGroutDecor));

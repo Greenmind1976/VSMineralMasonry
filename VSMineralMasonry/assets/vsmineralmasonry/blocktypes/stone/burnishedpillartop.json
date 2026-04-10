@@ -87,9 +87,6 @@
   "sideAo": { "all": false },
   "sidesolid": { "all": false },
   "sideopaque": { "all": false },
-  "heldTpIdleAnimation": "holdbothhandslarge",
-  "heldRightReadyAnimation": "heldblockready",
-  "heldTpUseAnimation": "twohandplaceblock",
   "sounds": {
     "walk": "walk/stone",
     "byTool": {

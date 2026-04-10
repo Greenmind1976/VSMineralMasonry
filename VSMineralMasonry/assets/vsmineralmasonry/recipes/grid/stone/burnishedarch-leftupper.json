@@ -1,0 +1,41 @@
+{
+  "ingredientPattern": "B  \n H \n C ",
+  "ingredients": {
+    "H": {
+      "type": "item",
+      "code": "game:hammer-*",
+      "isTool": true,
+      "toolDurabilityCost": 1
+    },
+    "C": {
+      "type": "item",
+      "code": "game:chisel-*",
+      "isTool": true,
+      "toolDurabilityCost": 1
+    },
+    "B": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnished-*",
+      "name": "rock",
+      "allowedVariants": [
+        "andesite",
+        "basalt",
+        "chalk",
+        "chert",
+        "granite",
+        "limestone",
+        "phyllite",
+        "shale",
+        "slate",
+        "whitemarble"
+      ]
+    }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+    "type": "block",
+    "code": "vsmineralmasonry:burnishedarch-{rock}-leftupper-north",
+    "quantity": 1
+  }
+}

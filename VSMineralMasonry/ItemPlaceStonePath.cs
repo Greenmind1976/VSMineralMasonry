@@ -65,14 +65,21 @@ public class ItemPlaceStonePath : Item
             return true;
         }
 
+        Block? existingDecor = world.BlockAccessor.GetDecor(pos, decorIndex);
+        bool replacingSamePathSet = IsSamePathSet(existingDecor, pathBlock);
+
         bool placed = world.BlockAccessor.SetDecor(pathBlock, pos, decorIndex);
         if (!placed)
         {
             return false;
         }
 
-        slot.TakeOut(1);
-        slot.MarkDirty();
+        if (!replacingSamePathSet)
+        {
+            slot.TakeOut(1);
+            slot.MarkDirty();
+        }
+
         return true;
     }
 
@@ -84,5 +91,23 @@ public class ItemPlaceStonePath : Item
             || path.Equals("soil", System.StringComparison.Ordinal)
             || path.StartsWith("sand-", System.StringComparison.Ordinal)
             || path.Equals("sand", System.StringComparison.Ordinal);
+    }
+
+    private static bool IsSamePathSet(Block? existingDecor, Block pathBlock)
+    {
+        string? existingPath = existingDecor?.Code?.Path;
+        string? newPath = pathBlock.Code?.Path;
+        if (string.IsNullOrEmpty(existingPath) || string.IsNullOrEmpty(newPath))
+        {
+            return false;
+        }
+
+        return BasePath(existingPath) == BasePath(newPath);
+    }
+
+    private static string BasePath(string path)
+    {
+        int lastDash = path.LastIndexOf('-');
+        return lastDash >= 0 ? path[..lastDash] : path;
     }
 }

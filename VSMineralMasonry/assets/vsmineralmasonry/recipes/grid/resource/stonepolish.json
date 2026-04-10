@@ -1,0 +1,24 @@
+{
+  "ingredientPattern": "Q \nWF",
+  "ingredients": {
+    "Q": {
+      "type": "item",
+      "code": "game:crushed-quartz"
+    },
+    "W": {
+      "type": "item",
+      "code": "game:beeswax"
+    },
+    "F": {
+      "type": "item",
+      "code": "game:fat"
+    }
+  },
+  "width": 2,
+  "height": 2,
+  "output": {
+    "type": "item",
+    "code": "vsmineralmasonry:stonepolish",
+    "quantity": 12
+  }
+}

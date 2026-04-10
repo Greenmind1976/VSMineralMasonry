@@ -1,0 +1,39 @@
+{
+  "ingredientPattern": "S\nB\nF",
+  "ingredients": {
+    "S": {
+      "type": "item",
+      "code": "vsmineralmasonry:groutsponge",
+      "isTool": true,
+      "toolDurabilityCost": 1
+    },
+    "B": {
+      "type": "block",
+      "code": "vsmineralmasonry:burnishedcobblestone-*-r1c1",
+      "name": "rock",
+      "allowedVariants": [
+        "andesite",
+        "basalt",
+        "chalk",
+        "chert",
+        "granite",
+        "limestone",
+        "phyllite",
+        "shale",
+        "slate",
+        "whitemarble"
+      ]
+    },
+    "F": {
+      "type": "block",
+      "code": "game:forestfloor-*"
+    }
+  },
+  "width": 1,
+  "height": 3,
+  "output": {
+    "type": "block",
+    "code": "vsmineralmasonry:mossycobblestone-{rock}-r1c1",
+    "quantity": 1
+  }
+}

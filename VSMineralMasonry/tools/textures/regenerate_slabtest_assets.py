@@ -76,24 +76,7 @@ FAMILY_TILE_COLUMN_OFFSETS = {
     "granite": 4,
 }
 
-EXCLUDED_COMBINATIONS = {
-    ("basalt", "burnished", "bituminouscoal"),
-    ("andesite", "burnished", "emerald"),
-    ("andesite", "burnished", "lignite"),
-    ("chalk", "burnished", "silver"),
-    ("chert", "burnished", "emerald"),
-    ("chert", "burnished", "lignite"),
-    ("granite", "burnished", "emerald"),
-    ("granite", "burnished", "lignite"),
-    ("limestone", "burnished", "emerald"),
-    ("limestone", "burnished", "silver"),
-    ("phyllite", "burnished", "emerald"),
-    ("phyllite", "burnished", "lignite"),
-    ("shale", "burnished", "lignite"),
-    ("slate", "burnished", "lignite"),
-    ("whitemarble", "burnished", "quartz"),
-    ("whitemarble", "burnished", "silver"),
-}
+EXCLUDED_COMBINATIONS = set()
 
 DISPLAY_NAMES = {
     "bituminouscoal": "Black Coal",

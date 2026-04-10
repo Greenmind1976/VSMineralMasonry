@@ -187,9 +187,6 @@
   "sideopaque": {
     "all": false
   },
-  "heldTpIdleAnimation": "holdbothhandslarge",
-  "heldRightReadyAnimation": "heldblockready",
-  "heldTpUseAnimation": "twohandplaceblock",
   "sounds": {
     "walk": "walk/stone",
     "byTool": {

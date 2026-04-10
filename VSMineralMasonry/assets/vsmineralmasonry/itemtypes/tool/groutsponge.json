@@ -29,6 +29,7 @@
     "items": ["*"],
     "tools": ["*"]
   },
+  "durability": 250,
   "attributes": {
     "handbook": {
       "include": true

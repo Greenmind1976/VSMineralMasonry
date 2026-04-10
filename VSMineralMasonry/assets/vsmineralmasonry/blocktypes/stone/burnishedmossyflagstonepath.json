@@ -1,0 +1,216 @@
+{
+  "code": "burnishedmossyflagstonepath",
+  "class": "BlockStonePathDecorCycle",
+  "behaviors": [
+    {
+      "name": "Decor",
+      "properties": {
+        "sides": [
+          "up"
+        ],
+        "notFullFace": true,
+        "thickness": 0.0,
+        "removable": false
+      }
+    }
+  ],
+  "replaceable": 120,
+  "blockmaterial": "Stone",
+  "storageFlags": 5,
+  "variantgroups": [
+    {
+      "code": "rock",
+      "states": [
+        "andesite",
+        "basalt",
+        "chalk",
+        "chert",
+        "granite",
+        "limestone",
+        "phyllite",
+        "shale",
+        "slate",
+        "whitemarble"
+      ]
+    },
+    {
+      "code": "tile",
+      "states": [
+        "r1c1",
+        "r1c2",
+        "r1c3",
+        "r2c1",
+        "r2c2",
+        "r2c3",
+        "r3c1",
+        "r3c2",
+        "r3c3"
+      ]
+    }
+  ],
+  "attributes": {
+    "ignoreSounds": true,
+    "autoAlignMirrorColumns": true,
+    "handbook": {
+      "include": false
+    }
+  },
+  "shapeInventory": {
+    "base": "game:block/basic/layers/0voxel",
+    "rotateX": 90
+  },
+  "texturesByType": {
+    "*": {
+      "all": {
+        "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}1-upface",
+        "overlays": [
+          "vsmineralmasonry:block/stone/burnishedmossywall/{rock}-{tile}-upface"
+        ],
+        "alternates": [
+          {
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}2-upface",
+            "overlays": [
+              "vsmineralmasonry:block/stone/burnishedmossywall/{rock}-{tile}-upface"
+            ]
+          },
+          {
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}3-upface",
+            "overlays": [
+              "vsmineralmasonry:block/stone/burnishedmossywall/{rock}-{tile}-upface"
+            ]
+          },
+          {
+            "base": "vsmineralmasonry:block/stone/muralslab-basefaces-mosscontrast/{rock}4-upface",
+            "overlays": [
+              "vsmineralmasonry:block/stone/burnishedmossywall/{rock}-{tile}-upface"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "allowedVariants": [
+    "burnishedmossyflagstonepath-andesite-r1c1",
+    "burnishedmossyflagstonepath-andesite-r1c2",
+    "burnishedmossyflagstonepath-andesite-r1c3",
+    "burnishedmossyflagstonepath-andesite-r2c1",
+    "burnishedmossyflagstonepath-andesite-r2c2",
+    "burnishedmossyflagstonepath-andesite-r2c3",
+    "burnishedmossyflagstonepath-andesite-r3c1",
+    "burnishedmossyflagstonepath-andesite-r3c2",
+    "burnishedmossyflagstonepath-andesite-r3c3",
+    "burnishedmossyflagstonepath-basalt-r1c1",
+    "burnishedmossyflagstonepath-basalt-r1c2",
+    "burnishedmossyflagstonepath-basalt-r1c3",
+    "burnishedmossyflagstonepath-basalt-r2c1",
+    "burnishedmossyflagstonepath-basalt-r2c2",
+    "burnishedmossyflagstonepath-basalt-r2c3",
+    "burnishedmossyflagstonepath-basalt-r3c1",
+    "burnishedmossyflagstonepath-basalt-r3c2",
+    "burnishedmossyflagstonepath-basalt-r3c3",
+    "burnishedmossyflagstonepath-chalk-r1c1",
+    "burnishedmossyflagstonepath-chalk-r1c2",
+    "burnishedmossyflagstonepath-chalk-r1c3",
+    "burnishedmossyflagstonepath-chalk-r2c1",
+    "burnishedmossyflagstonepath-chalk-r2c2",
+    "burnishedmossyflagstonepath-chalk-r2c3",
+    "burnishedmossyflagstonepath-chalk-r3c1",
+    "burnishedmossyflagstonepath-chalk-r3c2",
+    "burnishedmossyflagstonepath-chalk-r3c3",
+    "burnishedmossyflagstonepath-chert-r1c1",
+    "burnishedmossyflagstonepath-chert-r1c2",
+    "burnishedmossyflagstonepath-chert-r1c3",
+    "burnishedmossyflagstonepath-chert-r2c1",
+    "burnishedmossyflagstonepath-chert-r2c2",
+    "burnishedmossyflagstonepath-chert-r2c3",
+    "burnishedmossyflagstonepath-chert-r3c1",
+    "burnishedmossyflagstonepath-chert-r3c2",
+    "burnishedmossyflagstonepath-chert-r3c3",
+    "burnishedmossyflagstonepath-granite-r1c1",
+    "burnishedmossyflagstonepath-granite-r1c2",
+    "burnishedmossyflagstonepath-granite-r1c3",
+    "burnishedmossyflagstonepath-granite-r2c1",
+    "burnishedmossyflagstonepath-granite-r2c2",
+    "burnishedmossyflagstonepath-granite-r2c3",
+    "burnishedmossyflagstonepath-granite-r3c1",
+    "burnishedmossyflagstonepath-granite-r3c2",
+    "burnishedmossyflagstonepath-granite-r3c3",
+    "burnishedmossyflagstonepath-limestone-r1c1",
+    "burnishedmossyflagstonepath-limestone-r1c2",
+    "burnishedmossyflagstonepath-limestone-r1c3",
+    "burnishedmossyflagstonepath-limestone-r2c1",
+    "burnishedmossyflagstonepath-limestone-r2c2",
+    "burnishedmossyflagstonepath-limestone-r2c3",
+    "burnishedmossyflagstonepath-limestone-r3c1",
+    "burnishedmossyflagstonepath-limestone-r3c2",
+    "burnishedmossyflagstonepath-limestone-r3c3",
+    "burnishedmossyflagstonepath-phyllite-r1c1",
+    "burnishedmossyflagstonepath-phyllite-r1c2",
+    "burnishedmossyflagstonepath-phyllite-r1c3",
+    "burnishedmossyflagstonepath-phyllite-r2c1",
+    "burnishedmossyflagstonepath-phyllite-r2c2",
+    "burnishedmossyflagstonepath-phyllite-r2c3",
+    "burnishedmossyflagstonepath-phyllite-r3c1",
+    "burnishedmossyflagstonepath-phyllite-r3c2",
+    "burnishedmossyflagstonepath-phyllite-r3c3",
+    "burnishedmossyflagstonepath-shale-r1c1",
+    "burnishedmossyflagstonepath-shale-r1c2",
+    "burnishedmossyflagstonepath-shale-r1c3",
+    "burnishedmossyflagstonepath-shale-r2c1",
+    "burnishedmossyflagstonepath-shale-r2c2",
+    "burnishedmossyflagstonepath-shale-r2c3",
+    "burnishedmossyflagstonepath-shale-r3c1",
+    "burnishedmossyflagstonepath-shale-r3c2",
+    "burnishedmossyflagstonepath-shale-r3c3",
+    "burnishedmossyflagstonepath-slate-r1c1",
+    "burnishedmossyflagstonepath-slate-r1c2",
+    "burnishedmossyflagstonepath-slate-r1c3",
+    "burnishedmossyflagstonepath-slate-r2c1",
+    "burnishedmossyflagstonepath-slate-r2c2",
+    "burnishedmossyflagstonepath-slate-r2c3",
+    "burnishedmossyflagstonepath-slate-r3c1",
+    "burnishedmossyflagstonepath-slate-r3c2",
+    "burnishedmossyflagstonepath-slate-r3c3",
+    "burnishedmossyflagstonepath-whitemarble-r1c1",
+    "burnishedmossyflagstonepath-whitemarble-r1c2",
+    "burnishedmossyflagstonepath-whitemarble-r1c3",
+    "burnishedmossyflagstonepath-whitemarble-r2c1",
+    "burnishedmossyflagstonepath-whitemarble-r2c2",
+    "burnishedmossyflagstonepath-whitemarble-r2c3",
+    "burnishedmossyflagstonepath-whitemarble-r3c1",
+    "burnishedmossyflagstonepath-whitemarble-r3c2",
+    "burnishedmossyflagstonepath-whitemarble-r3c3"
+  ],
+  "vertexflags": {
+    "zOffset": 1
+  },
+  "renderPass": "Transparent",
+  "drawtype": "surfacelayer",
+  "doNotRenderAtLod2": true,
+  "randomizeRotations": false,
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "selectionBox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 1,
+    "z2": 1
+  },
+  "resistance": 0,
+  "lightAbsorption": 0,
+  "drops": [],
+  "materialDensity": 400,
+  "guiTransform": {
+    "origin": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    }
+  }
+}

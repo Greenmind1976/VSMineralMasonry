@@ -1,0 +1,33 @@
+{
+  "ingredientPattern": "BBB\nBCB\nBBB",
+  "ingredients": {
+    "B": {
+      "type": "item",
+      "code": "vsmineralmasonry:burnishedstone-*",
+      "name": "rock",
+      "allowedVariants": [
+        "andesite",
+        "basalt",
+        "chalk",
+        "chert",
+        "granite",
+        "limestone",
+        "phyllite",
+        "shale",
+        "slate",
+        "whitemarble"
+      ]
+    },
+    "C": {
+      "type": "item",
+      "code": "game:clay-*"
+    }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+    "type": "block",
+    "code": "vsmineralmasonry:burnishedcobblestone-{rock}-r1c1",
+    "quantity": 8
+  }
+}

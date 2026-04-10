@@ -38,10 +38,10 @@ ROCKS = [
     "slate",
     "whitemarble",
 ]
-GRAY_UNDERLAY_ROCKS = {"basalt", "shale", "slate"}
+GRAY_UNDERLAY_ROCKS = set()
 TILES = [f"r{row}c{col}" for row in range(1, 4) for col in range(1, 4)]
 FACES = ("south", "north", "west", "east", "down", "up")
-MOSS_OPACITY = "0.75"
+MOSS_OPACITY = "1.0"
 GRAY_UNDERLAY_COLOR = "#6e6e6e"
 MOSS_THRESHOLD = "70%"
 

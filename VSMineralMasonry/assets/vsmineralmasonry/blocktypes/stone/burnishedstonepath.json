@@ -50,6 +50,7 @@
   ],
   "attributes": {
     "ignoreSounds": true,
+    "autoAlignMirrorColumns": true,
     "handbook": {
       "include": false
     }
@@ -61,26 +62,30 @@
   "texturesByType": {
     "*": {
       "all": {
-        "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}1-{tile}",
+        "base": "vsmineralmasonry:block/stone/burnishedstonepath/transparent",
         "overlays": [
+          "vsmineralmasonry:block/stone/burnishedstonepath/{rock}1-{tile}",
           "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
         ],
         "alternates": [
           {
-            "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}2-{tile}",
+            "base": "vsmineralmasonry:block/stone/burnishedstonepath/transparent",
             "overlays": [
+              "vsmineralmasonry:block/stone/burnishedstonepath/{rock}2-{tile}",
               "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}3-{tile}",
+            "base": "vsmineralmasonry:block/stone/burnishedstonepath/transparent",
             "overlays": [
+              "vsmineralmasonry:block/stone/burnishedstonepath/{rock}3-{tile}",
               "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
             ]
           },
           {
-            "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}4-{tile}",
+            "base": "vsmineralmasonry:block/stone/burnishedstonepath/transparent",
             "overlays": [
+              "vsmineralmasonry:block/stone/burnishedstonepath/{rock}4-{tile}",
               "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
             ]
           }

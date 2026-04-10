@@ -55,7 +55,7 @@
     "trowelShapeParts": "topleft,topright,bottomright,bottomleft",
     "trowelShapeLabels": "Top Left,Top Right,Bottom Right,Bottom Left",
     "handbook": {
-      "include": true
+      "include": false
     }
   },
   "renderPass": "Transparent",
@@ -77,32 +77,6 @@
     "z2": 1
   },
   "blockmaterial": "Stone",
-  "creativeinventory": {
-    "general": [
-      "*-basalt-topleft",
-      "*-granite-topleft",
-      "*-whitemarble-topleft",
-      "*-slate-topleft",
-      "*-chert-topleft",
-      "*-phyllite-topleft",
-      "*-andesite-topleft",
-      "*-limestone-topleft",
-      "*-shale-topleft",
-      "*-chalk-topleft"
-    ],
-    "clutter": [
-      "*-basalt-topleft",
-      "*-granite-topleft",
-      "*-whitemarble-topleft",
-      "*-slate-topleft",
-      "*-chert-topleft",
-      "*-phyllite-topleft",
-      "*-andesite-topleft",
-      "*-limestone-topleft",
-      "*-shale-topleft",
-      "*-chalk-topleft"
-    ]
-  },
   "replaceable": 5500,
   "resistance": 0,
   "lightAbsorption": 0,

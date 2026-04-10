@@ -1,5 +1,5 @@
 {
-  "code": "crushedstone",
+  "code": "granules",
   "behaviors": [
     {
       "name": "GroundStorable",
@@ -28,7 +28,7 @@
   ],
   "attributes": {
     "handbook": {
-      "groupBy": ["crushedstone-*"]
+      "groupBy": ["granules-*"]
     },
     "displaycaseable": true,
     "shelvable": true,
