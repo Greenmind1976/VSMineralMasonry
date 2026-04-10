@@ -33,7 +33,6 @@
       }
     }
   },
-  "tool": "hammer",
   "damagedby": ["blockbreaking", "attacking"],
   "tooltierbytype": {
     "*-copper": 2,

@@ -197,7 +197,8 @@ public class ItemGroutTrowel : Item
 
     private static bool HasEditableTarget(IWorldAccessor world, BlockSelection blockSel)
     {
-        return DecorEditingHelper.GetSelectedDecor(world, blockSel) != null;
+        DecorEditingHelper.DecorTarget? target = DecorEditingHelper.GetSelectedDecor(world, blockSel);
+        return IsEditableByTrowel(target?.Block);
     }
 
     private static bool TryCycleTarget(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel)
@@ -205,7 +206,7 @@ public class ItemGroutTrowel : Item
         IWorldAccessor world = byEntity.World;
         DecorEditingHelper.DecorTarget? target = DecorEditingHelper.GetSelectedDecor(world, blockSel);
 
-        if (target == null)
+        if (target == null || !IsEditableByTrowel(target.Block))
         {
             return false;
         }
@@ -243,6 +244,11 @@ public class ItemGroutTrowel : Item
         }
 
         return null;
+    }
+
+    private static bool IsEditableByTrowel(Block? block)
+    {
+        return block is BlockGroutCycle || block is BlockTriangleOverlayCycle;
     }
 
     private static Block? GetNextGroutBlock(ItemSlot slot, IWorldAccessor world, Block block)

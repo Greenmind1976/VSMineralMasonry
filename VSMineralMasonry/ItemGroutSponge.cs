@@ -27,7 +27,7 @@ public class ItemGroutSponge : Item
     private static bool TryRemoveDecor(IWorldAccessor world, BlockSelection blockSel)
     {
         DecorEditingHelper.DecorTarget? target = DecorEditingHelper.GetSelectedDecor(world, blockSel);
-        if (target == null)
+        if (target == null || !IsRemovableBySponge(target.Block))
         {
             return false;
         }
@@ -39,5 +39,10 @@ public class ItemGroutSponge : Item
 
         Block air = world.GetBlock(0);
         return world.BlockAccessor.SetDecor(air, target.Position, target.DecorIndex);
+    }
+
+    private static bool IsRemovableBySponge(Block? block)
+    {
+        return block is BlockGroutCycle || block is BlockTriangleOverlayCycle;
     }
 }
