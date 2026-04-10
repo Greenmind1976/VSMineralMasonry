@@ -189,7 +189,7 @@ public class ItemGroutTrowel : Item
             return;
         }
 
-        if (TryCycleTarget(slot, byEntity.World, blockSel))
+        if (TryCycleTarget(slot, byEntity, blockSel))
         {
             handling = EnumHandHandling.Handled;
         }
@@ -197,14 +197,16 @@ public class ItemGroutTrowel : Item
 
     private static bool HasEditableTarget(IWorldAccessor world, BlockSelection blockSel)
     {
-        return DecorEditingHelper.GetSelectedDecor(world, blockSel) != null;
+        DecorEditingHelper.DecorTarget? target = DecorEditingHelper.GetSelectedDecor(world, blockSel);
+        return IsEditableByTrowel(target?.Block);
     }
 
-    private static bool TryCycleTarget(ItemSlot slot, IWorldAccessor world, BlockSelection blockSel)
+    private static bool TryCycleTarget(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel)
     {
+        IWorldAccessor world = byEntity.World;
         DecorEditingHelper.DecorTarget? target = DecorEditingHelper.GetSelectedDecor(world, blockSel);
 
-        if (target == null)
+        if (target == null || !IsEditableByTrowel(target.Block))
         {
             return false;
         }
@@ -220,7 +222,13 @@ public class ItemGroutTrowel : Item
             return false;
         }
 
-        return world.BlockAccessor.SetDecor(nextBlock, target.Position, target.DecorIndex);
+        bool changed = world.BlockAccessor.SetDecor(nextBlock, target.Position, target.DecorIndex);
+        if (changed)
+        {
+            slot.Itemstack?.Collectible.DamageItem(world, byEntity, slot, 1);
+        }
+
+        return changed;
     }
 
     private static Block? GetNextCycleBlock(ItemSlot slot, IWorldAccessor world, Block block)
@@ -236,6 +244,11 @@ public class ItemGroutTrowel : Item
         }
 
         return null;
+    }
+
+    private static bool IsEditableByTrowel(Block? block)
+    {
+        return block is BlockGroutCycle || block is BlockTriangleOverlayCycle;
     }
 
     private static Block? GetNextGroutBlock(ItemSlot slot, IWorldAccessor world, Block block)

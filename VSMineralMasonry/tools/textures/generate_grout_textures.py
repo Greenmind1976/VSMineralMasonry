@@ -6,11 +6,13 @@ from pathlib import Path
 
 
 ROOT = Path("/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/VSMineralMasonry")
+PROJECT_ROOT = ROOT.parent
 OUTPUT_DIR = ROOT / "assets/vsmineralmasonry/textures/block/stone/grout"
 THICK_OUTPUT_DIR = ROOT / "assets/vsmineralmasonry/textures/block/stone/thickgrout"
 ROCK_OUTPUT_DIR = ROOT / "assets/vsmineralmasonry/textures/block/stone/groutrock"
 SLABBASE_DIR = ROOT / "assets/vsmineralmasonry/textures/block/stone/slabbase"
-BLOB_MASK_SOURCE = OUTPUT_DIR / "black-blob.png"
+COLOR_DETAIL_SOURCE = PROJECT_ROOT / "textures" / "decor-overlays" / "color-tile-texture2.png"
+BLOB_MASK_SOURCE = PROJECT_ROOT / "workingdir" / "grout-blob.png"
 
 PARTS = (
     "top",
@@ -43,14 +45,19 @@ COLOR_HIGHLIGHT_FACTOR = 1.03
 COLOR_DETAIL_SIGMOID = "1.4,50%"
 
 COLOR_BASES = {
+    "black": "#1d1d1d",
+    "white": "#f2f2f2",
+    "orange": "#b64227",
+    "purple": "#603888",
+    "pink": "#b62777",
     "gold": "#d0b35b",
     "silver": "#b6bfc8",
-    "red": "#8f655f",
-    "blue": "#4f6180",
-    "green": "#425a43",
-    "yellow": "#8d7b33",
+    "red": "#b62742",
+    "blue": "#384c88",
+    "green": "#428838",
+    "yellow": "#b6ad27",
     "brown": "#a67647",
-    "grey": "#9ea6ae",
+    "grey": "#555555",
     "darkgrey": "#575a5e",
 }
 
@@ -199,17 +206,23 @@ def build_blob_from_rock(source: Path, out_path: Path) -> None:
     run(
         "magick",
         str(source),
-        "-alpha",
-        "extract",
-        "-write",
-        "mpr:sourcealpha",
-        "+delete",
-        str(source),
+        "-filter",
+        "point",
+        "-resize",
+        "32x32!",
         "-alpha",
         "off",
+        "(",
         str(BLOB_MASK_SOURCE),
+        "-filter",
+        "point",
+        "-resize",
+        "32x32!",
         "-alpha",
-        "extract",
+        "off",
+        "-colorspace",
+        "Gray",
+        ")",
         "-compose",
         "CopyOpacity",
         "-composite",
@@ -270,7 +283,7 @@ def tint_texture_single_color(source: Path, out_path: Path, color: str) -> None:
         "-write",
         "mpr:alpha",
         "+delete",
-        str(source),
+        str(COLOR_DETAIL_SOURCE),
         "-alpha",
         "off",
         "-colorspace",
@@ -303,6 +316,44 @@ def tint_texture_single_color(source: Path, out_path: Path, color: str) -> None:
     )
 
 
+def tint_blob_texture_single_color(source: Path, out_path: Path, color: str) -> None:
+    shadow = shade_color(color, COLOR_SHADOW_FACTOR)
+    highlight = shade_color(color, COLOR_HIGHLIGHT_FACTOR)
+    run(
+        "magick",
+        str(source),
+        "-alpha",
+        "off",
+        "-colorspace",
+        "Gray",
+        "-write",
+        "mpr:gray",
+        "+delete",
+        "mpr:gray",
+        "-auto-level",
+        "-sigmoidal-contrast",
+        COLOR_DETAIL_SIGMOID,
+        "(",
+        f"xc:{shadow}",
+        f"xc:{color}",
+        f"xc:{highlight}",
+        "+append",
+        "-filter",
+        "point",
+        "-resize",
+        "256x1!",
+        ")",
+        "-clut",
+        "-colorspace",
+        "sRGB",
+        "mpr:gray",
+        "-compose",
+        "CopyOpacity",
+        "-composite",
+        f"PNG32:{out_path}",
+    )
+
+
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     THICK_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -322,6 +373,7 @@ def main() -> None:
         for part in PARTS:
             tint_texture_single_color(OUTPUT_DIR / f"black-{part}.png", OUTPUT_DIR / f"{color}-{part}.png", hex_color)
             tint_texture_single_color(THICK_OUTPUT_DIR / f"black-{part}.png", THICK_OUTPUT_DIR / f"{color}-{part}.png", hex_color)
+        tint_blob_texture_single_color(BLOB_MASK_SOURCE, OUTPUT_DIR / f"{color}-blob.png", hex_color)
 
     for old_png in ROCK_OUTPUT_DIR.glob("*.png"):
         old_png.unlink()

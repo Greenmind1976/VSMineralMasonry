@@ -1,0 +1,212 @@
+{
+  "code": "burnishedarch",
+  "blockmaterial": "Stone",
+  "replaceable": 120,
+  "storageFlags": 5,
+  "behaviors": [
+    {
+      "name": "HorizontalOrientable"
+    }
+  ],
+  "variantgroups": [
+    {
+      "code": "rock",
+      "states": [
+        "basalt",
+        "granite",
+        "whitemarble",
+        "slate",
+        "chert",
+        "phyllite",
+        "andesite",
+        "limestone",
+        "shale",
+        "chalk"
+      ]
+    },
+    {
+      "code": "piece",
+      "states": [
+        "leftlower",
+        "leftupper",
+        "middle",
+        "rightupper",
+        "rightlower"
+      ]
+    },
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "attributes": {
+    "canChisel": true,
+    "handbook": {
+      "groupBy": [
+        "burnishedarch-{rock}-{piece}-*"
+      ]
+    }
+  },
+  "creativeinventory": {
+    "general": [
+      "*-leftlower-north",
+      "*-leftupper-north",
+      "*-middle-north",
+      "*-rightupper-north",
+      "*-rightlower-north"
+    ],
+    "construction": [
+      "*-leftlower-north",
+      "*-leftupper-north",
+      "*-middle-north",
+      "*-rightupper-north",
+      "*-rightlower-north"
+    ]
+  },
+  "drawtype": "json",
+  "shapeByType": {
+    "*-leftlower-north": {
+      "base": "block/stone/arch/leftlower",
+      "rotateY": 0
+    },
+    "*-leftlower-east": {
+      "base": "block/stone/arch/leftlower",
+      "rotateY": 270
+    },
+    "*-leftlower-south": {
+      "base": "block/stone/arch/leftlower",
+      "rotateY": 180
+    },
+    "*-leftlower-west": {
+      "base": "block/stone/arch/leftlower",
+      "rotateY": 90
+    },
+    "*-leftupper-north": {
+      "base": "block/stone/arch/leftupper",
+      "rotateY": 0
+    },
+    "*-leftupper-east": {
+      "base": "block/stone/arch/leftupper",
+      "rotateY": 270
+    },
+    "*-leftupper-south": {
+      "base": "block/stone/arch/leftupper",
+      "rotateY": 180
+    },
+    "*-leftupper-west": {
+      "base": "block/stone/arch/leftupper",
+      "rotateY": 90
+    },
+    "*-middle-north": {
+      "base": "block/stone/arch/middle",
+      "rotateY": 0
+    },
+    "*-middle-east": {
+      "base": "block/stone/arch/middle",
+      "rotateY": 270
+    },
+    "*-middle-south": {
+      "base": "block/stone/arch/middle",
+      "rotateY": 180
+    },
+    "*-middle-west": {
+      "base": "block/stone/arch/middle",
+      "rotateY": 90
+    },
+    "*-rightupper-north": {
+      "base": "block/stone/arch/rightupper",
+      "rotateY": 0
+    },
+    "*-rightupper-east": {
+      "base": "block/stone/arch/rightupper",
+      "rotateY": 270
+    },
+    "*-rightupper-south": {
+      "base": "block/stone/arch/rightupper",
+      "rotateY": 180
+    },
+    "*-rightupper-west": {
+      "base": "block/stone/arch/rightupper",
+      "rotateY": 90
+    },
+    "*-rightlower-north": {
+      "base": "block/stone/arch/rightlower",
+      "rotateY": 0
+    },
+    "*-rightlower-east": {
+      "base": "block/stone/arch/rightlower",
+      "rotateY": 270
+    },
+    "*-rightlower-south": {
+      "base": "block/stone/arch/rightlower",
+      "rotateY": 180
+    },
+    "*-rightlower-west": {
+      "base": "block/stone/arch/rightlower",
+      "rotateY": 90
+    }
+  },
+  "texturesByType": {
+    "*": {
+      "side": {
+        "base": "vsmineralmasonry:block/stone/slabbase/{rock}1",
+        "alternates": [
+          {
+            "base": "vsmineralmasonry:block/stone/slabbase/{rock}2"
+          },
+          {
+            "base": "vsmineralmasonry:block/stone/slabbase/{rock}3"
+          },
+          {
+            "base": "vsmineralmasonry:block/stone/slabbase/{rock}4"
+          }
+        ]
+      },
+      "topbottom": {
+        "base": "vsmineralmasonry:block/stone/slabbase/{rock}1",
+        "alternates": [
+          {
+            "base": "vsmineralmasonry:block/stone/slabbase/{rock}2"
+          },
+          {
+            "base": "vsmineralmasonry:block/stone/slabbase/{rock}3"
+          },
+          {
+            "base": "vsmineralmasonry:block/stone/slabbase/{rock}4"
+          }
+        ]
+      }
+    }
+  },
+  "sideAo": {
+    "all": false
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "sounds": {
+    "walk": "walk/stone",
+    "byTool": {
+      "Pickaxe": {
+        "hit": "block/rock-hit-pickaxe",
+        "break": "block/rock-break-pickaxe"
+      }
+    }
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  }
+}

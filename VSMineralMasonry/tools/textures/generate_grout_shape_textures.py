@@ -30,16 +30,19 @@ NORMALIZED_MASK_SIZE = "64x64!"
 PADDED_MASKS = {"tileset8"}
 
 COLOR_BASES = {
-    "black": "#2c2c30",
-    "white": "#e0e0e0",
+    "black": "#1d1d1d",
+    "white": "#f2f2f2",
+    "orange": "#b64227",
+    "purple": "#603888",
+    "pink": "#b62777",
     "gold": "#d0b35b",
     "silver": "#b6bfc8",
-    "red": "#8f655f",
-    "blue": "#4f6180",
-    "green": "#425a43",
-    "yellow": "#8d7b33",
+    "red": "#b62742",
+    "blue": "#384c88",
+    "green": "#428838",
+    "yellow": "#b6ad27",
     "brown": "#a67647",
-    "grey": "#9ea6ae",
+    "grey": "#555555",
     "darkgrey": "#575a5e",
 }
 

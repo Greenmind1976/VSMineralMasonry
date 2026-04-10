@@ -4,9 +4,9 @@
     "modid": "vsmineralmasonry",
     "name": "VSMineralMasonry",
     "authors": [
-        "Unknown"
+        "Greenmind"
     ],
-    "description": "To be added",
+    "description": "A Vintage Story building mod focused on elegant burnished masonry, grout-based customization, decorative flagstone paths, and mossy accent pieces.",
     "version": "1.0.0",
     "dependencies": {
         "game": "1.21.0"

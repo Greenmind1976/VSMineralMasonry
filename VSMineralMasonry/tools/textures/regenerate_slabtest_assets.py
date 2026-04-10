@@ -29,7 +29,20 @@ DEBUG_SLABBASE_ROOT = DEBUG_ROOT / "textures/block/stone/slabbase"
 # Source folder names still use the older "polished" label, but they now feed the burnished-only live set.
 ROCK_BASE_ROOT = PROJECT_ROOT / "textures/no-bevel-polished-vanilla-64"
 ALT_ROCK_BASE_ROOT = PROJECT_ROOT / "textures/polished-vanilla-64"
-OVERLAY_SOURCE_ROOT = PROJECT_ROOT / "textures/overlay-source-3x3"
+OVERLAY_FULL_SHEET_ROOT = PROJECT_ROOT / "textures/overlay-source-5x10-emerald"
+OVERLAY_SOURCE_ROOT = PROJECT_ROOT / "textures/overlay-source-5x5"
+ROCK_VARIANT_COUNTS = {
+    "andesite": 4,
+    "basalt": 4,
+    "chalk": 4,
+    "chert": 4,
+    "granite": 4,
+    "limestone": 4,
+    "phyllite": 4,
+    "shale": 4,
+    "slate": 4,
+    "whitemarble": 4,
+}
 
 FAMILIES = ["breccia", "travertine", "granite", "marble"]
 FINISHES = ["burnished"]
@@ -52,28 +65,18 @@ ROCKS = [
     "shale",
     "chalk",
 ]
-TILES = [f"r{row}c{col}" for row in range(1, 4) for col in range(1, 4)]
+TILE_ROWS = 5
+TILE_COLUMNS = 5
+TILE_SIZE = 64
+TILES = [f"r{row}c{col}" for row in range(1, TILE_ROWS + 1) for col in range(1, TILE_COLUMNS + 1)]
 FACES = ("south", "north", "west", "east", "down", "up")
 OVERLAY_COMPOSED_FAMILIES = {"breccia", "travertine", "marble", "granite"}
-
-EXCLUDED_COMBINATIONS = {
-    ("basalt", "burnished", "bituminouscoal"),
-    ("andesite", "burnished", "emerald"),
-    ("andesite", "burnished", "lignite"),
-    ("chalk", "burnished", "silver"),
-    ("chert", "burnished", "emerald"),
-    ("chert", "burnished", "lignite"),
-    ("granite", "burnished", "emerald"),
-    ("granite", "burnished", "lignite"),
-    ("limestone", "burnished", "emerald"),
-    ("limestone", "burnished", "silver"),
-    ("phyllite", "burnished", "emerald"),
-    ("phyllite", "burnished", "lignite"),
-    ("shale", "burnished", "lignite"),
-    ("slate", "burnished", "lignite"),
-    ("whitemarble", "burnished", "quartz"),
-    ("whitemarble", "burnished", "silver"),
+SEED_MINERALS = ("emerald", "quartz", "bituminouscoal")
+FAMILY_TILE_COLUMN_OFFSETS = {
+    "granite": 4,
 }
+
+EXCLUDED_COMBINATIONS = set()
 
 DISPLAY_NAMES = {
     "bituminouscoal": "Black Coal",
@@ -127,12 +130,187 @@ def rock_base_source(rock: str) -> Path:
     return ROCK_BASE_ROOT / f"{rock}.png"
 
 
+def rock_base_variant_sources(rock: str) -> list[Path]:
+    variant_count = ROCK_VARIANT_COUNTS.get(rock)
+    if variant_count is None:
+        return [rock_base_source(rock)]
+
+    variants = []
+    for index in range(1, variant_count + 1):
+        path = ROCK_BASE_ROOT / f"{rock}{index}.png"
+        if not path.exists():
+            raise FileNotFoundError(f"Missing rock variant: {path}")
+        variants.append(path)
+    return variants
+
+
 def is_excluded(rock: str, finish: str, mineral: str) -> bool:
     return (rock, finish, mineral) in EXCLUDED_COMBINATIONS
 
 
 def uses_overlay_composition(family: str) -> bool:
     return family in OVERLAY_COMPOSED_FAMILIES
+
+
+def recolor_seed_overlay(source: Path, target: Path, mineral: str) -> None:
+    target.parent.mkdir(parents=True, exist_ok=True)
+
+    if mineral == "emerald":
+        shutil.copy2(source, target)
+        return
+
+    if mineral == "quartz":
+        subprocess.run(
+            [
+                "magick",
+                str(source),
+                "-alpha",
+                "off",
+                "-colorspace",
+                "Gray",
+                "-auto-level",
+                "-level",
+                "25%,100%",
+                "-fill",
+                "rgb(236,236,232)",
+                "-colorize",
+                "100",
+                "(",
+                str(source),
+                "-alpha",
+                "extract",
+                ")",
+                "-compose",
+                "copyopacity",
+                "-composite",
+                str(target),
+            ],
+            check=True,
+        )
+        return
+
+    if mineral == "bituminouscoal":
+        subprocess.run(
+            [
+                "magick",
+                str(source),
+                "-alpha",
+                "off",
+                "-colorspace",
+                "Gray",
+                "-level",
+                "0%,58%",
+                "-colorspace",
+                "sRGB",
+                "-channel",
+                "R",
+                "-evaluate",
+                "multiply",
+                "0.115000",
+                "-channel",
+                "G",
+                "-evaluate",
+                "multiply",
+                "0.115000",
+                "-channel",
+                "B",
+                "-evaluate",
+                "multiply",
+                "0.135000",
+                "+channel",
+                "(",
+                str(source),
+                "-alpha",
+                "extract",
+                ")",
+                "-compose",
+                "copyopacity",
+                "-composite",
+                str(target),
+            ],
+            check=True,
+        )
+        return
+
+    rgb = MINERAL_TINTS[mineral]
+    r_mult = rgb[0] / 255.0
+    g_mult = rgb[1] / 255.0
+    b_mult = rgb[2] / 255.0
+    subprocess.run(
+        [
+            "magick",
+            str(source),
+            "-alpha",
+            "off",
+            "-colorspace",
+            "Gray",
+            "-colorspace",
+            "sRGB",
+            "-channel",
+            "R",
+            "-evaluate",
+            "multiply",
+            f"{r_mult:.6f}",
+            "-channel",
+            "G",
+            "-evaluate",
+            "multiply",
+            f"{g_mult:.6f}",
+            "-channel",
+            "B",
+            "-evaluate",
+            "multiply",
+            f"{b_mult:.6f}",
+            "+channel",
+            "(",
+            str(source),
+            "-alpha",
+            "extract",
+            ")",
+            "-compose",
+            "copyopacity",
+            "-composite",
+            str(target),
+        ],
+        check=True,
+    )
+
+
+def rebuild_overlay_seed_tiles() -> None:
+    if OVERLAY_SOURCE_ROOT.exists():
+        shutil.rmtree(OVERLAY_SOURCE_ROOT)
+    OVERLAY_SOURCE_ROOT.mkdir(parents=True, exist_ok=True)
+
+    for family in FAMILIES:
+        full_sheet = OVERLAY_FULL_SHEET_ROOT / family / f"{family}-polished-emerald-transparent-5x10.png"
+        if not full_sheet.exists():
+            raise FileNotFoundError(f"Missing overlay full sheet: {full_sheet}")
+
+        with tempfile.TemporaryDirectory(prefix=f"{family}-5x5-slices-") as temp_dir:
+            temp_root = Path(temp_dir)
+            column_offset = FAMILY_TILE_COLUMN_OFFSETS.get(family, 0)
+            for row in range(1, TILE_ROWS + 1):
+                for col in range(1, TILE_COLUMNS + 1):
+                    tile = f"r{row}c{col}"
+                    x = (column_offset + col - 1) * TILE_SIZE
+                    y = (row - 1) * TILE_SIZE
+                    emerald_target = temp_root / family / "emerald" / f"{tile}.png"
+                    emerald_target.parent.mkdir(parents=True, exist_ok=True)
+                    subprocess.run(
+                        [
+                            "magick",
+                            str(full_sheet),
+                            "-crop",
+                            f"{TILE_SIZE}x{TILE_SIZE}+{x}+{y}",
+                            "+repage",
+                            str(emerald_target),
+                        ],
+                        check=True,
+                    )
+
+                    for mineral in SEED_MINERALS:
+                        target = OVERLAY_SOURCE_ROOT / family / mineral / f"{tile}.png"
+                        recolor_seed_overlay(emerald_target, target, mineral)
 
 
 def colorize_overlay(source: Path, target: Path, mineral: str) -> None:
@@ -187,27 +365,6 @@ def colorize_overlay(source: Path, target: Path, mineral: str) -> None:
 
 
 def strengthen_overlay_if_needed(source: Path, target: Path, family: str, mineral: str) -> Path:
-    if family == "marble" and mineral == "bituminouscoal":
-        target.parent.mkdir(parents=True, exist_ok=True)
-        subprocess.run(
-            [
-                "magick",
-                str(source),
-                "-channel",
-                "A",
-                "-morphology",
-                "Dilate",
-                "Diamond:1",
-                "-evaluate",
-                "multiply",
-                "2.0",
-                "+channel",
-                str(target),
-            ],
-            check=True,
-        )
-        return target
-
     return source
 
 
@@ -251,6 +408,11 @@ def generate_shared_base_faces() -> None:
         base_tile = SOURCE_MURAL_BASEFACE_ROOT / f"{rock}.png"
         shutil.copy2(rock_base, base_tile)
         generate_face_files(base_tile)
+        if rock in ROCK_VARIANT_COUNTS:
+            for index, variant in enumerate(rock_base_variant_sources(rock), start=1):
+                variant_tile = SOURCE_MURAL_BASEFACE_ROOT / f"{rock}{index}.png"
+                shutil.copy2(variant, variant_tile)
+                generate_face_files(variant_tile)
 
 
 def generate_overlay_face_files(input_tile: Path, output_prefix: Path) -> None:
@@ -304,6 +466,7 @@ def generate_shared_overlay_faces() -> None:
 
 
 def rebuild_texture_bank() -> None:
+    rebuild_overlay_seed_tiles()
     if SOURCE_TEXTURE_ROOT.exists():
         shutil.rmtree(SOURCE_TEXTURE_ROOT)
     SOURCE_TEXTURE_ROOT.mkdir(parents=True, exist_ok=True)
@@ -349,6 +512,9 @@ def sync_slabbase_textures(target_root: Path) -> None:
     target_root.mkdir(parents=True, exist_ok=True)
     for rock in ROCKS:
         shutil.copy2(rock_base_source(rock), target_root / f"{rock}.png")
+        if rock in ROCK_VARIANT_COUNTS:
+            for index, variant in enumerate(rock_base_variant_sources(rock), start=1):
+                shutil.copy2(variant, target_root / f"{rock}{index}.png")
 
 
 def muralslab_states(block: dict) -> dict[str, list[str]]:
@@ -393,9 +559,29 @@ def build_allowed_variants(states: dict[str, list[str]]) -> list[str]:
 def build_textures_by_type(states: dict[str, list[str]]) -> dict[str, dict]:
     overlay_faces = {
         face: {
-            "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}-{face}face",
+            "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}1-{face}face",
             "overlays": [
                 f"vsmineralmasonry:block/stone/muralslab-overlays/{{family}}/{{finish}}/{{mineral}}/{{tile}}-{face}face"
+            ],
+            "alternates": [
+                {
+                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}2-{face}face",
+                    "overlays": [
+                        f"vsmineralmasonry:block/stone/muralslab-overlays/{{family}}/{{finish}}/{{mineral}}/{{tile}}-{face}face"
+                    ],
+                },
+                {
+                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}3-{face}face",
+                    "overlays": [
+                        f"vsmineralmasonry:block/stone/muralslab-overlays/{{family}}/{{finish}}/{{mineral}}/{{tile}}-{face}face"
+                    ],
+                },
+                {
+                    "base": f"vsmineralmasonry:block/stone/muralslab-basefaces/{{rock}}4-{face}face",
+                    "overlays": [
+                        f"vsmineralmasonry:block/stone/muralslab-overlays/{{family}}/{{finish}}/{{mineral}}/{{tile}}-{face}face"
+                    ],
+                },
             ],
         }
         for face in FACES

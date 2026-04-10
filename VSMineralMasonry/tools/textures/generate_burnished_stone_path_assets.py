@@ -21,6 +21,7 @@ DEBUG_ROOT = ROOT / "bin/Debug/Mods/mod/assets/vsmineralmasonry"
 DEBUG_TEXTURE_ROOT = DEBUG_ROOT / "textures/block/stone/burnishedstonepath"
 DEBUG_BLOCK_PATH = DEBUG_ROOT / "blocktypes/stone/burnishedstonepath.json"
 DEBUG_LANG_PATH = DEBUG_ROOT / "lang/en.json"
+ROCK_VARIANT_COUNT = 4
 
 ROCKS = [
     "andesite",
@@ -68,34 +69,36 @@ def prepare_mask(tile: Path, out_path: Path) -> None:
     )
 
 
-def render_top_tile(base: Path, mask: Path, out_path: Path) -> None:
+def render_base_tile(base: Path, mask: Path, out_path: Path) -> None:
+    subprocess.run(
+        [
+            "magick",
+            str(base),
+            str(mask),
+            "-alpha",
+            "off",
+            "-compose",
+            "CopyOpacity",
+            "-composite",
+            "PNG32:" + str(out_path),
+        ],
+        check=True,
+    )
+
+
+def render_overlay_tile(mask: Path, out_path: Path) -> None:
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
-        rock_rgba = tmp / "rock-rgba.png"
         binary_mask = tmp / "binary-mask.png"
-        inverse_mask = tmp / "inverse-mask.png"
         eroded_mask = tmp / "eroded-mask.png"
         edge_mask = tmp / "edge-mask.png"
         dilated_mask = tmp / "dilated-mask.png"
         outer_shadow_mask = tmp / "outer-shadow-mask.png"
-        gap_overlay = tmp / "gap-overlay.png"
         shadow_overlay = tmp / "shadow-overlay.png"
         outer_shadow_overlay = tmp / "outer-shadow-overlay.png"
-        subprocess.run(["magick", str(base), "PNG32:" + str(rock_rgba)], check=True)
-        subprocess.run(
-            [
-                "magick",
-                str(rock_rgba),
-                str(mask),
-                "-alpha",
-                "off",
-                "-compose",
-                "CopyOpacity",
-                "-composite",
-                "PNG32:" + str(out_path),
-            ],
-            check=True,
-        )
+        transparent = tmp / "transparent.png"
+        subprocess.run(["magick", "-size", "64x64", "xc:none", "PNG32:" + str(transparent)], check=True)
+        shutil.copy2(transparent, out_path)
         subprocess.run(
             [
                 "magick",
@@ -105,49 +108,6 @@ def render_top_tile(base: Path, mask: Path, out_path: Path) -> None:
                 "-alpha",
                 "off",
                 "PNG32:" + str(binary_mask),
-            ],
-            check=True,
-        )
-        subprocess.run(
-            [
-                "magick",
-                str(binary_mask),
-                "-negate",
-                "PNG32:" + str(inverse_mask),
-            ],
-            check=True,
-        )
-        subprocess.run(
-            [
-                "magick",
-                "-size",
-                "64x64",
-                "xc:black",
-                str(inverse_mask),
-                "-alpha",
-                "off",
-                "-compose",
-                "CopyOpacity",
-                "-composite",
-                "-channel",
-                "A",
-                "-evaluate",
-                "multiply",
-                GAP_DARKEN_ALPHA,
-                "+channel",
-                "PNG32:" + str(gap_overlay),
-            ],
-            check=True,
-        )
-        subprocess.run(
-            [
-                "magick",
-                str(out_path),
-                str(gap_overlay),
-                "-compose",
-                "Over",
-                "-composite",
-                "PNG32:" + str(out_path),
             ],
             check=True,
         )
@@ -196,18 +156,7 @@ def render_top_tile(base: Path, mask: Path, out_path: Path) -> None:
             ],
             check=True,
         )
-        subprocess.run(
-            [
-                "magick",
-                str(out_path),
-                str(shadow_overlay),
-                "-compose",
-                "Over",
-                "-composite",
-                "PNG32:" + str(out_path),
-            ],
-            check=True,
-        )
+        subprocess.run(["magick", str(out_path), str(shadow_overlay), "-compose", "Over", "-composite", "PNG32:" + str(out_path)], check=True)
         subprocess.run(
             [
                 "magick",
@@ -253,18 +202,7 @@ def render_top_tile(base: Path, mask: Path, out_path: Path) -> None:
             ],
             check=True,
         )
-        subprocess.run(
-            [
-                "magick",
-                str(out_path),
-                str(outer_shadow_overlay),
-                "-compose",
-                "Over",
-                "-composite",
-                "PNG32:" + str(out_path),
-            ],
-            check=True,
-        )
+        subprocess.run(["magick", str(out_path), str(outer_shadow_overlay), "-compose", "Over", "-composite", "PNG32:" + str(out_path)], check=True)
 
 
 def build_textures() -> None:
@@ -274,24 +212,27 @@ def build_textures() -> None:
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
+        subprocess.run(
+            ["magick", "-size", "64x64", "xc:none", "PNG32:" + str(TEXTURE_ROOT / "transparent.png")],
+            check=True,
+        )
         for tile in TILES:
             src = SOURCE_ROOT / f"{tile}.png"
             if not src.exists():
                 raise FileNotFoundError(f"Missing source tile: {src}")
             prepare_mask(src, tmp / f"{tile}-mask.png")
 
+        for tile in TILES:
+            mask = tmp / f"{tile}-mask.png"
+            render_overlay_tile(mask, TEXTURE_ROOT / f"overlay-{tile}.png")
         for rock in ROCKS:
-            base = SLABBASE_ROOT / f"{rock}.png"
-            if not base.exists():
-                raise FileNotFoundError(f"Missing rock base: {base}")
-            for tile in TILES:
-                mask = tmp / f"{tile}-mask.png"
-                up = TEXTURE_ROOT / f"{rock}-{tile}-upface.png"
-                up_raw = tmp / f"{rock}-{tile}-up-raw.png"
-
-                render_top_tile(base, mask, up_raw)
-                subprocess.run(["magick", str(up_raw), "-flop", "PNG32:" + str(up)], check=True)
-                shutil.copy2(up, TEXTURE_ROOT / f"{rock}-{tile}.png")
+            for index in range(1, ROCK_VARIANT_COUNT + 1):
+                base = SLABBASE_ROOT / f"{rock}{index}.png"
+                if not base.exists():
+                    raise FileNotFoundError(f"Missing rock base: {base}")
+                for tile in TILES:
+                    mask = tmp / f"{tile}-mask.png"
+                    render_base_tile(base, mask, TEXTURE_ROOT / f"{rock}{index}-{tile}.png")
 
     if DEBUG_TEXTURE_ROOT.exists():
         shutil.rmtree(DEBUG_TEXTURE_ROOT)
@@ -300,7 +241,7 @@ def build_textures() -> None:
 
 def build_block() -> None:
     block = {
-        "code": "burnishedstonepath",
+        "code": "burnishedflagstonepath",
         "class": "BlockStonePathDecorCycle",
         "behaviors": [
             {
@@ -322,19 +263,49 @@ def build_block() -> None:
         ],
         "attributes": {
             "ignoreSounds": True,
+            "autoAlignMirrorColumns": True,
             "handbook": {"include": False},
         },
         "shapeInventory": {
             "base": "game:block/basic/layers/0voxel",
             "rotateX": 90
         },
-        "textures": {
-            "all": {
-                "base": "vsmineralmasonry:block/stone/burnishedstonepath/{rock}-{tile}"
+        "texturesByType": {
+            "*": {
+                "all": {
+                    "base": "vsmineralmasonry:block/stone/burnishedstonepath/transparent",
+                    "overlays": [
+                        "vsmineralmasonry:block/stone/burnishedstonepath/{rock}1-{tile}",
+                        "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
+                    ],
+                    "alternates": [
+                        {
+                            "base": "vsmineralmasonry:block/stone/burnishedstonepath/transparent",
+                            "overlays": [
+                                "vsmineralmasonry:block/stone/burnishedstonepath/{rock}2-{tile}",
+                                "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
+                            ]
+                        },
+                        {
+                            "base": "vsmineralmasonry:block/stone/burnishedstonepath/transparent",
+                            "overlays": [
+                                "vsmineralmasonry:block/stone/burnishedstonepath/{rock}3-{tile}",
+                                "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
+                            ]
+                        },
+                        {
+                            "base": "vsmineralmasonry:block/stone/burnishedstonepath/transparent",
+                            "overlays": [
+                                "vsmineralmasonry:block/stone/burnishedstonepath/{rock}4-{tile}",
+                                "vsmineralmasonry:block/stone/burnishedstonepath/overlay-{tile}"
+                            ]
+                        }
+                    ]
+                }
             }
         },
         "allowedVariants": [
-            f"burnishedstonepath-{rock}-{tile}"
+            f"burnishedflagstonepath-{rock}-{tile}"
             for rock in ROCKS
             for tile in TILES
         ],

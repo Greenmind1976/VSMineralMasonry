@@ -1,0 +1,40 @@
+{
+  "ingredientPattern": "S\nP\nR",
+  "ingredients": {
+    "S": {
+      "type": "item",
+      "code": "vsmineralmasonry:groutsponge",
+      "isTool": true,
+      "toolDurabilityCost": 1
+    },
+    "P": {
+      "type": "item",
+      "code": "vsmineralmasonry:stonepolish"
+    },
+    "R": {
+      "type": "item",
+      "code": "game:stone-*",
+      "quantity": 8,
+      "name": "rock",
+      "allowedVariants": [
+        "andesite",
+        "basalt",
+        "chalk",
+        "chert",
+        "granite",
+        "limestone",
+        "phyllite",
+        "shale",
+        "slate",
+        "whitemarble"
+      ]
+    }
+  },
+  "width": 1,
+  "height": 3,
+  "output": {
+    "type": "item",
+    "code": "vsmineralmasonry:burnishedstone-{rock}",
+    "quantity": 8
+  }
+}

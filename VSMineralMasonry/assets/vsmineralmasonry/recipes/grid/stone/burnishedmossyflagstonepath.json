@@ -1,0 +1,33 @@
+{
+  "ingredientPattern": "SSS\n D ",
+  "ingredients": {
+    "S": {
+      "type": "item",
+      "code": "vsmineralmasonry:burnishedstone-*",
+      "name": "rock",
+      "allowedVariants": [
+        "andesite",
+        "basalt",
+        "chalk",
+        "chert",
+        "granite",
+        "limestone",
+        "phyllite",
+        "shale",
+        "slate",
+        "whitemarble"
+      ]
+    },
+    "D": {
+      "type": "block",
+      "code": "game:forestfloor-*"
+    }
+  },
+  "width": 3,
+  "height": 2,
+  "output": {
+    "type": "item",
+    "code": "vsmineralmasonry:burnishedmossyflagstonepathitem-{rock}",
+    "quantity": 3
+  }
+}
