@@ -1,9 +1,8 @@
-# VSMineralMasonry 1.0.0
+# VSMineralMasonry 1.21.3
 
 ## Highlights
-- Initial release.
-- Added `triangleoverlayvsm`, a placeable burnished-stone triangle decor set for all current host rocks.
-- Extended the `grouttrowel` so it cycles both grout variants and triangle overlay orientations.
+- Finalized the `1.21` support line release.
+- Includes the established burnished masonry, grout detailing, decorative paths, and mural slab feature set for the `1.21` game series.
 
 ## Notes
-- Add release notes here before publishing.
+- Targets the Vintage Story `1.21` line.
