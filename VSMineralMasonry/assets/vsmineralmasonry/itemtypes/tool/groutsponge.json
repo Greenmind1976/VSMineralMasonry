@@ -6,10 +6,10 @@
   },
   "textures": {
     "sponge": {
-      "base": "game:block/hay/bundle"
+      "base": "vsmineralmasonry:block/hay/bundle"
     },
     "scrub": {
-      "base": "game:block/wood/planks/aged/generic1"
+      "base": "vsmineralmasonry:block/wood/planks/aged/aged1"
     }
   },
   "behaviors": [

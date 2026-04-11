@@ -1,9 +1,11 @@
-# VSMineralMasonry 1.0.0
+# VSMineralMasonry 1.22.0
 
 ## Highlights
-- Initial release.
-- Added `triangleoverlayvsm`, a placeable burnished-stone triangle decor set for all current host rocks.
-- Extended the `grouttrowel` so it cycles both grout variants and triangle overlay orientations.
+- Added support for Vintage Story `1.22.0-rc.8`.
+- Updated the mod to build against the `1.22` / `.NET 10` API line.
+- Fixed grout and tool asset issues uncovered during the `1.22` migration.
+- Updated grout trowel, sponge, and JSON patch behavior for the current game version.
 
 ## Notes
-- Add release notes here before publishing.
+- `1.22.0-rc.8` is supported, but not heavily tested yet.
+- Please report bugs, missing assets, or unexpected behavior if you run into them.

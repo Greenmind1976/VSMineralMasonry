@@ -16,8 +16,8 @@
     ]
   },
   "textures": {
-    "blade": "",
-    "handle": ""
+    "blade": "block/metal/ingot/copper",
+    "handle": "item/tool/handle"
   },
   "elements": [
     {

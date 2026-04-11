@@ -149,9 +149,15 @@ public class ItemGroutTrowel : Item
 
     public override int GetToolMode(ItemSlot slot, IPlayer byPlayer, BlockSelection blockSelection)
     {
+        ItemStack? stack = slot.Itemstack;
+        if (stack == null)
+        {
+            return 0;
+        }
+
         Block? block = blockSelection == null ? null : DecorEditingHelper.GetSelectedDecor(byPlayer.Entity.World, blockSelection)?.Block;
         string[] shapeParts = block == null ? GroutShapeModes : GetShapeParts(block);
-        string selectedCode = slot.Itemstack.Attributes.GetString(ToolModeCodeAttribute, shapeParts[0]);
+        string selectedCode = stack.Attributes.GetString(ToolModeCodeAttribute, shapeParts[0]);
 
         for (int i = 0; i < shapeParts.Length; i++)
         {
@@ -166,10 +172,16 @@ public class ItemGroutTrowel : Item
 
     public override void SetToolMode(ItemSlot slot, IPlayer byPlayer, BlockSelection blockSelection, int toolMode)
     {
+        ItemStack? stack = slot.Itemstack;
+        if (stack == null)
+        {
+            return;
+        }
+
         Block? block = blockSelection == null ? null : DecorEditingHelper.GetSelectedDecor(byPlayer.Entity.World, blockSelection)?.Block;
         string[] shapeParts = block == null ? GroutShapeModes : GetShapeParts(block);
         int clampedMode = GameMath.Clamp(toolMode, 0, shapeParts.Length - 1);
-        slot.Itemstack.Attributes.SetString(ToolModeCodeAttribute, shapeParts[clampedMode]);
+        stack.Attributes.SetString(ToolModeCodeAttribute, shapeParts[clampedMode]);
         slot.MarkDirty();
     }
 
@@ -186,22 +198,10 @@ public class ItemGroutTrowel : Item
             return;
         }
 
-        if (HasEditableTarget(byEntity.World, blockSel) && byEntity.World.Side != EnumAppSide.Server)
-        {
-            handling = EnumHandHandling.Handled;
-            return;
-        }
-
         if (TryCycleTarget(slot, byEntity, blockSel))
         {
             handling = EnumHandHandling.Handled;
         }
-    }
-
-    private static bool HasEditableTarget(IWorldAccessor world, BlockSelection blockSel)
-    {
-        DecorEditingHelper.DecorTarget? target = DecorEditingHelper.GetSelectedDecor(world, blockSel);
-        return IsEditableByTrowel(target?.Block);
     }
 
     private static bool TryCycleTarget(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel)
@@ -228,7 +228,7 @@ public class ItemGroutTrowel : Item
         bool changed = world.BlockAccessor.SetDecor(nextBlock, target.Position, target.DecorIndex);
         if (changed)
         {
-            slot.Itemstack?.Collectible.DamageItem(world, byEntity, slot, 1);
+            slot.Itemstack?.Collectible.DamageItem(world, byEntity, slot, 1, true);
         }
 
         return changed;
@@ -256,10 +256,16 @@ public class ItemGroutTrowel : Item
 
     private static Block? GetNextGroutBlock(ItemSlot slot, IWorldAccessor world, Block block)
     {
+        ItemStack? stack = slot.Itemstack;
+        if (stack == null)
+        {
+            return null;
+        }
+
         if (!IsStandardGroutBlock(block))
         {
             string[] shapeParts = GetShapeParts(block);
-            string selectedPart = slot.Itemstack.Attributes.GetString(ToolModeCodeAttribute, shapeParts[0]);
+            string selectedPart = stack.Attributes.GetString(ToolModeCodeAttribute, shapeParts[0]);
 
             bool isValidPart = false;
             foreach (string shapePart in shapeParts)
@@ -467,8 +473,14 @@ public class ItemGroutTrowel : Item
 
     private static string GetSelectedShapeCode(ItemSlot slot, Block block)
     {
+        ItemStack? stack = slot.Itemstack;
+        if (stack == null)
+        {
+            return GetShapeParts(block)[0];
+        }
+
         string[] shapeParts = GetShapeParts(block);
-        string selectedShape = slot.Itemstack.Attributes.GetString(ToolModeCodeAttribute, shapeParts[0]);
+        string selectedShape = stack.Attributes.GetString(ToolModeCodeAttribute, shapeParts[0]);
         foreach (string shapePart in shapeParts)
         {
             if (shapePart == selectedShape)

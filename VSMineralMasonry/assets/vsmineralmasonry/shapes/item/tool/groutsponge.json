@@ -16,8 +16,8 @@
     ]
   },
   "textures": {
-    "sponge": "",
-    "scrub": ""
+    "sponge": "block/hay/bundle",
+    "scrub": "block/wood/planks/aged/aged1"
   },
   "elements": [
     {

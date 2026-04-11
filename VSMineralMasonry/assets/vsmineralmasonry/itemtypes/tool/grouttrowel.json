@@ -29,7 +29,7 @@
         "base": "game:block/metal/ingot/{metal}"
       },
       "handle": {
-        "base": "game:item/tool/material/wood"
+        "base": "vsmineralmasonry:item/tool/handle"
       }
     }
   },

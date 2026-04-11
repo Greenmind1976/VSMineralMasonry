@@ -2,7 +2,31 @@
   {
     "file": "game:itemtypes/tool/chisel",
     "op": "add",
-    "path": "/behaviors/-",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "PreserveGroutOnChisel"
+    }
+  },
+  {
+    "file": "game:itemtypes/tool/chisel",
+    "op": "add",
+    "path": "/behaviorsByType/*-iron/-",
+    "value": {
+      "name": "PreserveGroutOnChisel"
+    }
+  },
+  {
+    "file": "game:itemtypes/tool/chisel",
+    "op": "add",
+    "path": "/behaviorsByType/*-meteoriciron/-",
+    "value": {
+      "name": "PreserveGroutOnChisel"
+    }
+  },
+  {
+    "file": "game:itemtypes/tool/chisel",
+    "op": "add",
+    "path": "/behaviorsByType/*-steel/-",
     "value": {
       "name": "PreserveGroutOnChisel"
     }
