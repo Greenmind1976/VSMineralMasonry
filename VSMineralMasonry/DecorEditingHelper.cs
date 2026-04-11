@@ -19,13 +19,22 @@ public static class DecorEditingHelper
             return null;
         }
 
-        foreach (BlockPos pos in CandidatePositions(blockSel))
+        try
         {
-            DecorTarget? target = GetSelectedDecorAt(world, pos, blockSel);
-            if (target != null)
+            foreach (BlockPos pos in CandidatePositions(blockSel))
             {
-                return target;
+                DecorTarget? target = GetSelectedDecorAt(world, pos, blockSel);
+                if (target != null)
+                {
+                    return target;
+                }
             }
+        }
+        catch
+        {
+            // Tool-mode queries can run while the client is in a transient selection state.
+            // Failing closed here avoids crashing the game when no stable decor target exists.
+            return null;
         }
 
         return null;
@@ -76,7 +85,12 @@ public static class DecorEditingHelper
 
     private static BlockPos[] CandidatePositions(BlockSelection blockSel)
     {
-        BlockPos origin = blockSel.Position;
+        BlockPos? origin = blockSel.Position;
+        if (origin == null)
+        {
+            return [];
+        }
+
         if (blockSel.Face == null)
         {
             return
