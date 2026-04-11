@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path("/Users/garretcoffman/Documents/VSMods/VSMineralMasonry/VSMineralMasonry")
 PROJECT_ROOT = ROOT.parent
 MASK_ROOT = PROJECT_ROOT / "textures" / "decor-overlays"
+SOLID_SOURCE = MASK_ROOT / "solid.png"
 SLABBASE_DIR = ROOT / "assets" / "vsmineralmasonry" / "textures" / "block" / "stone" / "slabbase"
 COLOR_OUTPUT_DIR = ROOT / "assets" / "vsmineralmasonry" / "textures" / "block" / "stone" / "groutshapecolor"
 ROCK_OUTPUT_DIR = ROOT / "assets" / "vsmineralmasonry" / "textures" / "block" / "stone" / "groutshaperock"
@@ -20,7 +21,7 @@ COLOR_HIGHLIGHT_FACTOR = 1.03
 COLOR_DETAIL_SIGMOID = "1.4,50%"
 COLOR_DETAIL_LEVEL = "18%,86%"
 
-TILESETS = [f"tileset{i}" for i in range(1, 17)]
+TILESETS = ["solid"] + [f"tileset{i}" for i in range(1, 17)]
 CUSTOM_BORDER_TILESET_SOURCES = {"tileset10": "border2"}
 ROTATION_INVARIANT_TILESETS = {"tileset4", "tileset6", "tileset7", "tileset9", "tileset11", "tileset12", "tileset13", "tileset14", "tileset15"}
 TWO_WAY_TILESETS = {"tileset1", "tileset3", "tileset8"}
@@ -196,6 +197,102 @@ def build_rock_variant(mask_path: Path, source_path: Path, out_path: Path) -> No
     )
 
 
+def build_solid_color_variant(color_name: str, color_hex: str) -> None:
+    out_path = TILESET_OUTPUT_DIR / f"solid-{color_name}-frame.png"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    report_non_64_mask(SOLID_SOURCE)
+    with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as temp_file:
+        base_out = Path(temp_file.name)
+    run(
+        "magick",
+        str(COLOR_DETAIL_SOURCE),
+        "-alpha",
+        "off",
+        "-colorspace",
+        "Gray",
+        "-auto-level",
+        "-sigmoidal-contrast",
+        COLOR_DETAIL_SIGMOID,
+        "-level",
+        COLOR_DETAIL_LEVEL,
+        "-write",
+        "mpr:detail",
+        "+delete",
+        "mpr:detail",
+        "(",
+        f"xc:{shade_color(color_hex, COLOR_SHADOW_FACTOR)}",
+        f"xc:{color_hex}",
+        f"xc:{shade_color(color_hex, COLOR_HIGHLIGHT_FACTOR)}",
+        "+append",
+        "-filter",
+        "point",
+        "-resize",
+        "256x1!",
+        ")",
+        "-compose",
+        "CopyRed",
+        "-clut",
+        "-colorspace",
+        "sRGB",
+        "-alpha",
+        "off",
+        f"PNG32:{base_out}",
+    )
+    run(
+        "magick",
+        str(base_out),
+        "-alpha",
+        "off",
+        "(",
+        str(SOLID_SOURCE),
+        "-alpha",
+        "off",
+        "-colorspace",
+        "Gray",
+        "-threshold",
+        "50%",
+        ")",
+        "-compose",
+        "CopyOpacity",
+        "-composite",
+        f"PNG32:{out_path}",
+    )
+    base_out.unlink(missing_ok=True)
+
+
+def build_solid_rock_variant(rock_name: str) -> None:
+    out_path = TILESET_ROCK_OUTPUT_DIR / f"solid-{rock_name}-frame.png"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    report_non_64_mask(SOLID_SOURCE)
+    run(
+        "magick",
+        str(SLABBASE_DIR / f"{rock_name}.png"),
+        "-alpha",
+        "off",
+        "-filter",
+        "point",
+        "-resize",
+        NORMALIZED_MASK_SIZE,
+        "(",
+        str(SOLID_SOURCE),
+        "-alpha",
+        "off",
+        "-colorspace",
+        "Gray",
+        "-threshold",
+        "50%",
+        ")",
+        "-compose",
+        "CopyOpacity",
+        "-composite",
+        "-colorspace",
+        "sRGB",
+        "-define",
+        "png:color-type=6",
+        f"PNG32:{out_path}",
+    )
+
+
 def build_custom_border_color_variants(color_name: str, color_hex: str, family: str, source_prefix: str) -> None:
     frame_mask = MASK_ROOT / f"{source_prefix}-4x.png"
     edge_mask = MASK_ROOT / f"{source_prefix}-1x.png"
@@ -301,7 +398,16 @@ def main() -> None:
     for old_png in TILESET_ROCK_OUTPUT_DIR.glob("*.png"):
         old_png.unlink()
 
+    for color_name, color_hex in COLOR_BASES.items():
+        build_solid_color_variant(color_name, color_hex)
+
+    for rock in ROCKS:
+        build_solid_rock_variant(rock)
+
     for tileset in TILESETS:
+        if tileset == "solid":
+            continue
+
         mask_path = MASK_ROOT / f"{tileset}.png"
         report_non_64_mask(mask_path)
 

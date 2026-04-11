@@ -14,6 +14,7 @@ public class ItemGroutTrowel : Item
     private const string ToolModeCodeAttribute = "vsmineralmasonry:trowelShapeCode";
     private static readonly string[] GroutShapeModes =
     [
+        "solid",
         "tileset1",
         "tileset2",
         "tileset3",
@@ -34,6 +35,7 @@ public class ItemGroutTrowel : Item
     ];
     private static readonly string[] GroutShapeLabels =
     [
+        "Solid",
         "Tileset 1",
         "Tileset 2",
         "Tileset 3",
@@ -73,6 +75,7 @@ public class ItemGroutTrowel : Item
     ];
     private static readonly Dictionary<string, string[]> ShapePartsByCode = new()
     {
+        ["solid"] = ["frame"],
         ["tileset1"] = ["top", "right"],
         ["tileset2"] = TilesetParts,
         ["tileset3"] = ["top", "right"],
@@ -433,6 +436,7 @@ public class ItemGroutTrowel : Item
     {
         return code switch
         {
+            "solid" => "Solid",
             "tileset1" => "Tileset 1",
             "tileset2" => "Tileset 2",
             "tileset3" => "Tileset 3",
