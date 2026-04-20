@@ -2,12 +2,12 @@
 set -euo pipefail
 
 ###############################################################################
-# Build + Install split VSMineralMasonry mods into Vintage Story 1.21.7
+# Build + Install split VSMineralMasonry mods into Vintage Story 1.22
 ###############################################################################
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CURRENT_BRANCH="$(git -C "$ROOT_DIR" branch --show-current 2>/dev/null || true)"
-TARGET_BRANCH="support/1.21"
+TARGET_BRANCH="support/1.22"
 CURRENT_HEAD="$(git -C "$ROOT_DIR" rev-parse HEAD 2>/dev/null || true)"
 TARGET_HEAD="$(git -C "$ROOT_DIR" rev-parse "$TARGET_BRANCH" 2>/dev/null || true)"
 
@@ -46,16 +46,15 @@ if [[ "$CURRENT_BRANCH" != "$TARGET_BRANCH" ]]; then
 
     echo "Switching to $TARGET_BRANCH worktree:"
     echo "  $TARGET_WORKTREE"
-    exec "$TARGET_WORKTREE/build-install.sh" "$@"
+    exec "$TARGET_WORKTREE/build-122-install.sh" "$@"
   fi
 fi
 
 cd "$ROOT_DIR"
 
-VS_APP_DIR="/Applications/Vintage Story 1.21.7.app"
+VS_APP_DIR="/Applications/Vintage Story 1.22.app"
 VS_MODS_DIR="$VS_APP_DIR/Mods"
-VS_EXECUTABLE="$VS_APP_DIR/Vintagestory"
-VS_DATA_PATH="$HOME/Library/Application Support/VintagestoryData-1.21.7"
+VS_LAUNCHER="$HOME/bin/vs-1.22"
 
 projects=(
   "VSMineralMasonry.CobblestonesStonePaths:vsmineralmasonrycobblespaths"
@@ -126,17 +125,14 @@ for entry in "${projects[@]}"; do
   echo "  $VS_MODS_DIR/$mod_id"
 done
 
-if [[ ! -x "$VS_EXECUTABLE" ]]; then
+if [[ ! -x "$VS_LAUNCHER" ]]; then
   echo
-  echo "Vintage Story 1.21.7 executable not found at: $VS_EXECUTABLE"
-  echo "Check that the app bundle contains the Vintagestory executable."
+  echo "1.22 launcher not found at: $VS_LAUNCHER"
+  echo "Use ~/bin/vs-1.22 to start it with the configured launcher once it exists."
   exit 0
 fi
 
 echo
-echo "Launching Vintage Story 1.21.7 via:"
-echo "  $VS_EXECUTABLE"
-echo "Using data path:"
-echo "  $VS_DATA_PATH"
-mkdir -p "$VS_DATA_PATH"
-"$VS_EXECUTABLE" --dataPath "$VS_DATA_PATH" >/dev/null 2>&1 &
+echo "Launching Vintage Story 1.22 via:"
+echo "  $VS_LAUNCHER"
+"$VS_LAUNCHER" >/dev/null 2>&1 &
